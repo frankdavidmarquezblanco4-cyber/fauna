@@ -1,0 +1,120 @@
+/* Portada renovada de FaunaXR: azul profundo, acentos cian y paneles ligeros. */
+:root{
+  --landing-night:#071a36;
+  --landing-deep:#0a2e5b;
+  --landing-cyan:#63d8ff;
+  --landing-ice:#eaf5ff;
+}
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{background:linear-gradient(180deg,#071a36 0,#071a36 190px,#edf5fc 190px,#edf5fc 100%)}
+.shell{width:min(1380px,calc(100% - 40px))}
+.topbar{padding:14px 0 12px;border:0;background:linear-gradient(120deg,#06152f,#0a2d5d 72%,#07588e)}
+.topbar>.shell{padding:15px 18px;border:1px solid rgba(168,218,255,.2);border-radius:24px;background:rgba(4,21,48,.55);box-shadow:0 16px 40px rgba(1,12,29,.22)}
+.logo{width:52px;height:52px}
+.brand-copy h1{color:#fff}
+.brand-copy h1 span{color:#80ddff}
+.brand-copy p{color:#c5d9ef}
+.header-actions .btn,.header-actions .profile-chip{border-color:rgba(223,241,255,.23);background:rgba(255,255,255,.08);color:#f2f8ff}
+.header-actions .btn:hover,.header-actions .profile-chip:hover{background:rgba(255,255,255,.16);color:#fff}
+.header-actions .profile-chip .avatar{color:#fff}
+.status-row{margin-top:12px}
+.status-row .status{border-color:rgba(202,231,255,.17);background:rgba(255,255,255,.07);color:#d8eaff}
+.status-row .dot.off{background:#839ab3}
+main{padding:26px 0 60px}
+.hero{grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);min-height:500px;padding:clamp(26px,4.4vw,58px);border:1px solid rgba(116,193,255,.26);border-radius:30px;background-color:#071a36;background-image:linear-gradient(90deg,rgba(4,17,39,.97) 0%,rgba(4,17,39,.9) 39%,rgba(4,17,39,.47) 63%,rgba(4,17,39,.08) 100%),linear-gradient(0deg,rgba(3,18,40,.42),transparent 43%),url('./landing/faunaxr-hero.webp');background-position:center,right center,center;background-size:cover;box-shadow:0 26px 64px rgba(5,28,58,.24)}
+.hero::after{background-image:radial-gradient(rgba(99,216,255,.23) 1px,transparent 1px);background-size:23px 23px;mask-image:radial-gradient(44% 64% at 77% 45%,#000,transparent 77%);opacity:.34}
+.hero>.hero-copy,.hero>.hero-art{position:relative;z-index:1}
+.hero-copy{max-width:720px}
+.hero .eyebrow{color:#87e0ff}
+.hero h2{max-width:14ch;color:#fff;font-size:clamp(2.4rem,5vw,4.35rem);line-height:.99;letter-spacing:-.055em}
+.hero h2 em{background:linear-gradient(100deg,#7de2ff 4%,#9cf0ea 55%,#d0fa85);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:58ch;color:#d8e9fb;font-size:1.04rem;line-height:1.7}
+.hero-actions{gap:10px}
+.hero .btn{border-color:rgba(220,240,255,.34);background:rgba(255,255,255,.1);color:#f5faff;backdrop-filter:blur(8px)}
+.hero .btn:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.18)}
+.hero .btn-primary{border-color:#08a8ed;background:linear-gradient(120deg,#0878da,#05a9e7);color:#fff;box-shadow:0 8px 24px rgba(0,151,226,.24)}
+.hero .btn-primary:hover{background:linear-gradient(120deg,#0769c2,#058fca)}
+.hero-art{min-height:310px;display:block}
+.hero-art::before,.hero-art::after{position:absolute;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(158,229,255,.5);border-radius:999px;background:rgba(4,24,53,.62);box-shadow:0 10px 28px rgba(0,0,0,.18),inset 0 0 24px rgba(81,208,255,.08);backdrop-filter:blur(12px);color:#e7f8ff;font-weight:850;letter-spacing:.06em}
+.hero-art::before{content:'21 ESPECIES';right:0;bottom:8%;padding:11px 18px;font-size:.78rem}
+.hero-art::after{content:'3D  ·  RA  ·  RV';left:8%;top:16%;padding:10px 15px;font-size:.72rem}
+.hero-meta{display:flex;gap:12px 20px;flex-wrap:wrap;margin-top:22px;color:#d5e7fa;font-size:.86rem;font-weight:700}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta strong{color:#9ae7ff;font-size:1.02rem}
+.landing-info{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.78fr);gap:18px;align-items:stretch;margin:22px 0 28px}
+#como-funciona,#acerca-del-creador,#appTabs{scroll-margin-top:16px}
+.info-panel{min-width:0;padding:clamp(20px,3vw,30px);border:1px solid #d1e3f2;border-radius:25px;background:#fff;box-shadow:0 13px 34px rgba(16,54,91,.08)}
+.how-panel{background:linear-gradient(145deg,#fff 0%,#f4faff 100%)}
+.info-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px}
+.info-heading h2,.creator-heading h2{margin:0;color:#102d4a;font-size:clamp(1.45rem,2.6vw,2rem);line-height:1.1;letter-spacing:-.04em}
+.info-heading p:not(.eyebrow){max-width:60ch;margin:8px 0 0;color:#526e89}
+.guide-badge{flex:none;margin-top:4px;padding:7px 11px;border:1px solid #b9def4;border-radius:999px;background:#e8f6ff;color:#0a639f;font-size:.76rem;font-weight:850;white-space:nowrap}
+.how-steps{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.how-step{display:grid;grid-template-columns:36px minmax(0,1fr);gap:10px;align-items:start;padding:14px;border:1px solid #d9e8f4;border-radius:17px;background:rgba(255,255,255,.86)}
+.step-index{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#0b6bcb,#09a8dc);color:#fff;font-size:.78rem;font-weight:900;box-shadow:0 6px 14px rgba(11,107,203,.18)}
+.how-step h3{margin:1px 0 5px;color:#133553;font-size:.97rem;line-height:1.25}
+.how-step p{margin:0;color:#4b667f;font-size:.84rem;line-height:1.55}
+.guide-note{margin:14px 0 0;padding:11px 13px;border-left:3px solid #13a8d7;border-radius:0 10px 10px 0;background:#eaf7ff;color:#345974;font-size:.82rem;line-height:1.5}
+.creator-panel{position:relative;overflow:hidden;border-color:rgba(120,206,255,.28);background:radial-gradient(80% 65% at 100% 0%,rgba(24,158,220,.3),transparent 65%),linear-gradient(145deg,#071a36,#0b3f73 70%,#07548a);color:#fff}
+.creator-panel::after{position:absolute;right:-72px;bottom:-112px;width:245px;height:245px;border:1px solid rgba(170,229,255,.17);border-radius:50%;content:'';box-shadow:0 0 0 20px rgba(170,229,255,.035),0 0 0 42px rgba(170,229,255,.025)}
+.creator-panel>.eyebrow{color:#89e2ff}
+.creator-heading{position:relative;z-index:1;display:flex;align-items:center;gap:14px;margin:3px 0 18px}
+.creator-monogram{display:grid;place-items:center;width:62px;height:62px;flex:none;border:1px solid rgba(200,240,255,.55);border-radius:50%;background:linear-gradient(145deg,#18a8de,#0c5caa);box-shadow:0 0 0 6px rgba(111,211,255,.1),inset 0 0 20px rgba(255,255,255,.18);color:#fff;font-size:1.2rem;font-weight:900;letter-spacing:.04em}
+.creator-heading h2{color:#fff}
+.creator-name{margin:5px 0 0;color:#a9e6ff;font-size:.94rem;font-weight:800}
+.creator-bio{position:relative;z-index:1;margin:0;color:#e1effc;font-size:.94rem;line-height:1.72}
+.tabs-wrap{z-index:12;margin:18px 0;background:rgba(6,22,48,.96);border:1px solid rgba(136,193,238,.22);border-radius:19px;padding:6px;box-shadow:0 12px 30px rgba(8,36,69,.16);backdrop-filter:blur(12px)}
+.tabs{gap:5px;border:0}
+.tab{min-height:46px;padding:10px 15px;border:1px solid transparent;border-radius:12px;color:#c8dbef}
+.tab:hover{background:rgba(255,255,255,.08);color:#fff}
+.tab[aria-selected="true"]{border:1px solid rgba(174,225,255,.22);background:linear-gradient(120deg,#0a6dca,#078ed5);color:#fff;box-shadow:0 6px 16px rgba(0,118,199,.18)}
+.tab .tab-count{background:rgba(255,255,255,.14);color:#eaf7ff}
+.tab[aria-selected="true"] .tab-count{background:rgba(255,255,255,.2);color:#fff}
+body.high-contrast{background:#fff}
+body.high-contrast .topbar{background:#071a36}
+body.high-contrast .topbar>.shell{border:2px solid #fff;background:#071a36}
+body.high-contrast .tabs-wrap{border:2px solid #000;background:#fff}
+body.high-contrast .tab{color:#000}
+body.high-contrast .tab[aria-selected="true"]{border-color:#000;background:#0047ab;color:#fff}
+body.high-contrast .hero{border:3px solid #fff}
+body.high-contrast .hero .btn{border:2px solid #fff}
+@media(max-width:980px){
+  .landing-info{grid-template-columns:1fr}
+  .creator-panel{min-height:0}
+  .hero{grid-template-columns:minmax(0,1.1fr) minmax(190px,.7fr);min-height:470px}
+  .hero-art{min-height:250px}
+}
+@media(max-width:640px){
+  body{background:linear-gradient(180deg,#071a36 0,#071a36 280px,#edf5fc 280px,#edf5fc 100%)}
+  .shell{width:calc(100% - 24px)}
+  .topbar{padding:10px 0 11px}
+  .topbar>.shell{padding:13px;border-radius:19px}
+  .brand-row{gap:9px}
+  .logo{width:46px;height:46px}
+  .brand-copy h1{font-size:1.12rem}
+  .brand-copy p{font-size:.75rem}
+  .header-actions{gap:6px}
+  .header-actions .btn{min-height:36px;padding:6px 9px;font-size:.82rem}
+  .status-row{gap:6px;margin:10px 0 0}
+  .status{padding:5px 8px;font-size:.72rem}
+  main{padding:18px 0 42px}
+  .hero{grid-template-columns:1fr;min-height:0;padding:26px 20px;border-radius:23px;background-image:linear-gradient(90deg,rgba(4,17,39,.96),rgba(4,17,39,.82)),linear-gradient(0deg,rgba(3,18,40,.2),transparent 43%),url('./landing/faunaxr-hero.webp');background-position:center,center,62% center}
+  .hero h2{max-width:13ch;font-size:clamp(2.25rem,10vw,3.25rem)}
+  .hero p{font-size:.96rem}
+  .hero-art{display:none}
+  .hero-actions{gap:8px}
+  .hero-actions .btn{flex:1 1 145px;min-width:0;padding:9px 10px;font-size:.88rem}
+  .hero-meta{gap:8px 13px;margin-top:16px;font-size:.78rem}
+  .landing-info{gap:13px;margin:16px 0 22px}
+  .info-panel{padding:19px 16px;border-radius:20px}
+  .info-heading{display:block;margin-bottom:14px}
+  .guide-badge{display:inline-flex;margin-top:11px}
+  .how-steps{grid-template-columns:1fr;gap:9px}
+  .how-step{padding:12px}
+  .creator-heading{gap:12px}
+  .creator-monogram{width:54px;height:54px}
+  .creator-bio{font-size:.9rem}
+  .tabs-wrap{margin:14px 0;padding:5px;border-radius:15px}
+  .tab{padding:10px 12px;font-size:.87rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

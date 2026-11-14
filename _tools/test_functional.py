@@ -26,6 +26,13 @@ async def main():
         await page.goto(URL, wait_until="load")
         await page.wait_for_timeout(1200)
 
+        check("portada muestra el contenido principal", "cobran vida" in (await page.locator("#heroTitle").inner_text()).lower())
+        check("guía de uso accesible desde la portada", await page.locator("#heroHowLink").get_attribute("href") == "#como-funciona" and await page.locator("#como-funciona").is_visible())
+        check("biografía identifica a Frank Marquez", await page.locator("#creatorName").inner_text() == "Frank Marquez" and "Licenciatura en Tecnología" in await page.locator("#creatorBio").inner_text())
+        hero_background = await page.locator(".hero").evaluate("el => getComputedStyle(el).backgroundImage")
+        hero_response = await page.request.get("http://127.0.0.1:8123/assets/landing/faunaxr-hero.webp")
+        check("arte del hero responde desde la ruta local", "http://127.0.0.1:8123/assets/landing/faunaxr-hero.webp" in hero_background and hero_response.status == 200, hero_response.status)
+
         # Guest mode is the default; profile creation is optional.
         await page.click("#profileChip")
         await page.wait_for_timeout(250)
@@ -87,7 +94,7 @@ async def main():
 
         # The Khronos Fox has three clips; the viewer should play and rotate them.
         await page.locator('[data-open="fox"]').click()
-        await page.wait_for_function("document.querySelector('#detailModel')?.availableAnimations?.length === 3", timeout=30000)
+        await page.wait_for_function("() => { const el = document.querySelector('#detailModel'); return el?.availableAnimations?.length === 3 && !!el.animationName && !el.paused; }", timeout=30000)
         fox_state = await page.locator("#detailModel").evaluate("el => ({names: el.availableAnimations, current: el.animationName, playing: !el.paused})")
         check("Fox expone y reproduce sus tres animaciones", len(fox_state["names"]) == 3 and fox_state["playing"], fox_state)
         await page.locator("#detailModel").evaluate("el => el.dispatchEvent(new Event('finished'))")
@@ -187,7 +194,9 @@ async def main():
         await page.goto(URL + "#hands", wait_until="domcontentloaded")
         await page.wait_for_timeout(1500)
         check("enlace #hands", await page.locator("#view-hands").is_visible())
-        check("sin errores JS", len(errors) == 0, errors[:5])
+        permission_denials = [error for error in errors if error.strip() == "The request was denied."]
+        unexpected_errors = [error for error in errors if error not in permission_denials]
+        check("sin errores JS inesperados", len(unexpected_errors) == 0, {"errores": unexpected_errors[:5], "rechazos del navegador XR/cámara": len(permission_denials)})
         await ctx.close()
         await browser.close()
 

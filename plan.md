@@ -12,11 +12,15 @@ El quiz aplica Fisher–Yates al render y calcula el índice correcto en el obje
 
 Pato y zorro se verificaron contra las fichas primarias del repositorio Khronos glTF Sample Assets. Sus autorías, licencias, atribuciones y enlaces se muestran en catálogo/archivo local/README. El origen y licencia del GLB Scratch Cat no se encontraron en el ZIP; se documenta la incertidumbre y el riesgo de marca, sin presentar los términos generales de Scratch como licencia del GLB.
 
-Los siete modelos grandes se optimizaron con glTF Transform, compresión Draco, texturas WebP a un máximo de 1024 px y validación glTF. Los decodificadores son locales. La versión `faunaxr-offline-v42` separa el shell tolerante a fallos de `faunaxr-models-v1`; el usuario decide descargar los 21 modelos, con progreso, estimación de espacio y distintivo por animal. MediaPipe se carga bajo demanda. La limpieza elimina referencias obsoletas de audio y servicios legacy de este paquete.
+Los siete modelos grandes se optimizaron con glTF Transform, compresión Draco, texturas WebP a un máximo de 1024 px y validación glTF. Los decodificadores son locales. La versión `faunaxr-offline-v43` separa el shell tolerante a fallos de `faunaxr-models-v1`; el usuario decide descargar los 21 modelos, con progreso, estimación de espacio y distintivo por animal. MediaPipe se carga bajo demanda. La limpieza elimina referencias obsoletas de audio y servicios legacy de este paquete.
+
+## Experiencia de inicio
+
+La portada adopta la paleta azul/cian y la composición inmersiva de la referencia del usuario. El arte panorámico y la hoja `assets/landing.css` son recursos locales; el service worker los incluye en el shell para conservar la portada offline. La guía explica galería 3D, aprendizaje, RA, RV, gestos, modelos GLB y descarga offline. La sección «Acerca del creador» muestra la biografía proporcionada para Frank Marquez. Los botones del hero siguen abriendo las mismas pestañas existentes.
 
 ## Verificación
 
-Las pruebas Playwright usan Chromium/SwiftShader y cámara simulada. Cubren galería, perfiles, subida GLB, apertura de modelos Draco, las tres animaciones Fox, operación del quiz, unicidad de IDs, registro/caché del service worker, carga offline y RA por cámara con seguimiento compartido de manos en RA/RV en pantalla. No verifican RA nativa ni sesión WebXR de visor físico.
+Las pruebas Playwright usan Chromium/SwiftShader y cámara simulada. Cubren portada, guía, biografía, galería, perfiles, subida GLB, apertura de modelos Draco, las tres animaciones Fox, operación del quiz, unicidad de IDs, registro/caché del service worker, carga offline y RA por cámara con seguimiento compartido de manos en RA/RV en pantalla. No verifican RA nativa ni sesión WebXR de visor físico.
 
 ## Dependencias, límites y siguientes pasos
 

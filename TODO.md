@@ -8,10 +8,11 @@
 - Créditos comprobados de Duck y Fox de Khronos en el catálogo, archivos de licencia y README; tres animaciones de Fox usadas secuencialmente en los visores.
 - Nota explícita del GLB Scratch Cat: la fuente/licencia exacta no está en el ZIP, Scratch Cat es marca registrada; candidato genérico CC0 documentado sin sustitución no aprobada.
 - Siete GLB mayores de 4 MB optimizados a Draco/WebP, con texturas limitadas a 1024 × 1024; decodificadores locales y archivos originales preservados fuera del paquete.
-- Service worker `faunaxr-offline-v42`: instalación tolerante a fallos, MediaPipe bajo demanda, botón de descarga offline para los 21 modelos, progreso, estimación de espacio y estado por animal; retirado el manejo de audio.
+- Service worker `faunaxr-offline-v43`: instalación tolerante a fallos, MediaPipe bajo demanda, botón de descarga offline para los 21 modelos, progreso, estimación de espacio y estado por animal; portada y guía local precargadas; retirado el manejo de audio.
 - Etiquetas Open Graph/Twitter y depuración de archivos obsoletos del ZIP final.
 - RA: el botón principal intenta RA nativa y, si no está disponible, abre la superposición por cámara. «Activar manos» respeta consentimiento, comparte una sola cámara y dirige los gestos a RA/RV en pantalla. La superposición no ancla el modelo a una superficie.
 - Documentación coherente en README, guía offline, galería, plan y notas técnicas; regresión de navegador para RA/manos/RV.
+- Portada rediseñada según la referencia: hero azul/cian con ilustración local, responsive y compatible con el PWA offline; guía «Cómo funciona» con instrucciones para 3D, aprendizaje, RA, RV, gestos, modelos GLB y modo sin conexión; «Acerca del creador» con la biografía proporcionada de Frank Marquez. Los CTA siguen conectados a las pestañas existentes y el service worker precarga los recursos de portada en v43.
 
 ## Pendiente
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#07544D">
+  <meta name="theme-color" content="#071A36">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="./manifest.webmanifest">
@@ -455,6 +455,7 @@
     @media(max-width:640px){.vr-fullscreen-controls{left:8px;right:8px;bottom:8px;transform:none;width:auto;max-width:none;gap:4px;padding:6px}.vr-fullscreen-controls .btn{min-height:38px;padding:6px 8px;font-size:.76rem}.vr-fullscreen-controls select{max-width:none;height:38px;padding:0 4px;font-size:.78rem}.vr-fs-exit{top:8px;right:8px;padding:8px;font-size:.76rem}}
     @media(max-width:640px){.learn-grid{grid-template-columns:1fr 1fr;gap:9px}.learn-card{padding:12px}.learn-card .btn{width:100%}.ar-screen-toolbar{left:8px;right:8px;top:8px;padding:6px}.ar-screen-toolbar select{font-size:.83rem}.ar-screen.is-live .ar-screen-tag{display:none}.quiz-card{padding:14px}}
   </style>
+  <link rel="stylesheet" href="./assets/landing.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido principal</a>
@@ -547,30 +548,65 @@
 
   <main id="main" class="shell">
     <!-- ===== Hero ===== -->
-    <section class="hero" aria-labelledby="heroTitle">
-      <div>
-        <p class="eyebrow">Explora · Coloca · Controla</p>
-        <h2 id="heroTitle">Tus modelos 3D <em>salen de la pantalla</em></h2>
-        <p>Gira cada modelo en 3D, colócalo en tu espacio con realidad aumentada, recorre el museo en realidad virtual y muévelo con las manos usando la cámara. También puedes subir tu propio archivo GLB.</p>
+    <section id="inicio" class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">Explora · Aprende · Vive la fauna</p>
+        <h2 id="heroTitle">Los animales <em>cobran vida</em> frente a ti</h2>
+        <p>Descubre 21 especies en 3D, aprende con actividades interactivas y llévalas a tu espacio con realidad aumentada. También puedes explorar la sala virtual, usar tus manos o subir tus propios modelos.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary" id="heroGalleryBtn" type="button">Abrir la galería</button>
+          <button class="btn btn-primary" id="heroGalleryBtn" type="button">Explorar la galería</button>
+          <a class="btn btn-soft" id="heroHowLink" href="#como-funciona">Ver cómo funciona</a>
           <button class="btn" id="heroHandsBtn" type="button">Activar manos</button>
           <button class="btn btn-soft" id="heroUploadBtn" type="button">Subir un GLB</button>
         </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="holo-ring"></div>
-        <div class="holo-ring two"></div>
-        <div class="cube3d">
-          <div class="cube-face cf-front">3D</div>
-          <div class="cube-face cf-back">RA</div>
-          <div class="cube-face cf-right">RV</div>
-          <div class="cube-face cf-left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13V6.5a1.5 1.5 0 0 1 3 0V12M11 12V4.5a1.5 1.5 0 0 1 3 0V12M14 12V6a1.5 1.5 0 0 1 3 0v8a5 5 0 0 1-5 5h-1c-2 0-3-1-4-3l-2-4a1.5 1.5 0 0 1 2.5-1.6L8 13"/></svg></div>
-          <div class="cube-face cf-top">GLB</div>
-          <div class="cube-face cf-bottom">XR</div>
+        <div class="hero-meta" aria-label="Características de FaunaXR">
+          <span><strong>21</strong> animales para explorar</span>
+          <span>3D · RA · RV · Control con manos</span>
         </div>
-        <span class="cube-caption">Seis caras · cuatro formas de explorar</span>
       </div>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== Guía y creador ===== -->
+    <section class="landing-info" aria-label="Guía de uso y creador de FaunaXR">
+      <section id="como-funciona" class="info-panel how-panel" aria-labelledby="howTitle">
+        <div class="info-heading">
+          <div>
+            <p class="eyebrow">Tu guía para comenzar</p>
+            <h2 id="howTitle">¿Cómo funciona FaunaXR?</h2>
+            <p>Elige una experiencia, explora a tu ritmo y aprende haciendo. Tus datos y modelos propios permanecen en este dispositivo.</p>
+          </div>
+          <span class="guide-badge">4 formas de explorar</span>
+        </div>
+        <div class="how-steps">
+          <article class="how-step">
+            <span class="step-index" aria-hidden="true">01</span>
+            <div><h3>Explora y aprende</h3><p>En Galería 3D busca un animal o filtra por categoría. Abre su ficha, arrastra para girarlo y pellizca o usa la rueda para acercarte. En Aprende encontrarás información y un quiz.</p></div>
+          </article>
+          <article class="how-step">
+            <span class="step-index" aria-hidden="true">02</span>
+            <div><h3>Llévalo a tu espacio</h3><p>En una ficha elige «Ver en RA». Si tu equipo no admite RA nativa, prueba «RA en pantalla» y permite el acceso a la cámara. Este modo superpone el modelo a la imagen de cámara, sin anclarlo a una superficie.</p></div>
+          </article>
+          <article class="how-step">
+            <span class="step-index" aria-hidden="true">03</span>
+            <div><h3>Usa tus manos o entra a la sala</h3><p>Activa Manos y acepta la cámara: pellizca y arrastra para girar, usa dos pellizcos para acercar. En RA, mantén el puño cerrado y mueve la mano para desplazar el modelo. Pulgar arriba marca favoritos y la palma abierta controla la rotación. En Sala RV puedes usar visor WebXR o, sin visor, arrastrar y moverte con W A S D.</p></div>
+          </article>
+          <article class="how-step">
+            <span class="step-index" aria-hidden="true">04</span>
+            <div><h3>Sube modelos y continúa sin conexión</h3><p>En Mis modelos carga archivos GLB de hasta 60 MB; se guardan solo en este navegador. En la galería usa «Descargar para uso sin conexión» para conservar los 21 modelos en este dispositivo.</p></div>
+          </article>
+        </div>
+        <p class="guide-note">La cámara, la RA nativa y WebXR requieren permiso y un sitio seguro (HTTPS o localhost). El video de los gestos se procesa en el dispositivo y no se graba ni se sube.</p>
+      </section>
+
+      <section id="acerca-del-creador" class="info-panel creator-panel" aria-labelledby="creatorTitle">
+        <p class="eyebrow">La persona detrás del proyecto</p>
+        <div class="creator-heading">
+          <span class="creator-monogram" aria-hidden="true">FM</span>
+          <div><h2 id="creatorTitle">Acerca del creador</h2><p class="creator-name" id="creatorName">Frank Marquez</p></div>
+        </div>
+        <p class="creator-bio" id="creatorBio">Creador del proyecto y estudiante de Licenciatura en Tecnología (Universidad del Magdalena). Originario de San Juan de Palos Prietos (La Montaña), Puebloviejo. Apasionado por la electrónica, la resolución de problemas y el diseño de experiencias educativas interactivas. A través de esta web sobre animales, busco transformar la tecnología en una herramienta de aprendizaje autónomo y fortalecer competencias digitales más allá del uso recreativo. Guiado por la transparencia y la empatía, con mi madre y mis dos hermanas mayores como principal motor.</p>
+      </section>
     </section>
 
     <!-- ===== Perfil activo ===== -->
@@ -589,7 +625,7 @@
     </section>
 
     <!-- ===== Pestañas ===== -->
-    <nav class="tabs-wrap" aria-label="Secciones de la galería">
+    <nav id="appTabs" class="tabs-wrap" aria-label="Secciones de la galería">
       <div class="tabs" role="tablist" aria-label="Experiencias de FaunaXR Galería XR">
         <button class="tab" id="tab-gallery" role="tab" aria-selected="true" aria-controls="view-gallery" tabindex="0" data-tab="gallery">Galería 3D</button>
         <button class="tab" id="tab-learn" role="tab" aria-selected="false" aria-controls="view-learn" tabindex="-1" data-tab="learn">Aprende</button>
@@ -3463,9 +3499,16 @@
     }
 
     function initHero() {
-      $('#heroGalleryBtn').addEventListener('click', () => selectTab('gallery'));
-      $('#heroHandsBtn').addEventListener('click', () => selectTab('hands'));
-      $('#heroUploadBtn').addEventListener('click', () => selectTab('upload'));
+      const openExperience = (tab) => {
+        selectTab(tab, { scroll: false });
+        $('#appTabs').scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
+      };
+      $('#heroGalleryBtn').addEventListener('click', () => openExperience('gallery'));
+      $('#heroHandsBtn').addEventListener('click', () => openExperience('hands'));
+      $('#heroUploadBtn').addEventListener('click', () => openExperience('upload'));
     }
 
     /* ============================================================

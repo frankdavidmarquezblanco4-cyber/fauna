@@ -1,7 +1,7 @@
-/* FaunaXR · PWA offline — shell v42, modelos bajo demanda */
+/* FaunaXR · PWA offline — shell v43, modelos bajo demanda */
 'use strict';
 
-const CACHE_NAME = 'faunaxr-offline-v42';
+const CACHE_NAME = 'faunaxr-offline-v43';
 const MODEL_CACHE_NAME = 'faunaxr-models-v1';
 
 // Shell pequeño y necesario para abrir la app. Cada recurso se intenta por separado:
@@ -10,6 +10,8 @@ const APP_SHELL_CRITICAL = [
   './',
   './index.html',
   './galeria-xr.html',
+  './assets/landing.css',
+  './assets/landing/faunaxr-hero.webp',
   './manifest.webmanifest',
   './assets/data/fauna-learning.es.json',
   './assets/pwa/icon-192.png',

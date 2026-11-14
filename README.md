@@ -43,7 +43,8 @@ Los scripts usan Playwright/Chromium con SwiftShader y cámara simulada; sus res
 ## Archivos principales
 
 - `galeria-xr.html`: catálogo, quizzes, visores, cámara, perfiles y descarga offline.
-- `service-worker.js`: shell `faunaxr-offline-v42` y caché separada de modelos.
+- `assets/landing.css` y `assets/landing/faunaxr-hero.webp`: portada y guía de uso responsive, incluidas en el shell offline.
+- `service-worker.js`: shell `faunaxr-offline-v43` y caché separada de modelos.
 - `assets/data/fauna-learning.es.json`: teoría, fuentes y quizzes.
 - `assets/models/`: GLB, miniaturas y avisos de licencia.
 - `assets/vendor/draco/`: decodificadores locales con licencia Apache 2.0.

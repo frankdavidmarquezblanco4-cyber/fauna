@@ -12,7 +12,7 @@ Los 13 modelos salvajes son CC0 de Grab3D; la lista de archivos y URLs está en 
 
 ## PWA/offline
 
-`service-worker.js` usa `faunaxr-offline-v42` para shell y `faunaxr-models-v1` para los GLB bajo demanda. Los 21 modelos suman 13.13 MB decimales (12.52 MiB). La instalación usa `Promise.allSettled`; los binarios y tarea de MediaPipe se cachean al primer uso. El indicador de tarjetas consulta únicamente la caché de modelos. No hay branch de audio/HEAD/206.
+`service-worker.js` usa `faunaxr-offline-v43` para shell y `faunaxr-models-v1` para los GLB bajo demanda. Los 21 modelos suman 13.13 MB decimales (12.52 MiB). La instalación usa `Promise.allSettled`; hoja de estilos e ilustración del hero se precargan, mientras los binarios y la tarea de MediaPipe se cachean al primer uso. El indicador de tarjetas consulta únicamente la caché de modelos. No hay branch de audio/HEAD/206.
 
 ## Pruebas y herramientas
 
