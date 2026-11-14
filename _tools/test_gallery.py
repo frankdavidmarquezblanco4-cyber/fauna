@@ -1,10 +1,14 @@
 import asyncio, os
+from pathlib import Path
 from playwright.async_api import async_playwright
 
 URL = "http://127.0.0.1:8123/galeria-xr.html"
-SHOTS = "/home/ubuntu/upload/scratchxr/shots"
+ROOT = Path(__file__).resolve().parents[1]
+SHOTS = "/tmp/faunaxr-test-output"
 
 async def profile(page):
+    if not await page.locator("#accessGate").is_visible():
+        await page.click("#profileChip")
     await page.fill("#accessNickname", "Luna")
     await page.select_option("#accessGrade", "6")
     await page.check("#accessConsent")
@@ -50,31 +54,35 @@ async def main():
         await page.wait_for_timeout(2500)
         await page.screenshot(path=f"{SHOTS}/04b-ar-screen.png")
         await page.click("#arScreenStop")
-        # VR
-        await page.click("#tab-vr")
-        await page.wait_for_timeout(9000)
-        print("vr pedestals:", await page.locator(".pedestal").count())
-        await page.screenshot(path=f"{SHOTS}/05-vr.png")
-        # Hands with fake camera
+        # Hands with fake camera, before WebGL VR is mounted.
         await page.click("#tab-hands")
         await page.wait_for_timeout(800)
         await page.check("#handsConsent")
         await page.click("#handsStartBtn")
         for _ in range(15):
             await page.wait_for_timeout(1000)
-            badge = await page.locator("#handsBadge").inner_text()
-            if "activa" in badge:
+            if not await page.locator("#handsBadge").count():
                 break
-        print("hands badge:", await page.locator("#handsBadge").inner_text())
-        print("hands notice:", await page.locator("#handsNotice").inner_text())
-        print("fps:", await page.locator("#fpsNow").inner_text())
-        await page.screenshot(path=f"{SHOTS}/06-hands.png")
-        await page.click("#handsStopBtn")
+            badge = await page.locator("#handsBadge").inner_text()
+            if "activa" in badge.lower():
+                break
+        if await page.locator("#handsBadge").count():
+            print("hands badge:", await page.locator("#handsBadge").inner_text())
+            print("hands notice:", await page.locator("#handsNotice").inner_text())
+            print("fps:", await page.locator("#fpsNow").inner_text())
+            await page.screenshot(path=f"{SHOTS}/05-hands.png")
+            if await page.locator("#handsStopBtn").is_enabled():
+                await page.click("#handsStopBtn")
         await page.wait_for_timeout(500)
+        # VR
+        await page.click("#tab-vr")
+        await page.wait_for_timeout(9000)
+        print("vr pedestals:", await page.locator(".pedestal").count())
+        await page.screenshot(path=f"{SHOTS}/06-vr.png")
         # Upload
         await page.click("#tab-upload")
         await page.wait_for_timeout(500)
-        await page.set_input_files("#fileInput", "/home/ubuntu/upload/scratchxr/scratchxr-lab/assets/models/Duck.glb")
+        await page.set_input_files("#fileInput", str(ROOT / "assets/models/Duck.glb"))
         await page.wait_for_timeout(2500)
         print("uploads:", await page.locator(".upload-item").count())
         print("thumb after capture:", await page.evaluate("window.SXR.uploads.map(u=>({name:u.name,thumb:!!u.thumb}))"))

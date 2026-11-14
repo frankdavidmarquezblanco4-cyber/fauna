@@ -1,0 +1,9 @@
+# Nota de derechos: `scratch-cat.glb`
+
+- El catálogo contiene un modelo que representa el personaje **Scratch Cat**. El ZIP original no identifica autor del archivo 3D, URL de descarga ni licencia específica del GLB; por eso esos datos no se atribuyen ni se inventan aquí.
+- Los términos oficiales de Scratch indican que **Scratch Cat y el nombre/logo Scratch son marcas registradas de Scratch Team**. La licencia CC BY-SA 2.0 descrita para algunos materiales de apoyo o contenido compartido en Scratch no prueba por sí sola que este GLB particular esté cubierto por esa licencia.
+- Fuente oficial para las marcas y materiales de Scratch: https://scratch.mit.edu/terms_of_use (secciones 5.1–5.5). Esta referencia **no sustituye la licencia que debería acompañar al archivo 3D**.
+- Riesgo: al publicar o redistribuir este GLB, la autoría y los derechos de copyright del modelo específico quedan sin verificar; además, el uso de un personaje/marca reconocible puede sugerir asociación o respaldo. Evita utilizar el nombre, logo o personaje para promocionar un producto sin autorización.
+- Recomendación: sustituirlo antes de una redistribución pública o comercial por un gato genérico cuya ficha y licencia CC0 correspondan exactamente al archivo descargado. Candidato verificado: “Standing cat”, Innerscene, descarga GLB de 4,7 MB, dedicado al dominio público CC0 1.0: https://www.innerscene.com/tools/library/3d-parts/standing-cat-cda42538. La ficha ofrece descarga y declara modelo original de Innerscene; su disponibilidad indicada es hasta 2031-10-05. No se reemplazó automáticamente porque es una sustitución visual que conviene revisar en la app.
+
+Esta nota es un registro de procedencia y no constituye asesoría legal.

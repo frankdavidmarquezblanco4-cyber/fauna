@@ -1,19 +1,19 @@
-# Notas técnicas de Galería XR
+# Notas técnicas de FaunaXR
 
-La página `galeria-xr.html` reutiliza `assets/vendor` (model-viewer 4, A-Frame 1.7 y MediaPipe Vision). El catálogo contiene gato, cachorro, conejo, gallina, vaca y caballo. Las miniaturas de `_tools/shoot.py` se renderizan desde los GLB a 1500×1125 WebP y también se embeben en el HTML como respaldo, por lo que las imágenes permanecen visibles aunque falten archivos de miniaturas.
+`galeria-xr.html` es la página PWA principal. El catálogo contiene 21 modelos: gato, pato, zorro, cachorro, conejo, gallina, vaca, caballo, león, tigre blanco, lobo, elefante, jirafa, rinoceronte, panda, tiburón blanco, oso, cocodrilo, gorila, cebra y guepardo. Se usan las bibliotecas locales `model-viewer` 4.0.0, A-Frame 1.7.0 y MediaPipe Vision.
 
-## Modelos y licencias
-- Gato Scratch — Scratch Foundation; uso educativo: https://scratch.mit.edu/terms_of_use
-- Cachorro bernés — Grab3D, CC0 1.0; modelo asistido por IA: https://grab3d.com/models/animals/puppy/ (licencia local `assets/models/puppy-LICENSE.txt`).
-- Conejo low-poly — Grab3D, CC0 1.0; modelo asistido por IA: https://grab3d.com/models/animals/low-poly-rabbit/ (licencia local `assets/models/low-poly-rabbit-LICENSE.txt`).
-- Gallina low-poly — Grab3D, CC0 1.0; modelo asistido por IA: https://grab3d.com/models/animals/low-poly-chicken/ (licencia local `assets/models/low-poly-chicken-LICENSE.txt`).
-- Vaca low-poly — Grab3D, CC0 1.0; modelo asistido por IA: https://grab3d.com/models/animals/low-poly-cow/ (licencia local `assets/models/low-poly-cow-LICENSE.txt`).
-- Caballo low-poly — Grab3D, CC0 1.0; modelo asistido por IA: https://grab3d.com/models/animals/low-poly-horse/ (licencia local `assets/models/low-poly-horse-LICENSE.txt`).
+## Origen/licencias
 
-## Miniaturas y pruebas
+Los 13 modelos salvajes son CC0 de Grab3D; la lista de archivos y URLs está en `assets/models/WILD-MODELS-LICENSES.txt`. Cachorro, conejo, gallina, vaca y caballo tienen avisos individuales en `assets/models/*-LICENSE.txt`. Duck es copyright © 2006 Sony bajo SCEA Shared Source License 1.0. Fox combina el modelo CC0 de PixelMannen con rig/animación de tomkranis y conversión glTF de @AsoboStudio/@scurest bajo CC BY 4.0. Los créditos completos están en `assets/models/DUCK-FOX-LICENSES.txt` y se reflejan en `MODELS`. El GLB Scratch Cat no identifica origen/licencia del archivo específico; los términos Scratch no lo sustituyen y Scratch Cat es una marca. Ver `assets/models/scratch-cat-LICENSE.txt`.
 
-Las miniaturas se generan con `_tools/poster.html` y `_tools/shoot.py` (Playwright y Chromium con SwiftShader). `test_functional.py`, `test_gallery.py` y `test_profiles_offline.py` ejercitan galería, filtros, RA, RV, cámara simulada, GLB, perfiles y modo offline. Para ejecutarlos, inicia `python3 -m http.server 8123` en la raíz del proyecto.
+## Rendimiento y decodificadores
 
-## Almacenamiento y offline
+`Puppy.glb`, `wild-tiger.glb`, `wild-crocodile.glb`, `wild-cheetah.glb`, `wild-gorilla.glb`, `wild-giraffe.glb` y `wild-zebra.glb` se procesaron con glTF Transform 4.5.0: Draco, WebP y límite de textura 1024 × 1024. Los resultados validados se usan en el paquete. Decodificadores de navegador Draco de upstream Three.js/Google están en `assets/vendor/draco/` con Apache 2.0; el paquete no requiere instalación de npm al ejecutarse. Los GLB fuente originales se preservaron fuera del ZIP final.
 
-Perfil local en `localStorage` (`sxrGallery.v1`) y GLB propios en IndexedDB (`sxrGallery/models`). Los IDs retirados del catálogo se limpian de favoritos y modelos vistos antiguos, sin borrar el resto de los perfiles. El service worker se actualizó a `scratchxr-offline-v29`; precarga las miniaturas y los modelos pequeños. El cachorro (`Puppy.glb`, ~14 MB) se descarga y almacena en caché cuando se abre por primera vez, para no hacer pesada la instalación inicial.
+## PWA/offline
+
+`service-worker.js` usa `faunaxr-offline-v41` para shell y `faunaxr-models-v1` para los GLB bajo demanda. Los 21 modelos suman 13.13 MB decimales (12.52 MiB). La instalación usa `Promise.allSettled`; los binarios y tarea de MediaPipe se cachean al primer uso. El indicador de tarjetas consulta únicamente la caché de modelos. No hay branch de audio/HEAD/206.
+
+## Pruebas y herramientas
+
+La portada de miniaturas se genera con `_tools/poster.html` y `_tools/shoot.py` (Playwright/Chromium + SwiftShader). Ejecutar `python3 -m http.server 8123` y, desde la raíz, los scripts `python3 _tools/test_functional.py`, `test_gallery.py`, `test_profiles_offline.py` y `test_quiz_and_ids.py`. Los archivos de captura se escriben en `/tmp/faunaxr-test-output`, no en el paquete.

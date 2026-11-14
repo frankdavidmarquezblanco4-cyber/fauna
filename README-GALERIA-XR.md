@@ -1,33 +1,25 @@
-# FaunaXR · Galería de animales 3D
+# FaunaXR · Guía de galería
 
-FaunaXR es una aplicación web progresiva instalable para explorar animales domésticos y salvajes. Abre directamente sin registro; los perfiles locales son opcionales. Incluye favoritos, búsqueda, visores 3D, realidad aumentada, sala de RV, controles gestuales opcionales con cámara y carga de modelos GLB personales.
+FaunaXR es una aplicación web progresiva instalable para explorar 21 animales y tus modelos GLB en 3D, RA, sala RV y control gestual opcional. Funciona sin cuenta; perfiles, favoritos y archivos propios permanecen en el dispositivo.
 
-## Instalación como app
+## Empezar e instalar
 
-Sirve o publica la carpeta completa en HTTPS. En computadora, pulsa **Instalar app** en el encabezado si el navegador ofrece instalación. En Android, Chrome → menú ⋮ → **Instalar app** o **Agregar a pantalla principal**. En iPhone/iPad, abre FaunaXR en Safari → Compartir → **Agregar a pantalla de inicio**. Para probar en local, ejecuta `python3 -m http.server 8000` y abre `http://localhost:8000/`.
+Prueba en local con `python3 -m http.server 8000` y abre `http://localhost:8000/`. Para instalarla en computadora, Android o iPhone/iPad, publica primero en HTTPS y usa la opción **Instalar app** del navegador o **Compartir → Agregar a pantalla de inicio**. No hay publicación activa asociada a este paquete.
 
-## Colección y permisos
+## Galería y modo sin conexión
 
-La colección incorpora animales de casa y granja además de 13 especies salvajes: león, tigre blanco, lobo, elefante, jirafa, rinoceronte, panda, tiburón blanco, oso, cocodrilo, gorila, cebra y guepardo. Los nuevos modelos se redistribuyen bajo CC0 1.0; la lista de fuentes figura en `assets/models/WILD-MODELS-LICENSES.txt`. No se incluyó puma porque no quedó confirmada una descarga GLB redistribuible con licencia verificable.
+Busca animales y filtra por categoría. **Aprende** ofrece teoría con fuentes y diez preguntas autocorregibles por animal; cada render baraja el orden de respuestas y conserva la respuesta correcta, su explicación y la fuente asociadas.
 
-## Controles de RV
+**Descargar para uso sin conexión** guarda los 21 modelos del catálogo uno a uno. La página avisa del tamaño y del espacio aproximado informado por el navegador, muestra una barra de progreso y etiqueta cada tarjeta como **Offline listo** o **Solo en línea**. La descarga completa actual ronda 12,5 MiB. Si un modelo falla, queda indicado para reintentar. La caché persiste entre actualizaciones normales de la app, aunque el navegador puede borrarla si necesita espacio.
 
-En **Sala RV**, al entrar en **Pantalla completa**, usa los controles integrados: **Anterior**, el selector **Animal al frente** y **Siguiente**. También aparecen si el navegador no permite la pantalla completa nativa y se ajustan a pantallas estrechas. Cambiar de animal elimina los avisos superpuestos; además, no aparecen avisos durante la pantalla completa ni las sesiones inmersivas. En visor WebXR, los botones virtuales **ANTERIOR** y **SIGUIENTE** están frente a la cámara; apunta y pulsa con el controlador. Los pedestales también se pueden seleccionar con el puntero/control.
+## RA, RV y cámara
 
-El selector incluye las 21 especies de la galería y los diseños GLB cargados en **Mis modelos**. Si agregas o borras un GLB, la sala se reconstruye con la colección actual al volver a ella.
+En RA nativa, la colocación espacial depende de un dispositivo y navegador compatibles. **RA en pantalla** superpone el modelo a la imagen de cámara, pero no lo ancla a una superficie. Se requiere permiso de cámara y HTTPS o `localhost`; al salir o cambiar de pestaña, se detiene el video. El control de manos es opcional y procesa la cámara localmente.
 
-## Aprende
+En **Sala RV**, **Pantalla completa** funciona como alternativa cuando no hay visor WebXR. Para inmersión WebXR hace falta un visor físico compatible. En el zorro, los ciclos Survey, Walk y Run se reproducen secuencialmente en los visores; cada clip se ejecuta de a uno, como recomienda la ficha Khronos.
 
-La pestaña **Aprende** contiene teoría, fuentes enlazadas y un quiz autocorregible de diez preguntas para cada uno de los 21 animales. Cada pregunta ofrece tres opciones, explicación al responder y un enlace a su fuente. La ficha del león añade cinco datos curiosos. El contenido está guardado en `assets/data/fauna-learning.es.json` y se incluye en la caché offline.
+## Licencias y datos
 
-## Realidad aumentada con cámara
+Las fichas de los modelos enlazan licencia y fuente cuando se conoce. Pato y zorro tienen créditos oficiales en `assets/models/DUCK-FOX-LICENSES.txt`. El gato Scratch del ZIP no lleva origen ni licencia específica del GLB, y Scratch Cat es marca registrada; revisa `assets/models/scratch-cat-LICENSE.txt`. Antes de redistribución pública/comercial se recomienda un gato genérico CC0 con procedencia comprobable. No se añadió un puma sin una descarga GLB y licencia verificables.
 
-Desde una tarjeta de la galería o un modelo propio, pulsa **RA** para abrir la cámara y proyectar el diseño seleccionado. El selector dentro de la vista permite cambiar entre animales y GLB propios mientras la cámara está activa. En móviles, la vista en vivo ocupa más altura para que el modelo se vea con mayor claridad; los avisos se silencian. Al salir de RA, cambiar de pestaña o enviar la app a segundo plano, la cámara se detiene. Este modo superpone el diseño a la imagen de cámara, pero no lo ancla espacialmente; requiere permiso de cámara y HTTPS o `localhost`.
-
-## Modelos propios y privacidad
-
-En **Mis modelos**, sube GLB glTF 2.0 de hasta 60 MB, con texturas/recursos incluidos en el archivo; no sirven modelos `.gltf` que dependan de archivos externos. Si uno falla al abrirse en RA o manos, el mensaje junto al visor indicará volver a exportarlo con los recursos integrados o elegir otro animal. La página guarda los archivos válidos en IndexedDB del mismo navegador. Puedes explorar y guardar favoritos sin crear perfil; los perfiles y datos locales no se suben ni sincronizan. La cámara requiere HTTPS o localhost y permiso del navegador; el video de control gestual se procesa localmente.
-
-## Licencias y estructura
-
-Los modelos salvajes descargados de Grab3D tienen licencia CC0 1.0, indicada en sus páginas y catalogada en `assets/models/WILD-MODELS-LICENSES.txt`. Se conserva la atribución por trazabilidad. El pato y el zorro que ya venían en el ZIP tienen origen/licencia por verificar antes de redistribuirse por separado; sus fichas lo indican. El gato conserva sus términos de uso originales. El proyecto incluye bibliotecas locales A-Frame, model-viewer y MediaPipe con sus avisos de licencia.
+Los GLB propios y perfiles permanecen en el almacenamiento del mismo navegador; no se sincronizan entre dispositivos. Para cuota, cachés y guía de hosting HTTPS, consulta `PWA_OFFLINE.md`.

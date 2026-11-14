@@ -1,33 +1,21 @@
-# FaunaXR sin conexión (PWA)
+# FaunaXR sin conexión
 
-## Uso inicial
+FaunaXR es una PWA estática. El shell usa la caché `faunaxr-offline-v41`; los modelos descargados a petición se guardan por separado en `faunaxr-models-v1` y sobreviven a una actualización del shell.
 
-La instalación y la primera preparación requieren conexión. Abre FaunaXR bajo HTTPS (o `http://localhost`), espera a que aparezca **Modo sin conexión preparado** y luego instala desde el navegador. En Chrome/Edge se puede usar **Instalar app**; en Safari/iPadOS, **Compartir → Añadir a pantalla de inicio**. La galería se puede explorar sin crear perfil; los perfiles son opcionales. El navegador puede solicitar permiso de almacenamiento.
+## Preparación
 
-## Qué funciona offline
+Abre la app una vez con conexión bajo HTTPS o `localhost`. En la instalación, el service worker intenta guardar por separado la página, manifiesto, JSON educativo, iconos, miniaturas, bibliotecas locales, fuente A-Frame y decodificador Draco. Usa `Promise.allSettled`, de modo que un recurso aislado que falte no cancele la instalación.
 
-- Galería, fichas de animales, búsqueda y preferencias locales.
-- Favoritos y visitas guardados en el dispositivo incluso sin crear perfil.
-- Las teorías y quizzes de diez preguntas para cada uno de los 21 animales, incluidos en la caché inicial de la PWA.
-- Modelos y miniaturas que ya se hayan descargado o abierto previamente.
-- Sala de RV en pantalla; la sesión inmersiva necesita un visor y WebXR compatible.
-- Control de manos cuando MediaPipe y la cámara están disponibles. El video se procesa localmente y no se graba ni se envía.
+No se precargan los 21 GLB ni los binarios/tarea de MediaPipe en el shell. MediaPipe se descarga y cachea oportunistamente cuando se usa por primera vez; sus errores no impiden navegar. Los GLB solo se guardan al pulsar **Descargar para uso sin conexión**, uno por uno. El progreso y el estado por animal aparecen en la galería como **Offline listo** o **Solo en línea**. Abrir un modelo mientras hay conexión no añade en secreto su GLB a la caché offline.
 
-## Qué requiere conexión o compatibilidad
+La descarga completa actual es de alrededor de **12,5 MiB** (21 archivos). El panel calcula el total desde los GLB incluidos y muestra la estimación de espacio disponible que expone el navegador, si la hay. Son cifras aproximadas: el navegador puede imponer cuota o eliminar almacenamiento bajo presión. Los modelos que fallen se enumeran para que puedas volver a intentar la descarga. Los GLB propios siguen guardados en IndexedDB y no forman parte de este botón.
 
-- La instalación y la preparación inicial de la PWA.
-- Descargar una versión nueva del sitio o modelos remotos que aún no estén en caché.
-- La RA nativa necesita un navegador/dispositivo compatible (por ejemplo, Chrome Android con ARCore o Safari en dispositivos Apple). **RA en pantalla** usa la cámara como alternativa, pero no ancla el modelo a una superficie.
-- RV inmersiva requiere HTTPS, un navegador con WebXR y un visor compatible. Sin esos elementos sigue disponible la sala en pantalla completa con controles.
+## Estrategia
 
-El sitio es una PWA estática: no crea solicitudes de aula, no consulta decisiones docentes y no sincroniza perfiles, favoritos, avances ni modelos con Supabase.
+La navegación es de red primero con una copia cacheada de respaldo. Los recursos estáticos se sirven desde caché primero y se añaden al shell cuando se usan en línea. Las peticiones GET a GLB consultan solo `faunaxr-models-v1`; sin una copia descargada y sin red devuelven un mensaje 503 específico. Las respuestas parciales y de terceros no se cachean. Ya no existe lógica especial de `HEAD`/206 para audio de misiones.
 
-El uso de cámara es opcional y siempre depende del permiso del navegador. Para RA en pantalla o control de manos se necesita HTTPS (localhost también es contexto seguro). Si el permiso se deniega, habilítalo en los ajustes del sitio; cierra otras apps que estén usando la cámara y vuelve a intentarlo. Sin cámara se puede usar ratón, teclado o pantalla táctil.
+El modo offline necesita que el service worker se haya registrado bajo HTTPS o `localhost`. Borrar datos del sitio elimina la caché y el almacenamiento local. La RA nativa necesita además soporte del dispositivo; la sala RV visible en pantalla no equivale a verificar WebXR inmersivo con visor físico.
 
-## Publicación y actualización
+## Preparación de hosting HTTPS (todavía no publicado)
 
-Publica en la raíz `index.html`, `manifest.webmanifest`, `service-worker.js`, `assets/` y los demás archivos, conservando las rutas relativas. GitHub Pages con HTTPS y otros servidores HTTPS son válidos; `file://` no admite service workers. El app shell actual usa `faunaxr-offline-v40`. Al cambiar recursos precargados, incrementa `CACHE_NAME`; al activarse, el service worker elimina sus cachés anteriores sin borrar `localStorage` ni los datos locales del usuario.
-
-## Privacidad y almacenamiento
-
-La caché PWA contiene archivos de aplicación y modelos, no perfiles ni respuestas de APIs. El estado y los modelos subidos se guardan en el almacenamiento local del navegador y no se comparten automáticamente entre dispositivos. En equipos compartidos, si creas un perfil, evita introducir información que identifique a menores. Borrar los datos del sitio elimina perfiles, modelos subidos y preferencias locales de ese navegador.
+Publica manualmente el contenido del ZIP conservando las rutas relativas y `service-worker.js` junto a la página. Comprueba por HTTPS la galería, el manifiesto, iconos, los archivos de `assets/vendor/draco/` y la consola del navegador. Abre la app con conexión, descarga los modelos y verifica una recarga sin red. No se ha creado ni publicado hosting en este trabajo.

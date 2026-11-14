@@ -1,8 +1,10 @@
 import asyncio
+from pathlib import Path
 from playwright.async_api import async_playwright
 
 URL = "http://127.0.0.1:8123/galeria-xr.html"
-DUCK = "/home/ubuntu/upload/scratchxr/scratchxr-lab/assets/models/Duck.glb"
+ROOT = Path(__file__).resolve().parents[1]
+DUCK = str(ROOT / "assets/models/Duck.glb")
 fails = []
 
 def check(name, cond, extra=""):
@@ -11,6 +13,8 @@ def check(name, cond, extra=""):
         fails.append(name)
 
 async def make_profile(page, name):
+    if not await page.locator("#accessGate").is_visible():
+        await page.click("#profileChip")
     await page.fill("#accessNickname", name)
     await page.select_option("#accessGrade", "6")
     await page.check("#accessConsent")
@@ -70,7 +74,7 @@ async def main():
         await page.click("#confirmYes")
         await page.wait_for_timeout(900)
         check("borrado", await page.locator(".upload-item").count() == 0)
-        check("galería vuelve a 6", await page.locator(".model-card").count() == 6)
+        check("galería vuelve a 21", await page.locator(".model-card").count() == 21)
 
         # Wipe all profiles in a separate context
         wctx = await browser.new_context(viewport={"width": 1200, "height": 900})
@@ -84,19 +88,33 @@ async def main():
         await wp.wait_for_timeout(300)
         await wp.click("#confirmYes")
         await wp.wait_for_timeout(1200)
-        check("borrar perfiles vuelve al acceso", await wp.locator("#accessGate").is_visible())
+        check("borrar perfiles vuelve a modo invitado", not await wp.locator("#accessGate").is_visible() and await wp.locator("#profileChip").is_visible())
         await wctx.close()
 
-        # Offline test
+        # Offline test: shell v41 is installed; GLBs are separate and user-triggered.
+        await page.click("#tab-gallery")
         await page.evaluate("navigator.serviceWorker.ready")
         await page.wait_for_timeout(800)
+        cache_state = await page.evaluate("""async () => {
+          const names = await caches.keys();
+          const models = await caches.open('faunaxr-models-v1');
+          const puppy = await models.match(new URL('./assets/models/Puppy.glb', location.href).href);
+          return {shell: names.includes('faunaxr-offline-v41'), modelCache: names.includes('faunaxr-models-v1'), puppyInitiallyCached: !!puppy};
+        }""")
+        check("service worker shell v41", cache_state["shell"], cache_state)
+        check("GLB no se precarga sin pedirlo", not cache_state["puppyInitiallyCached"], cache_state)
+        await page.click("#downloadOfflineModelsBtn")
+        await page.wait_for_function("document.querySelector('#offlineModelStatus').textContent.includes('Descarga completa')", timeout=60000)
+        model_count = await page.evaluate("""async () => (await (await caches.open('faunaxr-models-v1')).keys()).filter(r => new URL(r.url).pathname.toLowerCase().endsWith('.glb')).length""")
+        check("descarga offline de 21 modelos", model_count == 21, model_count)
+        check("estado offline en cada tarjeta", await page.locator('.offline-state.ready').count() == 21)
         await page.reload(wait_until="domcontentloaded")
         await page.wait_for_timeout(1500)
         await ctx.set_offline(True)
         try:
             await page.reload(wait_until="domcontentloaded", timeout=30000)
             await page.wait_for_timeout(1500)
-            check("offline carga la página", "GALERÍA" in (await page.title()).upper())
+            check("offline carga la página", "FAUNAXR" in (await page.title()).upper())
             check("offline conserva perfil", not await page.locator("#accessGate").is_visible())
         except Exception as e:
             check("offline carga la página", False, e)

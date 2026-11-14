@@ -1,27 +1,23 @@
 # Estado de FaunaXR
 
-## Entregado
-- [x] La página principal y el inicio PWA abren la Galería de animales; la marca visible y el manifiesto se llaman FaunaXR.
-- [x] Iconos de instalación FaunaXR en tamaños 192 y 512 px, incluido icono maskable.
-- [x] Catálogo ampliado a 21 animales; agrega 13 salvajes: león, tigre blanco, lobo, elefante, jirafa, rinoceronte, panda, tiburón blanco, oso, cocodrilo, gorila, cebra y guepardo.
-- [x] Licencias CC0 1.0 y fuentes de modelos identificadas en las fichas y en `assets/models/WILD-MODELS-LICENSES.txt`.
-- [x] La sección Mis modelos acepta GLB de hasta 60 MB y los guarda localmente.
-- [x] La sala RV lista los 21 animales y los GLB propios; el selector de pantalla completa enfoca la estación seleccionada.
-- [x] La RA por cámara deja seleccionar cualquier animal de la galería o GLB propio, y silencia los avisos superpuestos mientras proyecta el modelo.
-- [x] La pestaña Aprende tiene teoría y fuentes enlazadas para cada animal del catálogo.
-- [x] El JSON de aprendizaje está incluido en el app shell de la PWA para lectura offline.
-- [x] La teoría del león africano incluye cinco datos curiosos, cada uno con fuente enlazada.
+## Completado en este paquete
 
-## Últimos cambios
-- [x] Cada uno de los 21 animales tiene exactamente diez preguntas autocorregibles, con tres opciones, explicación y fuente enlazada en cada pregunta. Se integraron las cinco series investigadas y las otras 16 se redactaron solo desde la teoría, los hechos curiosos y la fuente ya asociados a cada ficha, según la alternativa autorizada.
-- [x] En RA móvil, ampliar la vista en vivo; mantener ocultas las notificaciones mientras la cámara está activa; detener la cámara al salir de RA y al pasar la página a segundo plano.
-- [x] En RV, esperar a que la sala esté lista antes de habilitar la entrada, limpiar los avisos al cambiar de modelo y silenciarlos durante pantalla completa/sesiones inmersivas, y conservar el selector completo usable en pantallas estrechas.
-- [x] Los errores de GLB aparecen junto al visor afectado con instrucciones de reparación, no como avisos emergentes repetidos; la carga propia comprueba estructura glTF 2.0 y detecta recursos externos.
+- Catálogo de 21 animales; galería, perfiles locales, RA/RV, quizzes y cargas GLB.
+- Barajado Fisher–Yates del quiz en cada render sin cambiar `fauna-learning.es.json`; `correctIndex` se recalcula y se mantienen explicación/fuente.
+- IDs únicos para el marcador de RV, texto y salida; textura de cuadrícula declarada decorativa con `alt=""` y `aria-hidden`.
+- Créditos comprobados de Duck y Fox de Khronos en el catálogo, archivos de licencia y README; tres animaciones de Fox usadas secuencialmente en los visores.
+- Nota explícita del GLB Scratch Cat: la fuente/licencia exacta no está en el ZIP, Scratch Cat es marca registrada; candidato genérico CC0 documentado sin sustitución no aprobada.
+- Siete GLB mayores de 4 MB optimizados a Draco/WebP, con texturas limitadas a 1024 × 1024; decodificadores locales y archivos originales preservados fuera del paquete.
+- Service worker `faunaxr-offline-v41`: instalación tolerante a fallos, MediaPipe bajo demanda, botón de descarga offline para los 21 modelos, progreso, estimación de espacio y estado por animal; retirado el manejo de audio.
+- Etiquetas Open Graph/Twitter y depuración de archivos obsoletos del ZIP final.
+- Documentación coherente en README, guía offline, galería, plan y notas técnicas.
 
-## Pendientes previos
-- [ ] Añadir un puma/cougar si aparece un GLB redistribuible con licencia verificable.
-- [ ] Publicar como sitio en hosting HTTPS; aún no hay despliegue web. HTTPS es necesario para cámara fuera de localhost.
-- [ ] Probar la sesión WebXR inmersiva con un visor físico; el hardware no estuvo disponible para esta verificación.
+## Pendiente
+
+- Incorporar puma solo cuando haya un GLB con licencia verificable y apto para redistribución. No se inventó ni añadió un modelo.
+- Publicar manualmente en hosting HTTPS; el README y `PWA_OFFLINE.md` solo preparan los pasos. No se realizó despliegue.
+- Probar RA nativa en un móvil real y WebXR inmersivo con visor físico; el navegador de pruebas no sustituye ese hardware.
 
 ## Privacidad
-Los perfiles, favoritos y modelos propios persisten en el navegador/dispositivo local. El control de manos/cámara es opcional, requiere permiso del navegador y procesa video en el dispositivo.
+
+Perfiles, favoritos y GLB propios permanecen en almacenamiento local. El video del control gestual se procesa en el dispositivo y requiere permiso explícito de cámara.

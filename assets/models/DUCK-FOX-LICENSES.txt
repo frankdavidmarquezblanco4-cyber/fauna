@@ -1,0 +1,26 @@
+# Créditos y licencias: Duck.glb y Fox.glb
+
+Estas copias provienen de los Khronos glTF Sample Assets, no fueron creadas por FaunaXR. Se conservan aquí la fuente oficial, la licencia aplicable y los avisos de atribución.
+
+## Duck.glb
+
+- Obra/modelo: “Duck” (juguete de pato de goma), Copyright © 2006 Sony.
+- Crédito oficial de Khronos: Sony — “Sony for Everything”. El asset referencia la SCEA Shared Source License; no se atribuye otra autoría del modelo.
+- Licencia: SCEA Shared Source License, Version 1.0. Esta licencia permite usar y redistribuir el recurso conforme a sus condiciones; conserva este aviso y el texto íntegro de la licencia junto con el modelo.
+- Ficha oficial: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Duck
+- GLB fuente: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/glTF-Binary/Duck.glb
+- Texto legal íntegro: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/LICENSES/SCEA.txt
+- Atribución incluida en el catálogo: “Duck — © 2006 Sony; SCEA Shared Source License 1.0; modelo de Sony”.
+
+## Fox.glb
+
+- Obra/modelo base: “Fox” (2014), Copyright © 2014, Public; autor del modelo: PixelMannen; CC0 1.0 Universal.
+- Rig y ciclos de animación (Survey, Walk, Run): tomkranis, © 2014; CC BY 4.0.
+- Conversión a glTF (2017): @AsoboStudio y @scurest, © 2017; CC BY 4.0.
+- Ficha oficial: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Fox
+- GLB fuente: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Fox/glTF-Binary/Fox.glb
+- Licencias: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/ y CC BY 4.0 https://creativecommons.org/licenses/by/4.0/.
+- Atribución requerida por las partes CC BY: “Fox model by PixelMannen (CC0 1.0); rigging and animation by tomkranis (CC BY 4.0); glTF conversion by @AsoboStudio and @scurest (CC BY 4.0).”
+- El README de Khronos describe tres ciclos y especifica que solo uno debe estar activo a la vez. FaunaXR los reproduce secuencialmente en los visores.
+
+Fuentes primarias revisadas: los README oficiales de cada modelo y `LICENSES/SCEA.txt` en `KhronosGroup/glTF-Sample-Assets`.
