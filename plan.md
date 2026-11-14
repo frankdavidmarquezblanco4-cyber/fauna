@@ -2,14 +2,14 @@
 
 ## Alcance
 
-En el repositorio público independiente `frankdavidmarquezblanco4-cyber/fauna`, ampliar la experiencia instalada existente. `scratchxr-lab` queda fuera de alcance. La sala RV debe listar todos los animales y los GLB subidos en el selector de pantalla completa; el modo RA por cámara debe permitir elegir cualquiera de esos modelos y evitar notificaciones que tapen la proyección; el apartado educativo debe ofrecer teoría breve y al menos un quiz por cada animal de catálogo. La ficha del león añadirá datos curiosos con fuentes y un quiz de varias preguntas autocorregible.
+En el repositorio público independiente `frankdavidmarquezblanco4-cyber/fauna`, ampliar la experiencia instalada existente. `scratchxr-lab` queda fuera de alcance. Cada animal del catálogo debe tener un quiz autocorregible de exactamente diez preguntas, no una sola, con tres opciones, explicación y fuente. Mantener teoría y fuentes por especie, incluida la ficha del león y sus datos curiosos. En RA, dar más espacio al modelo proyectado en móviles, ocultar notificaciones mientras está activa la cámara y liberar la cámara al salir o al ocultar la página. En RV, conservar el selector de diseños en pantalla completa, ocultar toasts durante pantalla completa o sesión inmersiva y hacer que los controles se acomoden al viewport.
 
 ## Implementación y estructura
 
-- `galeria-xr.html` conserva la PWA estática y su navegación por pestañas. Añadir una pestaña educativa con fichas seleccionables, teoría, referencia consultada y quiz autocorregible de tres alternativas. Los 21 IDs nativos siguen alineados con `MODELS`.
-- `assets/data/fauna-learning.es.json` mantiene el contenido educativo separado del markup y apto para precarga offline; en el león guarda curiosidades con fuente por hecho y seis preguntas con explicación.
+- `galeria-xr.html` conserva la PWA estática y su navegación por pestañas. La pestaña educativa presenta fichas seleccionables, teoría, referencias y exactamente diez preguntas autocorregibles de tres alternativas por animal; cada respuesta incluye explicación y fuente. Los 21 IDs nativos siguen alineados con `MODELS`.
+- `assets/data/fauna-learning.es.json` mantiene el contenido educativo separado del markup y apto para precarga offline; cada uno de los 21 animales lleva diez preguntas, y el león conserva cinco curiosidades con sus fuentes.
 - `service-worker.js` precarga el JSON y aumenta la versión de caché para que los clientes instalados reciban los cambios.
-- El selector RA y la lista del visor usan `allModels()`, que combina animales incluidos y GLB personales guardados en IndexedDB. La RA por cámara recibe su propia lista compacta dentro del visor; notificaciones globales se silencian mientras la proyección está activa.
+- El selector RA y la lista del visor usan `allModels()`, que combina animales incluidos y GLB personales guardados en IndexedDB. La RA por cámara recibe su propia lista compacta; la vista en vivo aprovecha más alto de pantalla en móvil, no muestra toasts y detiene el stream al abandonar la vista o pasar la app a segundo plano. RV mantiene su lista desplegable, oculta toasts mientras está inmersiva o a pantalla completa y ajusta los controles a móviles.
 - `README-GALERIA-XR.md` describe las limitaciones de RA por cámara y el uso del apartado educativo.
 
 ## Diseño

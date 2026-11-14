@@ -12,7 +12,7 @@ La colección incorpora animales de casa y granja además de 13 especies salvaje
 
 ## Controles de RV
 
-En **Sala RV**, al entrar en **Pantalla completa**, usa los controles integrados: **Anterior**, el selector **Animal al frente** y **Siguiente**. También aparecen si el navegador no permite la pantalla completa nativa. En visor WebXR, los botones virtuales **ANTERIOR** y **SIGUIENTE** están frente a la cámara; apunta y pulsa con el controlador. Los pedestales también se pueden seleccionar con el puntero/control.
+En **Sala RV**, al entrar en **Pantalla completa**, usa los controles integrados: **Anterior**, el selector **Animal al frente** y **Siguiente**. También aparecen si el navegador no permite la pantalla completa nativa y se ajustan a pantallas estrechas. Los avisos emergentes se silencian durante la pantalla completa y las sesiones inmersivas. En visor WebXR, los botones virtuales **ANTERIOR** y **SIGUIENTE** están frente a la cámara; apunta y pulsa con el controlador. Los pedestales también se pueden seleccionar con el puntero/control.
 
 El selector incluye las 21 especies de la galería y los diseños GLB cargados en **Mis modelos**. Si agregas o borras un GLB, la sala se reconstruye con la colección actual al volver a ella.
 
@@ -22,7 +22,7 @@ La pestaña **Aprende** contiene teoría, fuentes enlazadas y quizzes autocorreg
 
 ## Realidad aumentada con cámara
 
-Desde una tarjeta de la galería o un modelo propio, pulsa **RA** para abrir la cámara y proyectar el diseño seleccionado. El selector dentro de la vista permite cambiar entre animales y GLB propios mientras la cámara está activa. Los avisos emergentes se silencian durante la proyección. Este modo superpone el diseño a la imagen de cámara, pero no lo ancla espacialmente; requiere permiso de cámara y HTTPS o `localhost`.
+Desde una tarjeta de la galería o un modelo propio, pulsa **RA** para abrir la cámara y proyectar el diseño seleccionado. El selector dentro de la vista permite cambiar entre animales y GLB propios mientras la cámara está activa. En móviles, la vista en vivo ocupa más altura para que el modelo se vea con mayor claridad; los avisos se silencian. Al salir de RA, cambiar de pestaña o enviar la app a segundo plano, la cámara se detiene. Este modo superpone el diseño a la imagen de cámara, pero no lo ancla espacialmente; requiere permiso de cámara y HTTPS o `localhost`.
 
 ## Modelos propios y privacidad
 

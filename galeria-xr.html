@@ -429,6 +429,9 @@
     .ar-screen.is-live .ar-screen-actions{left:12px;right:auto;bottom:12px;width:auto}
     .ar-screen.is-live .ar-screen-actions .btn{box-shadow:0 4px 18px rgba(0,0,0,.28)}
     body.ar-camera-live .toast-region{display:none!important}
+    body.vr-fullscreen-open .toast-region,body.vr-session-active .toast-region{display:none!important}
+    body.ar-camera-live .ar-screen{height:min(72vh,720px);min-height:360px}
+    @media(max-width:640px){.vr-fullscreen-controls{left:8px;right:8px;bottom:8px;transform:none;width:auto;max-width:none;gap:4px;padding:6px}.vr-fullscreen-controls .btn{min-height:38px;padding:6px 8px;font-size:.76rem}.vr-fullscreen-controls select{max-width:none;height:38px;padding:0 4px;font-size:.78rem}.vr-fs-exit{top:8px;right:8px;padding:8px;font-size:.76rem}}
     @media(max-width:640px){.learn-grid{grid-template-columns:1fr 1fr;gap:9px}.learn-card{padding:12px}.learn-card .btn{width:100%}.ar-screen-toolbar{left:8px;right:8px;top:8px;padding:6px}.ar-screen-toolbar select{font-size:.83rem}.ar-screen.is-live .ar-screen-tag{display:none}.quiz-card{padding:14px}}
   </style>
 </head>
@@ -1681,6 +1684,8 @@
       $('#arScreenModelSelect').addEventListener('change', (event) => setArModel(event.target.value));
       $('#arScreenStart').addEventListener('click', startArScreen);
       $('#arScreenStop').addEventListener('click', stopArScreen);
+      document.addEventListener('visibilitychange', () => { if (document.hidden && arScreenStream) stopArScreen(); });
+      window.addEventListener('pagehide', stopArScreen);
     }
     let arScreenStream = null;
     async function startArScreen() {
@@ -1762,6 +1767,7 @@
     let vrDirty = false;
     let vrPedestals = new Map();
     let vrCurrentId = null;
+    let vrImmersiveSupported = false;
 
     function ensureAFrame() {
       if (window.AFRAME) return Promise.resolve();
@@ -1809,10 +1815,12 @@
     }
 
     async function initVr() {
-      updateVrSupport();
+      await updateVrSupport();
       if (vrBuilding) return;
       if (vrBuilt && !vrDirty) return;
       vrBuilding = true;
+      const enterButton = $('#vrEnterBtn');
+      if (enterButton) { enterButton.disabled = true; enterButton.textContent = 'PREPARANDO RV…'; }
       const placeholder = $('#vrPlaceholder');
       if (placeholder) placeholder.hidden = false;
       const placeholderText = $('#vrPlaceholderText');
@@ -1825,6 +1833,7 @@
       } catch (error) {
         const failText = $('#vrPlaceholderText');
         if (failText) failText.textContent = 'No se pudo cargar la sala RV. Revisa la conexión y vuelve a intentarlo.';
+        if (enterButton) { enterButton.disabled = false; enterButton.textContent = 'REINTENTAR RV'; }
         setStatus('#dotVr', '#statusVr', 'off', 'RV · no disponible');
         toast('Sala RV no disponible', 'A-Frame no se pudo cargar. El resto de la galería sigue funcionando.', 'warn');
       } finally {
@@ -1835,6 +1844,7 @@
     async function updateVrSupport() {
       let ok = false;
       try { ok = !!(navigator.xr?.isSessionSupported && await navigator.xr.isSessionSupported('immersive-vr')); } catch (_) { ok = false; }
+      vrImmersiveSupported = ok;
       $('#vrBadge').textContent = ok ? 'Visor WebXR detectado' : 'Exploración en pantalla';
       setStatus('#dotVr', '#statusVr', ok ? 'ok' : 'wait', ok ? 'RV · visor disponible' : 'RV · pantalla');
       return ok;
@@ -1951,6 +1961,8 @@
       const markReady = () => {
         const ph = $('#vrPlaceholder');
         if (ph) ph.hidden = true;
+        const enterButton = $('#vrEnterBtn');
+        if (enterButton) { enterButton.disabled = false; enterButton.textContent = 'ENTRAR EN RV'; }
         setStatus('#dotVr', '#statusVr', 'ok', 'RV · sala lista');
       };
       fitVrCamera();
@@ -2011,13 +2023,18 @@
       });
 
       scene.addEventListener('enter-vr', () => {
+        document.body.classList.add('vr-session-active');
+        $('#toastRegion').replaceChildren();
+        setVrFullscreenUi(isVrFullscreen());
         $('#vrEnterBtn').textContent = 'SALIR DE RV';
         $('#vrExitBtn').hidden = false;
         setStatus('#dotVr', '#statusVr', 'ok', 'RV · sesión inmersiva');
       });
       scene.addEventListener('exit-vr', () => {
+        document.body.classList.remove('vr-session-active');
         $('#vrEnterBtn').textContent = 'ENTRAR EN RV';
         $('#vrExitBtn').hidden = true;
+        setVrFullscreenUi(isVrFullscreen());
         setStatus('#dotVr', '#statusVr', 'ok', 'RV · sala lista');
       });
       $('#vrFsExit').addEventListener('click', exitVrScreen);
@@ -2091,22 +2108,27 @@
     async function enterVr() {
       let scene = $('#vrScene');
       if (scene?.is('vr-mode')) { scene.exitVR(); return; }
-      if (!scene || !scene.hasLoaded) {
-        if (!vrBuilding) await initVr();
-        scene = $('#vrScene');
-        if (!scene || !scene.hasLoaded) {
-          toast('Sala RV preparándose', 'Espera a que termine de cargar la sala y vuelve a pulsar «Entrar en RV».', 'warn');
-          return;
-        }
+      if (!scene?.hasLoaded) {
+        if (!vrBuilding) void initVr();
+        toast('Sala RV preparándose', 'El botón se habilitará cuando termine de cargar el museo. Pulsa «Entrar en RV» cuando esté listo.', 'info');
+        return;
+      }
+      if (!vrImmersiveSupported) {
+        await fullscreenVr();
+        if (isVrFullscreen()) setStatus('#dotVr', '#statusVr', 'ok', 'RV · pantalla completa');
+        else toast('RV no disponible', 'Este navegador no pudo abrir la pantalla completa.', 'warn');
+        return;
       }
       try {
         if (typeof scene.enterVR !== 'function') throw new Error('WebXR no está disponible en este navegador.');
         await scene.enterVR();
+        if (!scene.is('vr-mode')) throw new Error('No se inició una sesión RV inmersiva.');
       } catch (_) {
         const mount = $('#vrMount');
         if (document.fullscreenElement === mount || mount.classList.contains('is-fullscreen')) setVrFullscreenUi(true);
         else await fullscreenVr();
-        toast('Modo RV en pantalla', 'No se detectó un visor WebXR; se abrió la sala en pantalla completa con controles para cambiar de animal.', '');
+        if (document.body.classList.contains('vr-fullscreen-open')) setStatus('#dotVr', '#statusVr', 'ok', 'RV · pantalla completa');
+        else toast('RV no disponible', 'Este navegador no pudo abrir el visor ni la pantalla completa.', 'warn');
       }
     }
     function setVrFullscreenUi(on) {
@@ -2115,13 +2137,19 @@
       if (controls) controls.hidden = !on;
       if (fsBtn) fsBtn.hidden = !on;
       document.body.classList.toggle('vr-fullscreen-open', !!on);
+      if (on) $('#toastRegion').replaceChildren();
       fitVrCamera();
+    }
+    function isVrFullscreen() {
+      const mount = $('#vrMount');
+      const fullscreenElement = document.fullscreenElement;
+      return !!mount && (fullscreenElement === mount || mount.classList.contains('is-fullscreen'));
     }
 
     async function fullscreenVr() {
       const mount = $('#vrMount');
       if (!mount) return;
-      if (document.fullscreenElement === mount || mount.classList.contains('is-fullscreen')) { exitVrScreen(); return; }
+      if (isVrFullscreen()) { exitVrScreen(); return; }
       try {
         if (!mount.requestFullscreen) throw new Error('Fullscreen API no disponible');
         await mount.requestFullscreen({ navigationUI: 'hide' });
@@ -2133,18 +2161,16 @@
     }
     function exitVrScreen() {
       const mount = $('#vrMount');
-      if (document.fullscreenElement === mount) document.exitFullscreen?.();
+      const scene = $('#vrScene');
+      if (scene?.is('vr-mode')) scene.exitVR();
+      if (document.fullscreenElement && mount?.contains(document.fullscreenElement)) document.exitFullscreen?.();
       mount?.classList.remove('is-fullscreen');
       setVrFullscreenUi(false);
     }
     function initVrEvents() {
       $('#vrEnterBtn').addEventListener('click', enterVr);
       $('#vrScreenBtn').addEventListener('click', fullscreenVr);
-      $('#vrExitBtn').addEventListener('click', () => {
-        const scene = $('#vrScene');
-        if (scene?.is('vr-mode')) scene.exitVR();
-        exitVrScreen();
-      });
+      $('#vrExitBtn').addEventListener('click', exitVrScreen);
       $('#vrStartModel').addEventListener('change', (event) => focusVrModel(event.target.value));
       document.addEventListener('change', (event) => {
         if (event.target?.id === 'vrFullscreenModel') focusVrModel(event.target.value);
@@ -2154,8 +2180,7 @@
         else if (event.target?.closest?.('#vrNextAnimal')) cycleVrModel(1);
       });
       document.addEventListener('fullscreenchange', () => {
-        const mount = $('#vrMount');
-        setVrFullscreenUi(!!mount && (document.fullscreenElement === mount || mount.classList.contains('is-fullscreen')));
+        setVrFullscreenUi(isVrFullscreen());
       });
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && $('#vrMount')?.classList.contains('is-fullscreen')) exitVrScreen();
