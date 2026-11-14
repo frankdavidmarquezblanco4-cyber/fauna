@@ -16,6 +16,7 @@
 - [x] Cada uno de los 21 animales tiene exactamente diez preguntas autocorregibles, con tres opciones, explicación y fuente enlazada en cada pregunta. Se integraron las cinco series investigadas y las otras 16 se redactaron solo desde la teoría, los hechos curiosos y la fuente ya asociados a cada ficha, según la alternativa autorizada.
 - [x] En RA móvil, ampliar la vista en vivo; mantener ocultas las notificaciones mientras la cámara está activa; detener la cámara al salir de RA y al pasar la página a segundo plano.
 - [x] En RV, esperar a que la sala esté lista antes de habilitar la entrada, limpiar los avisos al cambiar de modelo y silenciarlos durante pantalla completa/sesiones inmersivas, y conservar el selector completo usable en pantallas estrechas.
+- [x] Los errores de GLB aparecen junto al visor afectado con instrucciones de reparación, no como avisos emergentes repetidos; la carga propia comprueba estructura glTF 2.0 y detecta recursos externos.
 
 ## Pendientes previos
 - [ ] Añadir un puma/cougar si aparece un GLB redistribuible con licencia verificable.

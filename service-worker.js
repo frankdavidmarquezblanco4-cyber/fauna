@@ -1,7 +1,7 @@
 /* FaunaXR · PWA offline cache */
 'use strict';
 
-const CACHE_NAME = 'faunaxr-offline-v39';
+const CACHE_NAME = 'faunaxr-offline-v40';
 const APP_SHELL = [
   './',
   './index.html',

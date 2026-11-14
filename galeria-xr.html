@@ -784,7 +784,7 @@
             <button class="btn btn-sm" id="handsFavBtn" type="button" aria-pressed="false">☆ Favorito</button>
             <label class="check"><input type="checkbox" id="handsAutoRotate"> Rotación automática</label>
           </div>
-          <p class="note">También funciona con ratón, dedo o teclado: arrastra para girar y pellizca para acercar.</p>
+          <p class="note" id="handsModelMessage" role="status" aria-live="polite">También funciona con ratón, dedo o teclado: arrastra para girar y pellizca para acercar.</p>
         </section>
       </div>
       <div class="gesture-grid">
@@ -1628,6 +1628,11 @@
       detectArSupport();
       syncFavoriteUI();
     }
+    function modelLoadFailureMessage(id) {
+      const model = getModel(id);
+      const name = model?.name ? `«${model.name}»` : 'el diseño seleccionado';
+      return `No se pudo cargar ${name}. Si es un diseño propio, expórtalo como GLB 2.0 con las texturas incluidas y sin archivos externos; si es de la galería, prueba otro animal.`;
+    }
     function arIndexStep(delta) {
       const list = allModels();
       let index = list.findIndex((m) => m.id === arCurrentId);
@@ -1681,7 +1686,9 @@
         $('#arModel').toggleAttribute('auto-rotate', event.target.checked);
       });
       $('#arModel').addEventListener('load', detectArSupport);
-      $('#arModel').addEventListener('error', () => toast('Modelo no disponible', 'No se pudo cargar este GLB en realidad aumentada.', 'warn'));
+      $('#arModel').addEventListener('error', () => {
+        $('#arMessage').textContent = modelLoadFailureMessage(arCurrentId);
+      });
       $('#arScreenBtn').addEventListener('click', () => {
         const panel = $('#arScreen');
         panel.hidden = !panel.hidden;
@@ -2221,6 +2228,7 @@
       viewer.setAttribute('camera-orbit', 'auto auto auto');
       $('#handsModelName').textContent = m.name;
       $('#handsModelCategory').textContent = m.category;
+      $('#handsModelMessage').textContent = 'También funciona con ratón, dedo o teclado: arrastra para girar y pellizca para acercar.';
       syncFavoriteUI();
     }
     function handsStep(delta) {
@@ -2567,7 +2575,9 @@
         $('#handsStartBtn').disabled = !event.target.checked || Hands.running;
         $('#handsNotice').textContent = event.target.checked ? 'Listo para activar. Pulsa «Activar manos».' : 'Marca la casilla para habilitar la cámara.';
       });
-      $('#handsModel').addEventListener('error', () => toast('Modelo no disponible', 'No se pudo cargar este GLB para controlarlo con las manos.', 'warn'));
+      $('#handsModel').addEventListener('error', () => {
+        $('#handsModelMessage').textContent = modelLoadFailureMessage(handsCurrentId);
+      });
       $('#handsStartBtn').addEventListener('click', async () => {
         if (!window.isSecureContext) { toast('Se necesita HTTPS', 'La cámara solo funciona con HTTPS o localhost.', 'warn'); return; }
         $('#handsStartBtn').disabled = true;
@@ -2689,15 +2699,31 @@
     async function validateGlb(file) {
       if (!/\.glb$/i.test(file.name) && file.type !== 'model/gltf-binary') return 'Solo se admiten archivos .glb (glTF binario).';
       if (file.size > MAX_UPLOAD) return `El archivo pesa ${fmtSize(file.size)}. El máximo es 60 MB.`;
-      if (file.size < 32) return 'El archivo está vacío o dañado.';
+      if (file.size < 20) return 'El archivo está vacío o no contiene una cabecera GLB completa.';
       try {
-        const head = new Uint8Array(await file.slice(0, 12).arrayBuffer());
+        const header = await file.slice(0, 20).arrayBuffer();
+        const view = new DataView(header);
+        const head = new Uint8Array(header, 0, 4);
         const magic = String.fromCharCode(head[0], head[1], head[2], head[3]);
         if (magic !== 'glTF') return 'El archivo no parece un GLB válido.';
-        const version = new DataView(head.buffer).getUint32(4, true);
+        const version = view.getUint32(4, true);
         if (version !== 2) return 'Solo se admiten modelos glTF 2.0.';
+        if (view.getUint32(8, true) !== file.size) return 'El GLB está incompleto o dañado (el tamaño declarado no coincide).';
+        const jsonLength = view.getUint32(12, true);
+        const jsonType = view.getUint32(16, true);
+        if (jsonType !== 0x4E4F534A || 20 + jsonLength > file.size) return 'El GLB no contiene un bloque JSON válido.';
+        const jsonBytes = await file.slice(20, 20 + jsonLength).arrayBuffer();
+        const gltf = JSON.parse(new TextDecoder().decode(jsonBytes).trim());
+        if (!/^2\./.test(gltf?.asset?.version || '')) return 'El contenido del archivo no declara una versión glTF 2.0 válida.';
+        const refs = [
+          ...(Array.isArray(gltf.buffers) ? gltf.buffers : []),
+          ...(Array.isArray(gltf.images) ? gltf.images : [])
+        ];
+        if (refs.some((ref) => typeof ref?.uri === 'string' && !/^data:/i.test(ref.uri))) {
+          return 'Este GLB depende de texturas o archivos externos. Vuelve a exportarlo con todos los recursos incluidos.';
+        }
       } catch (_) {
-        return 'No se pudo leer el archivo.';
+        return 'No se pudo leer el contenido del GLB. Vuelve a exportarlo como glTF 2.0 binario.';
       }
       return '';
     }

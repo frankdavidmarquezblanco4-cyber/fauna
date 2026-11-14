@@ -26,7 +26,7 @@ Desde una tarjeta de la galería o un modelo propio, pulsa **RA** para abrir la 
 
 ## Modelos propios y privacidad
 
-En **Mis modelos**, sube GLB de hasta 60 MB; la página valida el archivo y guarda sus datos en IndexedDB del mismo navegador. Puedes explorar y guardar favoritos sin crear perfil; los perfiles y datos locales no se suben ni sincronizan. La cámara requiere HTTPS o localhost y permiso del navegador; el video de control gestual se procesa localmente.
+En **Mis modelos**, sube GLB glTF 2.0 de hasta 60 MB, con texturas/recursos incluidos en el archivo; no sirven modelos `.gltf` que dependan de archivos externos. Si uno falla al abrirse en RA o manos, el mensaje junto al visor indicará volver a exportarlo con los recursos integrados o elegir otro animal. La página guarda los archivos válidos en IndexedDB del mismo navegador. Puedes explorar y guardar favoritos sin crear perfil; los perfiles y datos locales no se suben ni sincronizan. La cámara requiere HTTPS o localhost y permiso del navegador; el video de control gestual se procesa localmente.
 
 ## Licencias y estructura
 
