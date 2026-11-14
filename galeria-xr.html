@@ -648,7 +648,7 @@
         <div>
           <p class="eyebrow">Tu espacio, aumentado</p>
           <h2>Realidad aumentada</h2>
-          <p>Coloca el modelo sobre una superficie con la RA nativa del dispositivo o superpónlo a la cámara en el modo «RA en pantalla», que funciona en más equipos.</p>
+          <p>Coloca el modelo con RA nativa o usa «RA en pantalla» con la cámara. El botón «Activar manos» permite manipular el modelo; la superposición por cámara no se ancla a superficies.</p>
         </div>
         <span class="pill pill-blue" id="arBadge">Comprobando compatibilidad…</span>
       </div>
@@ -670,6 +670,7 @@
           </div>
           <div class="viewer-actions">
             <button class="btn btn-ar" id="arActivateBtn" type="button" disabled>Ver en RA</button>
+            <button class="btn btn-sm" id="arHandsBtn" type="button" aria-pressed="false">Activar manos</button>
             <button class="btn btn-sm" id="arPrevBtn" type="button" aria-label="Modelo anterior">‹ Anterior</button>
             <button class="btn btn-sm" id="arNextBtn" type="button" aria-label="Modelo siguiente">Siguiente ›</button>
             <label class="check"><input type="checkbox" id="arAutoRotate"> Rotación automática</label>
@@ -722,7 +723,7 @@
         <div>
           <p class="eyebrow">Museo inmersivo</p>
           <h2>Sala de realidad virtual</h2>
-          <p>Un museo circular con todos los modelos sobre pedestales. Entra con un visor WebXR compatible o recorre la sala en pantalla con teclado, ratón o táctil.</p>
+          <p>Un museo circular con todos los modelos sobre pedestales. Recorre la sala en pantalla o con un visor WebXR; «Activar manos» controla la mirada, el zoom y la selección.</p>
         </div>
         <span class="pill" id="vrBadge">Comprobando WebXR…</span>
       </div>
@@ -730,6 +731,7 @@
         <button class="btn btn-primary" id="vrEnterBtn" type="button">ENTRAR EN RV</button>
         <button class="btn" id="vrScreenBtn" type="button">Pantalla completa</button>
         <button class="btn btn-danger" id="vrExitBtn" type="button" hidden>Salir</button>
+        <button class="btn" id="vrHandsBtn" type="button" aria-pressed="false">Activar manos</button>
         <label for="vrStartModel">Empezar mirando</label>
         <select id="vrStartModel"></select>
       </div>
@@ -1382,6 +1384,7 @@
     function selectTab(key, opts = {}) {
       if (!TAB_KEYS.includes(key)) key = 'gallery';
       currentTab = key;
+      if (key !== 'hands' && key !== handsReturnTab) handsReturnTab = null;
       $$('.tab').forEach((tab) => {
         const selected = tab.dataset.tab === key;
         tab.setAttribute('aria-selected', String(selected));
@@ -1394,7 +1397,15 @@
       if (key === 'hands') initHandsView();
       if (key === 'upload') renderUploads();
       if (key !== 'ar') stopArScreen();
-      if (key !== 'hands') Hands.stop();
+      if (!['hands', 'ar', 'vr'].includes(key)) Hands.stop();
+      else Hands.resetGestures();
+      if (key === 'ar' && !$('#arScreen').hidden && Hands.running && !arScreenStream) void startArScreen();
+      if (key === 'ar' || key === 'vr') syncHandsModeButtons();
+      if (key === 'ar' || key === 'hands') {
+        const viewer = gestureTargetViewer();
+        if (viewer) viewer.toggleAttribute('auto-rotate', handsAutoRotate);
+      }
+      if (key === 'vr') setVrHandsRotation(handsAutoRotate);
       if (opts.push !== false) history.replaceState(null, '', `#${key}`);
       if (opts.focus) $(`#view-${key}`).focus({ preventScroll: true });
       if (opts.scroll !== false) {
@@ -1626,6 +1637,7 @@
        ============================================================ */
     let arCurrentId = null;
     let arDetected = false;
+    let arNativeAvailable = false;
 
     function initAr() {
       renderArPicker();
@@ -1720,41 +1732,43 @@
       try {
         if (navigator.xr?.isSessionSupported) webxr = await navigator.xr.isSessionSupported('immersive-ar');
       } catch (_) { webxr = false; }
-      const can = !!viewer?.canActivateAR || webxr;
+      arNativeAvailable = !!viewer?.canActivateAR || webxr;
+      const camera = !!(window.isSecureContext && navigator.mediaDevices?.getUserMedia);
+      const available = arNativeAvailable || camera;
       const ua = navigator.userAgent;
       const android = /Android/i.test(ua);
       const ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      $('#arActivateBtn').disabled = !can;
+      const mode = arNativeAvailable ? 'native' : camera ? 'screen' : 'off';
+      $('#arActivateBtn').disabled = !available;
+      $('#arActivateBtn').textContent = arNativeAvailable ? 'Ver en RA' : camera ? 'Ver en RA en pantalla' : 'Cámara no disponible';
       const dot = $('#dotAr');
       dot.classList.remove('ok', 'wait', 'off');
-      dot.classList.add(can ? 'ok' : 'wait');
-      setStatus('#dotAr', '#statusAr', can ? 'ok' : 'wait', can ? 'RA · disponible' : 'RA · solo en pantalla');
-      $('#arStatus').innerHTML = `<i class="dot ${can ? 'ok' : 'wait'}"></i><span>${can ? 'RA nativa disponible' : 'RA nativa no disponible'}</span>`;
-      $('#arBadge').textContent = can ? 'RA nativa disponible' : 'Usa RA en pantalla';
-      $('#arCompatText').textContent = can
+      dot.classList.add(mode === 'off' ? 'off' : 'ok');
+      setStatus('#dotAr', '#statusAr', mode === 'off' ? 'off' : 'ok', arNativeAvailable ? 'RA · nativa' : camera ? 'RA · cámara' : 'RA · sin cámara');
+      const label = arNativeAvailable ? 'RA nativa disponible' : camera ? 'RA por cámara disponible · sin anclaje' : 'Cámara no disponible';
+      $('#arStatus').innerHTML = `<i class="dot ${mode === 'off' ? 'off' : 'ok'}"></i><span>${label}</span>`;
+      $('#arBadge').textContent = arNativeAvailable ? 'RA nativa disponible' : camera ? 'RA en pantalla disponible' : 'Cámara no disponible';
+      $('#arCompatText').textContent = arNativeAvailable
         ? `Tu navegador ofrece RA nativa${webxr ? ' con WebXR' : ' mediante Scene Viewer'}. Pulsa «Ver en RA» y apunta al suelo.`
-        : ios
-          ? 'En iPhone o iPad, Quick Look necesita un archivo USDZ; como esta galería usa GLB, prueba «RA en pantalla» para ver el modelo sobre la cámara.'
-          : android
-            ? 'Este navegador no anuncia RA nativa ahora mismo. Prueba Chrome en Android con ARCore o usa «RA en pantalla».'
-            : 'En computadora no suele haber RA nativa. Usa «RA en pantalla» con la webcam o abre la página en un teléfono compatible.';
+        : camera
+          ? `${ios ? 'La RA nativa de iPhone/iPad depende de Quick Look y del visor del sistema.' : android ? 'Este navegador no anuncia RA nativa ahora mismo.' : 'Este equipo no anuncia RA nativa.'} El botón abre una superposición GLB sobre la cámara; no detecta superficies ni ancla el modelo.`
+          : 'Para activar la cámara, abre esta página por HTTPS en un navegador con cámara. La RA espacial nativa también requiere un dispositivo compatible.';
       arDetected = true;
     }
     async function activateAr(viewer) {
-      try {
-        if (typeof viewer?.activateAR !== 'function') throw new Error('Este navegador no expone RA nativa.');
-        await viewer.activateAR();
-      } catch (_) {
-        const panel = $('#arScreen');
-        panel.hidden = false;
-        $('#arScreenBtn').setAttribute('aria-expanded', 'true');
-        $('#arScreenModel').setAttribute('src', viewer?.getAttribute('src') || '');
-        $('#arMessage').textContent = 'No se pudo iniciar la RA nativa. Puedes activar la cámara y usar el modo RA en pantalla.';
-        toast('RA nativa no disponible', 'Se abrió la alternativa con cámara; pulsa «Activar cámara» para continuar.', 'warn');
+      if (arNativeAvailable && typeof viewer?.activateAR === 'function') {
+        try { await viewer.activateAR(); return; } catch (_) { /* abrir el modo por cámara */ }
       }
+      const panel = $('#arScreen');
+      panel.hidden = false;
+      $('#arScreenBtn').setAttribute('aria-expanded', 'true');
+      $('#arScreenModel').setAttribute('src', viewer?.getAttribute('src') || '');
+      $('#arMessage').textContent = 'Este dispositivo no inició RA nativa. Se abrirá la superposición por cámara, que no ancla el modelo a una superficie.';
+      await startArScreen();
     }
     function initArEvents() {
       $('#arActivateBtn').addEventListener('click', () => activateAr($('#arModel')));
+      $('#arHandsBtn').addEventListener('click', toggleHandsFromMode);
       $('#arPrevBtn').addEventListener('click', () => arIndexStep(-1));
       $('#arNextBtn').addEventListener('click', () => arIndexStep(1));
       $('#arAutoRotate').addEventListener('change', (event) => {
@@ -1771,26 +1785,30 @@
         if (!panel.hidden) {
           $('#arScreenModel').setAttribute('src', $('#arModel').getAttribute('src'));
           renderArPicker();
+          if (Hands.running) void startArScreen();
         } else {
           stopArScreen();
         }
       });
       $('#arScreenModelSelect').addEventListener('change', (event) => setArModel(event.target.value));
       $('#arScreenStart').addEventListener('click', startArScreen);
-      $('#arScreenStop').addEventListener('click', stopArScreen);
-      document.addEventListener('visibilitychange', () => { if (document.hidden && arScreenStream) stopArScreen(); });
-      window.addEventListener('pagehide', stopArScreen);
+      $('#arScreenStop').addEventListener('click', () => { Hands.stop(); stopArScreen(); });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) { stopArScreen(); Hands.stop(); }
+      });
+      window.addEventListener('pagehide', () => { stopArScreen(); Hands.stop(); });
     }
     let arScreenStream = null;
     async function startArScreen() {
       if (!window.isSecureContext) { toast('Se necesita HTTPS', 'Abre FaunaXR desde GitHub Pages o localhost para usar la cámara.', 'warn'); return; }
       if (!navigator.mediaDevices?.getUserMedia) { toast('Cámara no disponible', 'Este navegador no ofrece acceso a cámara. Prueba Chrome o Safari actualizado.', 'warn'); return; }
+      if (arScreenStream?.active) return true;
       const startBtn = $('#arScreenStart');
       let stream = null;
       startBtn.disabled = true;
       startBtn.textContent = 'Abriendo cámara…';
       try {
-        stream = await navigator.mediaDevices.getUserMedia({
+        stream = Hands.running && Hands.getStream() ? Hands.getStream() : await navigator.mediaDevices.getUserMedia({
           audio: false,
           video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } }
         });
@@ -1801,7 +1819,7 @@
         video.autoplay = true;
         video.srcObject = stream;
         await video.play();
-        const facing = stream.getVideoTracks()[0]?.getSettings?.().facingMode || 'environment';
+        const facing = stream.getVideoTracks()[0]?.getSettings?.().facingMode || (Hands.running ? Hands.getFacing() : 'environment');
         video.style.transform = facing === 'user' ? 'scaleX(-1)' : 'none';
         $('#arScreenEmpty').hidden = true;
         $('#arScreen').classList.add('is-live');
@@ -1812,9 +1830,10 @@
         $('#arScreenModel').setAttribute('src', $('#arModel').getAttribute('src'));
         $('#arScreenModel').setAttribute('camera-orbit', 'auto auto auto');
         $('#arMessage').hidden = true;
-        setStatus('#dotCam', '#statusCam', 'ok', 'Cámara · RA en pantalla');
+        setStatus('#dotCam', '#statusCam', 'ok', Hands.running ? 'Cámara · RA y manos activas' : 'Cámara · RA en pantalla');
+        return true;
       } catch (error) {
-        stream?.getTracks().forEach((track) => track.stop());
+        if (stream && (!Hands.running || Hands.getStream() !== stream)) stream.getTracks().forEach((track) => track.stop());
         stopArScreen();
         let message = error?.message || 'No se pudo abrir la cámara.';
         if (error?.name === 'NotAllowedError' || error?.name === 'PermissionDeniedError') message = 'Permite el acceso a la cámara para este sitio en los ajustes del navegador y vuelve a intentarlo.';
@@ -1823,12 +1842,14 @@
         else if (error?.name === 'SecurityError') message = 'La cámara requiere HTTPS o localhost.';
         $('#arMessage').textContent = message;
         toast('Cámara no disponible', message, 'warn');
+        return false;
       }
     }
     function stopArScreen() {
-      if (arScreenStream) {
-        arScreenStream.getTracks().forEach((track) => track.stop());
-        arScreenStream = null;
+      const stream = arScreenStream;
+      arScreenStream = null;
+      if (stream && (!Hands.running || Hands.getStream() !== stream)) {
+        stream.getTracks().forEach((track) => track.stop());
       }
       const video = $('#arScreenVideo');
       if (video) video.srcObject = null;
@@ -1838,7 +1859,7 @@
       if ($('#arMessage')) $('#arMessage').hidden = false;
       if ($('#arScreenStart')) { $('#arScreenStart').disabled = false; $('#arScreenStart').textContent = 'Activar cámara'; }
       if ($('#arScreenStop')) $('#arScreenStop').disabled = true;
-      if (!Hands.running) setStatus('#dotCam', '#statusCam', 'off', 'Cámara · apagada');
+      setStatus('#dotCam', '#statusCam', Hands.running ? 'ok' : 'off', Hands.running ? 'Cámara · manos activas' : 'Cámara · apagada');
     }
     function goToAr(id) {
       selectTab('ar');
@@ -2038,6 +2059,15 @@
           }
         });
       }
+      if (window.AFRAME && !AFRAME.components['faunaxr-hand-rotate']) {
+        AFRAME.registerComponent('faunaxr-hand-rotate', {
+          tick(_time, delta) {
+            if (currentTab === 'vr' && handsAutoRotate && this.el.dataset.id === vrCurrentId) {
+              this.el.object3D.rotation.y += delta * 0.00055;
+            }
+          }
+        });
+      }
       const items = allModels();
       const radius = items.length > 1 ? Math.max(4.2, items.length * 0.9) : 0;
       const camZ = radius + 4.8;
@@ -2185,6 +2215,11 @@
       });
       $('#vrFsExit').addEventListener('click', exitVrScreen);
       renderVrSelect();
+      if (!vrCurrentId) {
+        const first = $('#vrStartModel')?.value || items[0]?.id;
+        if (first) selectVrStation(first);
+      }
+      setVrHandsRotation(handsAutoRotate);
     }
 
     function teardownVr() {
@@ -2228,6 +2263,16 @@
       $$('.pedestal').forEach((p) => {
         const ring = p.querySelector('a-ring');
         if (ring) ring.setAttribute('color', p.dataset.id === id ? '#FF7A1A' : '#8EDFFF');
+      });
+      setVrHandsRotation(handsAutoRotate);
+    }
+
+    function setVrHandsRotation(on) {
+      vrPedestals.forEach((pedestal, id) => {
+        const holder = pedestal.querySelector('.model-holder');
+        if (!holder) return;
+        if (on && id === vrCurrentId) holder.setAttribute('faunaxr-hand-rotate', '');
+        else holder.removeAttribute('faunaxr-hand-rotate');
       });
     }
 
@@ -2340,6 +2385,18 @@
     }
     let handsCurrentId = null;
     let handsAutoRotate = false;
+    let handsReturnTab = null;
+
+    function gestureTargetViewer() {
+      if (currentTab === 'hands') return $('#handsModel');
+      if (currentTab === 'ar') return !$('#arScreen').hidden ? $('#arScreenModel') : $('#arModel');
+      return null;
+    }
+    function gestureTargetModelId() {
+      if (currentTab === 'ar') return arCurrentId;
+      if (currentTab === 'vr') return vrCurrentId || $('#vrStartModel')?.value;
+      return handsCurrentId;
+    }
 
     const HAND_CONNECTIONS = [
       [0, 1], [1, 2], [2, 3], [3, 4], [0, 5], [5, 6], [6, 7], [7, 8],
@@ -2363,6 +2420,8 @@
       syncFavoriteUI();
     }
     function handsStep(delta) {
+      if (currentTab === 'ar') { arIndexStep(delta); return; }
+      if (currentTab === 'vr') { cycleVrModel(delta); return; }
       const list = allModels();
       let index = list.findIndex((m) => m.id === handsCurrentId);
       index = (index + delta + list.length) % list.length;
@@ -2377,14 +2436,24 @@
       }
     }
     function resetHandsView() {
-      const viewer = $('#handsModel');
+      if (currentTab === 'vr') {
+        const id = vrCurrentId || $('#vrStartModel')?.value;
+        if (id) focusVrModel(id);
+        $('#vrCamera')?.setAttribute('camera', 'fov', 72);
+        toast('Vista reiniciada', 'La sala vuelve a enfocar el animal seleccionado.', '');
+        return;
+      }
+      const viewer = gestureTargetViewer() || $('#handsModel');
       viewer.setAttribute('camera-orbit', 'auto auto auto');
       toast('Vista reiniciada', 'El modelo vuelve a su encuadre inicial.', '');
     }
     function setHandsAuto(on) {
       handsAutoRotate = !!on;
-      $('#handsModel').toggleAttribute('auto-rotate', handsAutoRotate);
+      const viewer = gestureTargetViewer();
+      if (viewer) viewer.toggleAttribute('auto-rotate', handsAutoRotate);
+      setVrHandsRotation(handsAutoRotate);
       $('#handsAutoRotate').checked = handsAutoRotate;
+      syncHandsModeButtons();
       if (on) toast('Rotación automática', 'La palma abierta la ha activado.', '');
     }
     function toggleHandsAuto() {
@@ -2425,9 +2494,11 @@
         $('#handsStartBtn').disabled = on || !$('#handsConsent').checked || !window.isSecureContext;
         $('#handsStopBtn').disabled = !on;
         $('#handsFlipBtn').disabled = !on;
-        $('#handsBadge').textContent = on ? 'Cámara activa · gestos en vivo' : 'Cámara apagada';
+        $('#handsBadge').textContent = on ? 'Cámara activa · gestos en vivo' : arScreenStream ? 'Cámara activa · RA en pantalla' : 'Cámara apagada';
         $('#handsCameraNote').textContent = on ? 'Procesamiento local activo. El video no se graba ni se envía.' : 'Buena luz frontal ayuda a detectar mejor los dedos.';
-        setStatus('#dotCam', '#statusCam', on ? 'ok' : 'off', on ? 'Cámara · manos activas' : 'Cámara · apagada');
+        const cameraOn = on || !!arScreenStream;
+        setStatus('#dotCam', '#statusCam', cameraOn ? 'ok' : 'off', on ? (arScreenStream ? 'Cámara · RA y manos activas' : 'Cámara · manos activas') : arScreenStream ? 'Cámara · RA en pantalla' : 'Cámara · apagada');
+        syncHandsModeButtons();
       }
 
       async function start() {
@@ -2440,12 +2511,13 @@
           if (!navigator.mediaDevices?.getUserMedia) throw new Error('Este navegador no ofrece acceso a cámara. Usa ratón o táctil.');
           note('Solicitando permiso de cámara…');
           try {
-            localStream = await navigator.mediaDevices.getUserMedia({
+            localStream = arScreenStream?.active ? arScreenStream : await navigator.mediaDevices.getUserMedia({
               audio: false,
               video: { facingMode: { ideal: facing }, width: { ideal: 640 }, height: { ideal: 480 }, frameRate: { ideal: 30, max: 30 } }
             });
+            facing = localStream.getVideoTracks()[0]?.getSettings?.().facingMode || facing;
           } catch (error) { throw new Error(mapError(error)); }
-          if (my !== token) { localStream.getTracks().forEach((t) => t.stop()); return; }
+          if (my !== token) { if (localStream !== arScreenStream) localStream.getTracks().forEach((t) => t.stop()); return; }
           stream = localStream;
           video.srcObject = localStream;
           video.muted = true;
@@ -2470,7 +2542,7 @@
             options.baseOptions = { ...options.baseOptions, delegate: 'CPU' };
             detector = await vision.HandLandmarker.createFromOptions(files, options);
           }
-          if (my !== token) { detector.close(); localStream.getTracks().forEach((t) => t.stop()); return; }
+          if (my !== token) { detector.close(); if (localStream !== arScreenStream) localStream.getTracks().forEach((t) => t.stop()); return; }
           landmarker = detector;
           running = true;
           lastVideoTime = -1; fpsCount = 0; fpsStart = performance.now();
@@ -2481,7 +2553,10 @@
           loop();
         } catch (error) {
           if (my === token) {
-            try { (stream || localStream)?.getTracks().forEach((t) => t.stop()); } catch (_) { /* nada */ }
+            try {
+              const failedStream = stream || localStream;
+              if (failedStream && failedStream !== arScreenStream) failedStream.getTracks().forEach((t) => t.stop());
+            } catch (_) { /* nada */ }
             stream = null;
             video.srcObject = null;
             try { landmarker?.close(); } catch (_) { /* nada */ }
@@ -2502,10 +2577,11 @@
       function stop() {
         token++;
         const was = running || stream || landmarker;
+        const activeStream = stream;
         running = false;
         starting = false;
         cancelAnimationFrame(raf);
-        try { stream?.getTracks().forEach((t) => t.stop()); } catch (_) { /* nada */ }
+        try { if (activeStream && activeStream !== arScreenStream) activeStream.getTracks().forEach((t) => t.stop()); } catch (_) { /* nada */ }
         stream = null;
         try { if (video.srcObject) { video.pause?.(); video.srcObject = null; } } catch (_) { /* nada */ }
         try { landmarker?.close(); } catch (_) { /* nada */ }
@@ -2535,6 +2611,15 @@
           video.srcObject = next;
           await video.play();
           stream = next;
+          if (arScreenStream === previous) {
+            arScreenStream = next;
+            const arVideo = $('#arScreenVideo');
+            if (arVideo) {
+              arVideo.srcObject = next;
+              await arVideo.play().catch(() => {});
+              arVideo.style.transform = target === 'user' ? 'scaleX(-1)' : 'none';
+            }
+          }
           previous?.getTracks().forEach((t) => t.stop());
           facing = target;
           canvas.width = video.videoWidth || 640;
@@ -2614,6 +2699,7 @@
       }
 
       function process(result, now) {
+        if (!['hands', 'ar', 'vr'].includes(currentTab)) return;
         const hands = (result.landmarks || []).map(handInfo).sort((a, b) => a.x - b.x);
         $('#handsNow').textContent = String(hands.length);
         const cursor = $('#handCursor');
@@ -2625,11 +2711,13 @@
         } else {
           cursor.classList.remove('on', 'pinch');
         }
-        const viewer = $('#handsModel');
-        const orbit = typeof viewer.getCameraOrbit === 'function' ? viewer.getCameraOrbit() : null;
+        const viewer = gestureTargetViewer();
+        const orbit = viewer && typeof viewer.getCameraOrbit === 'function' ? viewer.getCameraOrbit() : null;
+        const vrReady = currentTab === 'vr' && !!$('#vrRig') && !!$('#vrCamera');
+        const controlsReady = !!orbit || vrReady;
         const both = hands.length >= 2 && hands[0].pinch && hands[1].pinch;
-        if (both && orbit) { pinchState = null; applyTwo(hands); }
-        else if (hands.length && hands[0].pinch && orbit) { twoState = null; applyPinch(hands[0]); }
+        if (both && controlsReady) { pinchState = null; applyTwo(hands); }
+        else if (hands.length && hands[0].pinch && controlsReady) { twoState = null; applyPinch(hands[0]); }
         else { pinchState = null; twoState = null; }
         const primary = hands[0];
         const label = primary ? (primary.pinch ? 'Pellizco' : primary.thumbUp ? 'Pulgar arriba' : primary.fist ? 'Puño' : primary.open ? 'Palma abierta' : 'Mano') : 'Sin manos';
@@ -2639,7 +2727,23 @@
       }
 
       function applyPinch(hand) {
-        const viewer = $('#handsModel');
+        if (currentTab === 'vr') {
+          const rig = $('#vrRig');
+          const rotation = rig.getAttribute('rotation') || { x: 0, y: 0, z: 0 };
+          if (!pinchState) {
+            pinchState = { x: hand.x, y: hand.y, yaw: rotation.y, pitch: rotation.x };
+            setHandsAuto(false);
+            return;
+          }
+          const dx = hand.x - pinchState.x;
+          const dy = hand.y - pinchState.y;
+          const yaw = pinchState.yaw - dx * 180;
+          const pitch = clamp(pinchState.pitch + dy * 110, -35, 35);
+          rig.setAttribute('rotation', `${pitch.toFixed(1)} ${yaw.toFixed(1)} 0`);
+          return;
+        }
+        const viewer = gestureTargetViewer();
+        if (!viewer || typeof viewer.getCameraOrbit !== 'function') return;
         if (!pinchState) {
           pinchState = { x: hand.x, y: hand.y, orbit: viewer.getCameraOrbit() };
           setHandsAuto(false);
@@ -2653,8 +2757,16 @@
       }
 
       function applyTwo(hands) {
-        const viewer = $('#handsModel');
         const dist = Math.hypot(hands[0].x - hands[1].x, hands[0].y - hands[1].y) || 0.001;
+        if (currentTab === 'vr') {
+          const camera = $('#vrCamera');
+          const fov = Number(camera.getAttribute('camera')?.fov) || 72;
+          if (!twoState) { twoState = { d: dist, fov }; setHandsAuto(false); return; }
+          camera.setAttribute('camera', 'fov', clamp(twoState.fov * (twoState.d / dist), 40, 90));
+          return;
+        }
+        const viewer = gestureTargetViewer();
+        if (!viewer || typeof viewer.getCameraOrbit !== 'function') return;
         if (!twoState) {
           twoState = { d: dist, orbit: viewer.getCameraOrbit() };
           setHandsAuto(false);
@@ -2674,7 +2786,10 @@
           lastAction[key] = now;
           return true;
         };
-        if (gesture === 'thumb' && ready('thumb', 550)) toggleFavorite(handsCurrentId);
+        if (gesture === 'thumb' && ready('thumb', 550)) {
+          const id = gestureTargetModelId();
+          if (id) toggleFavorite(id);
+        }
         if (gesture === 'fist' && ready('fist', 650)) resetHandsView();
         if (gesture === 'open' && ready('open', 1000)) toggleHandsAuto();
         if (gesture === 'open') {
@@ -2697,9 +2812,39 @@
       return {
         start, stop, flip,
         get running() { return running; },
+        getStream() { return stream; },
+        getFacing() { return facing; },
+        resetGestures() { pinchState = null; twoState = null; stable = null; swipeTrack = null; },
         setSensitivity(value) { sensitivity = clamp(Number(value) || 1, 0.6, 1.6); }
       };
     })();
+
+    function syncHandsModeButtons() {
+      const active = Hands.running;
+      ['arHandsBtn', 'vrHandsBtn'].forEach((id) => {
+        const button = $(`#${id}`);
+        if (!button) return;
+        button.textContent = active ? 'Apagar manos' : 'Activar manos';
+        button.setAttribute('aria-pressed', String(active));
+      });
+    }
+
+    async function toggleHandsFromMode() {
+      if (Hands.running) { Hands.stop(); return; }
+      if (!$('#handsConsent').checked) {
+        handsReturnTab = currentTab;
+        $('#handsNotice').textContent = 'Antes de activar manos, acepta el uso de cámara en esta pantalla. El video se procesa localmente.';
+        selectTab('hands');
+        requestAnimationFrame(() => $('#handsConsent').focus());
+        return;
+      }
+      try {
+        await Hands.start();
+        toast('Manos activas', 'Pellizca y arrastra para girar; usa dos manos para acercar o alejar.', 'ok');
+      } catch (error) {
+        toast('No se pudieron activar las manos', error.message || 'Revisa el permiso de cámara.', 'warn');
+      }
+    }
 
     function initHandsEvents() {
       $('#handsConsent').addEventListener('change', (event) => {
@@ -2714,12 +2859,18 @@
         $('#handsStartBtn').disabled = true;
         try {
           await Hands.start();
-          toast('Manos activas', 'Acerca la mano a la cámara y pellizca para girar el modelo.', 'ok');
+          toast('Manos activas', 'Pellizca y arrastra para girar; usa dos manos para acercar o alejar.', 'ok');
+          if (['ar', 'vr'].includes(handsReturnTab)) {
+            const destination = handsReturnTab;
+            handsReturnTab = null;
+            selectTab(destination);
+          }
         } catch (error) {
           toast('No se pudo activar la cámara', error.message || 'Revisa el permiso del navegador.', 'warn');
           $('#handsStartBtn').disabled = !$('#handsConsent').checked;
         }
       });
+      $('#vrHandsBtn').addEventListener('click', toggleHandsFromMode);
       $('#handsStopBtn').addEventListener('click', () => Hands.stop());
       $('#handsFlipBtn').addEventListener('click', () => Hands.flip());
       $('#handSensitivity').addEventListener('input', (event) => Hands.setSensitivity(event.target.value));

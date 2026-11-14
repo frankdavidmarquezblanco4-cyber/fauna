@@ -91,7 +91,7 @@ async def main():
         check("borrar perfiles vuelve a modo invitado", not await wp.locator("#accessGate").is_visible() and await wp.locator("#profileChip").is_visible())
         await wctx.close()
 
-        # Offline test: shell v41 is installed; GLBs are separate and user-triggered.
+        # Offline test: shell v42 is installed; GLBs are separate and user-triggered.
         await page.click("#tab-gallery")
         await page.evaluate("navigator.serviceWorker.ready")
         await page.wait_for_timeout(800)
@@ -99,9 +99,9 @@ async def main():
           const names = await caches.keys();
           const models = await caches.open('faunaxr-models-v1');
           const puppy = await models.match(new URL('./assets/models/Puppy.glb', location.href).href);
-          return {shell: names.includes('faunaxr-offline-v41'), modelCache: names.includes('faunaxr-models-v1'), puppyInitiallyCached: !!puppy};
+          return {shell: names.includes('faunaxr-offline-v42'), modelCache: names.includes('faunaxr-models-v1'), puppyInitiallyCached: !!puppy};
         }""")
-        check("service worker shell v41", cache_state["shell"], cache_state)
+        check("service worker shell v42", cache_state["shell"], cache_state)
         check("GLB no se precarga sin pedirlo", not cache_state["puppyInitiallyCached"], cache_state)
         await page.click("#downloadOfflineModelsBtn")
         await page.wait_for_function("document.querySelector('#offlineModelStatus').textContent.includes('Descarga completa')", timeout=60000)

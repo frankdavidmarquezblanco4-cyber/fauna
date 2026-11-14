@@ -1,7 +1,7 @@
-/* FaunaXR · PWA offline — shell v41, modelos bajo demanda */
+/* FaunaXR · PWA offline — shell v42, modelos bajo demanda */
 'use strict';
 
-const CACHE_NAME = 'faunaxr-offline-v41';
+const CACHE_NAME = 'faunaxr-offline-v42';
 const MODEL_CACHE_NAME = 'faunaxr-models-v1';
 
 // Shell pequeño y necesario para abrir la app. Cada recurso se intenta por separado:

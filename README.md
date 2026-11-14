@@ -24,7 +24,7 @@ En **Aprende**, cada animal tiene diez preguntas autocorregibles de tres opcione
 
 En **Galería**, pulsa **Descargar para uso sin conexión** para guardar los 21 GLB localmente. El panel informa el progreso y la estimación de espacio; cada ficha indica si el modelo quedó disponible offline. Consulta [PWA_OFFLINE.md](PWA_OFFLINE.md) para detalles.
 
-La RA nativa y WebXR inmersivo requieren navegador/dispositivo compatible y no pudieron verificarse en hardware real. La RA por cámara no ancla el modelo a una superficie. El despliegue HTTPS no se realizó; `PWA_OFFLINE.md` incluye pasos de preparación para hosting estático, sin publicar ni conectar un servicio.
+El botón **Ver en RA** usa RA nativa si el navegador la anuncia; de lo contrario abre la superposición por cámara, que no detecta superficies ni ancla el modelo. **Activar manos** solicita consentimiento, comparte un único flujo de cámara y controla los modelos en RA y RV en pantalla; el procesamiento es local. El control gestual dentro de RA nativa o WebXR inmersivo depende del navegador y hardware compatibles, que no se probaron físicamente. Página pública: https://frankdavidmarquezblanco4-cyber.github.io/fauna/galeria-xr.html#hands.
 
 ## Pruebas
 
@@ -33,6 +33,7 @@ Con el servidor local en puerto 8123, ejecuta desde la raíz:
 ```bash
 python3 _tools/test_functional.py
 python3 _tools/test_gallery.py
+python3 _tools/test_ar_hands.py
 python3 _tools/test_profiles_offline.py
 python3 _tools/test_quiz_and_ids.py
 ```
@@ -42,7 +43,7 @@ Los scripts usan Playwright/Chromium con SwiftShader y cámara simulada; sus res
 ## Archivos principales
 
 - `galeria-xr.html`: catálogo, quizzes, visores, cámara, perfiles y descarga offline.
-- `service-worker.js`: shell `faunaxr-offline-v41` y caché separada de modelos.
+- `service-worker.js`: shell `faunaxr-offline-v42` y caché separada de modelos.
 - `assets/data/fauna-learning.es.json`: teoría, fuentes y quizzes.
 - `assets/models/`: GLB, miniaturas y avisos de licencia.
 - `assets/vendor/draco/`: decodificadores locales con licencia Apache 2.0.

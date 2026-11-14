@@ -12,8 +12,8 @@ Los 13 modelos salvajes son CC0 de Grab3D; la lista de archivos y URLs está en 
 
 ## PWA/offline
 
-`service-worker.js` usa `faunaxr-offline-v41` para shell y `faunaxr-models-v1` para los GLB bajo demanda. Los 21 modelos suman 13.13 MB decimales (12.52 MiB). La instalación usa `Promise.allSettled`; los binarios y tarea de MediaPipe se cachean al primer uso. El indicador de tarjetas consulta únicamente la caché de modelos. No hay branch de audio/HEAD/206.
+`service-worker.js` usa `faunaxr-offline-v42` para shell y `faunaxr-models-v1` para los GLB bajo demanda. Los 21 modelos suman 13.13 MB decimales (12.52 MiB). La instalación usa `Promise.allSettled`; los binarios y tarea de MediaPipe se cachean al primer uso. El indicador de tarjetas consulta únicamente la caché de modelos. No hay branch de audio/HEAD/206.
 
 ## Pruebas y herramientas
 
-La portada de miniaturas se genera con `_tools/poster.html` y `_tools/shoot.py` (Playwright/Chromium + SwiftShader). Ejecutar `python3 -m http.server 8123` y, desde la raíz, los scripts `python3 _tools/test_functional.py`, `test_gallery.py`, `test_profiles_offline.py` y `test_quiz_and_ids.py`. Los archivos de captura se escriben en `/tmp/faunaxr-test-output`, no en el paquete.
+La portada de miniaturas se genera con `_tools/poster.html` y `_tools/shoot.py` (Playwright/Chromium + SwiftShader). Ejecutar `python3 -m http.server 8123` y, desde la raíz, los scripts `python3 _tools/test_functional.py`, `test_gallery.py`, `test_ar_hands.py`, `test_profiles_offline.py` y `test_quiz_and_ids.py`. Los archivos de captura se escriben en `/tmp/faunaxr-test-output`, no en el paquete.

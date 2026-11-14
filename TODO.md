@@ -8,15 +8,16 @@
 - Créditos comprobados de Duck y Fox de Khronos en el catálogo, archivos de licencia y README; tres animaciones de Fox usadas secuencialmente en los visores.
 - Nota explícita del GLB Scratch Cat: la fuente/licencia exacta no está en el ZIP, Scratch Cat es marca registrada; candidato genérico CC0 documentado sin sustitución no aprobada.
 - Siete GLB mayores de 4 MB optimizados a Draco/WebP, con texturas limitadas a 1024 × 1024; decodificadores locales y archivos originales preservados fuera del paquete.
-- Service worker `faunaxr-offline-v41`: instalación tolerante a fallos, MediaPipe bajo demanda, botón de descarga offline para los 21 modelos, progreso, estimación de espacio y estado por animal; retirado el manejo de audio.
+- Service worker `faunaxr-offline-v42`: instalación tolerante a fallos, MediaPipe bajo demanda, botón de descarga offline para los 21 modelos, progreso, estimación de espacio y estado por animal; retirado el manejo de audio.
 - Etiquetas Open Graph/Twitter y depuración de archivos obsoletos del ZIP final.
-- Documentación coherente en README, guía offline, galería, plan y notas técnicas.
+- RA: el botón principal intenta RA nativa y, si no está disponible, abre la superposición por cámara. «Activar manos» respeta consentimiento, comparte una sola cámara y dirige los gestos a RA/RV en pantalla. La superposición no ancla el modelo a una superficie.
+- Documentación coherente en README, guía offline, galería, plan y notas técnicas; regresión de navegador para RA/manos/RV.
 
 ## Pendiente
 
 - Incorporar puma solo cuando haya un GLB con licencia verificable y apto para redistribución. No se inventó ni añadió un modelo.
-- Publicar manualmente en hosting HTTPS; el README y `PWA_OFFLINE.md` solo preparan los pasos. No se realizó despliegue.
-- Probar RA nativa en un móvil real y WebXR inmersivo con visor físico; el navegador de pruebas no sustituye ese hardware.
+- Publicación en GitHub Pages realizada en `main`: https://frankdavidmarquezblanco4-cyber.github.io/fauna/galeria-xr.html#hands.
+- Probar RA nativa en un móvil real y WebXR inmersivo con visor físico; el navegador de pruebas no sustituye ese hardware. La prueba simulada sí verifica la superposición de cámara y el control gestual en pantalla.
 
 ## Privacidad
 

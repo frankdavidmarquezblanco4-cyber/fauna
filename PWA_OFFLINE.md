@@ -1,6 +1,6 @@
 # FaunaXR sin conexión
 
-FaunaXR es una PWA estática. El shell usa la caché `faunaxr-offline-v41`; los modelos descargados a petición se guardan por separado en `faunaxr-models-v1` y sobreviven a una actualización del shell.
+FaunaXR es una PWA estática. El shell usa la caché `faunaxr-offline-v42`; los modelos descargados a petición se guardan por separado en `faunaxr-models-v1` y sobreviven a una actualización del shell.
 
 ## Preparación
 
@@ -14,8 +14,8 @@ La descarga completa actual es de alrededor de **12,5 MiB** (21 archivos). El pa
 
 La navegación es de red primero con una copia cacheada de respaldo. Los recursos estáticos se sirven desde caché primero y se añaden al shell cuando se usan en línea. Las peticiones GET a GLB consultan solo `faunaxr-models-v1`; sin una copia descargada y sin red devuelven un mensaje 503 específico. Las respuestas parciales y de terceros no se cachean. Ya no existe lógica especial de `HEAD`/206 para audio de misiones.
 
-El modo offline necesita que el service worker se haya registrado bajo HTTPS o `localhost`. Borrar datos del sitio elimina la caché y el almacenamiento local. La RA nativa necesita además soporte del dispositivo; la sala RV visible en pantalla no equivale a verificar WebXR inmersivo con visor físico.
+El modo offline necesita que el service worker se haya registrado bajo HTTPS o `localhost`. Borrar datos del sitio elimina la caché y el almacenamiento local. El botón principal de RA ofrece superposición de cámara cuando no hay RA nativa; esta no ancla el modelo. El seguimiento de manos comparte el flujo de cámara con las vistas AR/RV en pantalla y se apaga al salir de esos modos o al ocultar la página. La sala RV visible en pantalla no equivale a verificar WebXR inmersivo con visor físico.
 
-## Preparación de hosting HTTPS (todavía no publicado)
+## Publicación HTTPS
 
-Publica manualmente el contenido del ZIP conservando las rutas relativas y `service-worker.js` junto a la página. Comprueba por HTTPS la galería, el manifiesto, iconos, los archivos de `assets/vendor/draco/` y la consola del navegador. Abre la app con conexión, descarga los modelos y verifica una recarga sin red. No se ha creado ni publicado hosting en este trabajo.
+La página está publicada en [GitHub Pages](https://frankdavidmarquezblanco4-cyber.github.io/fauna/galeria-xr.html#hands) desde la rama `main`. Después de actualizaciones del shell se usa `faunaxr-offline-v42`; al abrir la app en línea el navegador instala la caché nueva y conserva por separado los modelos ya descargados. Para verificar el modo sin conexión, abre la app con conexión, completa **Descargar para uso sin conexión** y prueba una recarga sin red.
