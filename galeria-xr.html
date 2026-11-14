@@ -1805,7 +1805,7 @@
         }
       });
       $('#arScreenModelSelect').addEventListener('change', (event) => setArModel(event.target.value));
-      $('#arScreenStart').addEventListener('click', startArScreen);
+      $('#arScreenStart').addEventListener('click', () => startArScreen());
       $('#arScreenStop').addEventListener('click', () => { Hands.stop(); stopArScreen(); });
       document.addEventListener('visibilitychange', () => {
         if (document.hidden) { stopArScreen(); Hands.stop(); }
@@ -1813,10 +1813,14 @@
       window.addEventListener('pagehide', () => { stopArScreen(); Hands.stop(); });
     }
     let arScreenStream = null;
-    async function startArScreen() {
+    async function startArScreen(facingMode = 'environment') {
       if (!window.isSecureContext) { toast('Se necesita HTTPS', 'Abre FaunaXR desde GitHub Pages o localhost para usar la cámara.', 'warn'); return; }
       if (!navigator.mediaDevices?.getUserMedia) { toast('Cámara no disponible', 'Este navegador no ofrece acceso a cámara. Prueba Chrome o Safari actualizado.', 'warn'); return; }
-      if (arScreenStream?.active) return true;
+      if (arScreenStream?.active) {
+        const currentFacing = arScreenStream.getVideoTracks()[0]?.getSettings?.().facingMode;
+        if (facingMode !== 'user' || currentFacing === 'user') return true;
+        stopArScreen();
+      }
       const startBtn = $('#arScreenStart');
       let stream = null;
       startBtn.disabled = true;
@@ -1824,8 +1828,13 @@
       try {
         stream = Hands.running && Hands.getStream() ? Hands.getStream() : await navigator.mediaDevices.getUserMedia({
           audio: false,
-          video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } }
+          video: { facingMode: { ideal: facingMode }, width: { ideal: 1280 }, height: { ideal: 720 } }
         });
+        if (facingMode === 'user' && stream.getVideoTracks()[0]?.getSettings?.().facingMode === 'environment') {
+          const cameraError = new Error('No se pudo seleccionar la cámara frontal. Revisa que esté disponible y vuelve a intentarlo.');
+          cameraError.name = 'OverconstrainedError';
+          throw cameraError;
+        }
         arScreenStream = stream;
         const video = $('#arScreenVideo');
         video.muted = true;
@@ -1833,7 +1842,7 @@
         video.autoplay = true;
         video.srcObject = stream;
         await video.play();
-        const facing = stream.getVideoTracks()[0]?.getSettings?.().facingMode || (Hands.running ? Hands.getFacing() : 'environment');
+        const facing = stream.getVideoTracks()[0]?.getSettings?.().facingMode || (Hands.running ? Hands.getFacing() : facingMode);
         video.style.transform = facing === 'user' ? 'scaleX(-1)' : 'none';
         $('#arScreenEmpty').hidden = true;
         $('#arScreen').classList.add('is-live');
@@ -1854,6 +1863,7 @@
         let message = error?.message || 'No se pudo abrir la cámara.';
         if (error?.name === 'NotAllowedError' || error?.name === 'PermissionDeniedError') message = 'Permite el acceso a la cámara para este sitio en los ajustes del navegador y vuelve a intentarlo.';
         else if (error?.name === 'NotFoundError' || error?.name === 'DevicesNotFoundError') message = 'No se encontró una cámara en este dispositivo.';
+        else if (error?.name === 'OverconstrainedError' && facingMode === 'user') message = 'No se pudo seleccionar la cámara frontal. Revisa que esté disponible y vuelve a intentarlo.';
         else if (error?.name === 'NotReadableError' || error?.name === 'TrackStartError') message = 'La cámara está ocupada por otra aplicación. Ciérrala y vuelve a intentarlo.';
         else if (error?.name === 'SecurityError') message = 'La cámara requiere HTTPS o localhost.';
         $('#arMessage').textContent = message;
@@ -2858,7 +2868,7 @@
         renderArPicker();
       }
       if (modelSrc && model.getAttribute('src') !== modelSrc) model.setAttribute('src', modelSrc);
-      return await startArScreen();
+      return await startArScreen('user');
     }
 
     function handsActiveHint() {
