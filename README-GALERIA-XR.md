@@ -18,7 +18,7 @@ El selector incluye las 21 especies de la galería y los diseños GLB cargados e
 
 ## Aprende
 
-La pestaña **Aprende** contiene una teoría breve, una fuente enlazada y un quiz autocorregible para cada uno de los 21 animales. El contenido está guardado en `assets/data/fauna-learning.es.json` y se incluye en la caché offline.
+La pestaña **Aprende** contiene teoría, fuentes enlazadas y quizzes autocorregibles para los 21 animales. La ficha del león añade cinco datos curiosos con su fuente y un quiz de seis preguntas con explicación y resultado final; los demás animales conservan su quiz. El contenido está guardado en `assets/data/fauna-learning.es.json` y se incluye en la caché offline.
 
 ## Realidad aumentada con cámara
 

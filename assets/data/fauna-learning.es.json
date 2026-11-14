@@ -134,7 +134,96 @@
       "question": "¿Qué nombre reciben los grupos sociales de leones?",
       "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
       "sourceUrl": "https://nationalzoo.si.edu/animals/lion",
-      "theory": "Los leones viven en hábitats muy variados, desde llanuras abiertas hasta matorrales densos y bosques secos. Se alimentan sobre todo de animales grandes, como cebras y ñus. A diferencia de la mayoría de los felinos, forman grupos sociales llamados manadas, compuestos principalmente por hembras emparentadas, sus crías y uno o más machos. Las hembras suelen ser las principales cazadoras y también crían a los cachorros."
+      "theory": "El león africano (Panthera leo) es un gran felino carnívoro de sabanas, praderas y bosques abiertos. A diferencia de la mayoría de los felinos, suele vivir en grupos familiares llamados manadas. Las hembras emparentadas cooperan en la caza y en el cuidado de las crías; los machos suelen ayudar a defender el territorio. La cooperación, la competencia y el descanso forman parte de la vida de la manada.",
+      "interestingFacts": [
+        {
+          "text": "El rugido de un león puede oírse a varios kilómetros. Hembras y machos rugen para comunicarse y defender el territorio.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "text": "Las leonas realizan la mayor parte de la caza y a menudo cooperan; suelen aprovechar la noche o las primeras horas del día.",
+          "sourceTitle": "How loud is a lion’s roar? And 4 other lion facts | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/resources/facts/how-loud-is-a-lions-roar-and-4-other-lion-facts/"
+        },
+        {
+          "text": "Un león puede dormir o descansar hasta 20 horas en un día.",
+          "sourceTitle": "Lion | African Wildlife Foundation",
+          "sourceUrl": "https://www.awf.org/wildlife-conservation/lion"
+        },
+        {
+          "text": "Los cachorros pueden tener manchas claras en el pelaje; normalmente se desvanecen a medida que crecen.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "text": "La melena de los machos varía en longitud y color; influyen factores como la edad, la genética y las hormonas.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        }
+      ],
+      "quizzes": [
+        {
+          "question": "¿Qué nombre reciben los grupos sociales de leones?",
+          "options": [
+            "Bandadas",
+            "Colonias de madrigueras",
+            "Manadas"
+          ],
+          "correctIndex": 2,
+          "explanation": "Los grupos familiares de leones se llaman manadas (prides en inglés)."
+        },
+        {
+          "question": "¿Quiénes suelen realizar la mayor parte de la caza de la manada?",
+          "options": [
+            "Las leonas",
+            "Los cachorros",
+            "Solo los machos adultos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Las leonas suelen ser las principales cazadoras y pueden cooperar para acercarse a sus presas."
+        },
+        {
+          "question": "¿Cuándo suelen preferir cazar los leones?",
+          "options": [
+            "Al mediodía, bajo el sol más fuerte",
+            "De noche o temprano por la mañana",
+            "Solo durante las lluvias"
+          ],
+          "correctIndex": 1,
+          "explanation": "La poca luz ayuda a las leonas a acercarse a sus presas sin ser detectadas."
+        },
+        {
+          "question": "¿A qué distancia puede oírse el rugido de un león, según las fuentes consultadas?",
+          "options": [
+            "Hasta unos 8 kilómetros",
+            "Solo a unos pocos metros",
+            "No se oye fuera de la manada"
+          ],
+          "correctIndex": 0,
+          "explanation": "El Smithsonian indica que puede escucharse hasta cinco millas; la AWF lo expresa como unos ocho kilómetros."
+        },
+        {
+          "question": "¿Cuánto pueden dormir o descansar los leones durante un día?",
+          "options": [
+            "Hasta 20 horas",
+            "Menos de dos horas",
+            "Exactamente seis minutos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los leones pueden descansar hasta 20 horas al día, según WWF y African Wildlife Foundation."
+        },
+        {
+          "question": "¿Qué suele pasar con las manchas claras que algunos cachorros tienen en el pelaje?",
+          "options": [
+            "Se transforman en rayas oscuras",
+            "Se desvanecen mientras crecen",
+            "Se vuelven más grandes cada año"
+          ],
+          "correctIndex": 1,
+          "explanation": "Las manchas juveniles suelen desaparecer a medida que los leones crecen."
+        }
+      ]
     },
     {
       "correctIndex": 0,

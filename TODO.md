@@ -10,6 +10,8 @@
 - [x] La RA por cámara deja seleccionar cualquier animal de la galería o GLB propio, y silencia los avisos superpuestos mientras proyecta el modelo.
 - [x] La nueva pestaña Aprende tiene teoría breve, fuente enlazada y quiz autocorregible para cada animal del catálogo.
 - [x] El JSON de aprendizaje está incluido en el app shell de la PWA para lectura offline.
+- [x] La teoría del león africano incluye cinco datos curiosos, cada uno con fuente enlazada.
+- [x] El quiz del león tiene seis preguntas autocorregibles, cada una con tres opciones y explicación; los demás animales conservan sus quizzes existentes.
 
 ## Pendientes previos
 - [ ] Añadir un puma/cougar si aparece un GLB redistribuible con licencia verificable.

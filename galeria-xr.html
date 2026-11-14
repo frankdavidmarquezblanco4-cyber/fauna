@@ -405,9 +405,19 @@
     .learn-detail h3{margin:3px 0 12px;font-size:clamp(1.35rem,3vw,1.9rem)}
     .learn-theory{max-width:75ch;font-size:1.03rem;line-height:1.75;color:#30475A}
     .learn-source{font-size:.85rem;color:var(--muted)}
+    .learning-facts{max-width:75ch;margin:16px 0;padding:16px 20px;border:1px solid #C6DFEE;border-radius:16px;background:#F3FAFD}
+    .learning-facts h4{margin:0 0 12px;color:#123B5A;font-size:1.05rem}
+    .learning-facts ul{margin:0;padding-left:22px;line-height:1.65}
+    .learning-facts li+li{margin-top:12px}
+    .learn-fact-source{display:block;margin-top:3px;font-size:.82rem;color:var(--muted)}
     .quiz-card{margin-top:22px;padding:18px;border:1px solid #C6DFEE;border-radius:18px;background:#fff}
     .quiz-card fieldset{border:0;padding:0;margin:0}
     .quiz-card legend{font-weight:900;font-size:1.08rem;margin-bottom:12px}
+    .quiz-card fieldset.quiz-question{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid #D8E9F2}
+    .quiz-card fieldset.quiz-question:last-of-type{border-bottom:0;margin-bottom:8px}
+    .quiz-number{display:block;margin-bottom:5px;color:var(--blue);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+    .quiz-question-feedback{min-height:1.2em;margin:6px 0 0;font-size:.91rem;line-height:1.5}
+    .quiz-card button{margin-top:12px}
     .quiz-option{display:flex;align-items:flex-start;gap:10px;margin:8px 0;padding:12px;border:1px solid var(--border);border-radius:12px;cursor:pointer}
     .quiz-option input{width:18px;height:18px;accent-color:var(--blue);flex:none;margin:2px 0 0}
     .quiz-feedback{min-height:1.5em;font-weight:800;margin:12px 0 0}
@@ -2778,34 +2788,71 @@
       activeLearningId = id;
       $('#learnGrid').hidden = true;
       detail.hidden = false;
-      const options = lesson.options.map((option, index) => `
-        <label class="quiz-option" for="animalQuizOption${index}">
-          <input id="animalQuizOption${index}" type="radio" name="animalQuizAnswer" value="${index}">
-          <span>${esc(option)}</span>
-        </label>`).join('');
+
+      const quizzes = Array.isArray(lesson.quizzes) && lesson.quizzes.length
+        ? lesson.quizzes
+        : [{ question: lesson.question, options: lesson.options, correctIndex: lesson.correctIndex, explanation: lesson.explanation }];
+      const questions = quizzes.map((quiz, questionIndex) => {
+        const options = quiz.options.map((option, optionIndex) => `
+          <label class="quiz-option" for="animalQuizOption${questionIndex}_${optionIndex}">
+            <input id="animalQuizOption${questionIndex}_${optionIndex}" type="radio" name="animalQuizAnswer${questionIndex}" value="${optionIndex}">
+            <span>${esc(option)}</span>
+          </label>`).join('');
+        return `
+          <fieldset class="quiz-question">
+            <legend><span class="quiz-number">Pregunta ${questionIndex + 1} de ${quizzes.length}</span>${esc(quiz.question)}</legend>
+            ${options}
+          </fieldset>
+          <p class="quiz-feedback quiz-question-feedback" id="animalQuizQuestionFeedback${questionIndex}" role="status" aria-live="polite"></p>`;
+      }).join('');
+      const facts = Array.isArray(lesson.interestingFacts) ? lesson.interestingFacts : [];
+      const factsMarkup = facts.length ? `
+        <section class="learning-facts" aria-labelledby="learningFactsTitle">
+          <h4 id="learningFactsTitle">Datos curiosos</h4>
+          <ul>${facts.map((fact) => `
+            <li>${esc(fact.text)}<span class="learn-fact-source">Fuente: <a href="${esc(fact.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(fact.sourceTitle)}</a></span></li>`).join('')}
+          </ul>
+        </section>` : '';
+
       detail.innerHTML = `
         <button class="btn btn-sm" type="button" data-learn-back>‹ Todos los animales</button>
         <p class="eyebrow" style="margin:18px 0 4px">Teoría del animal</p>
         <h3>${esc(model.name)}</h3>
         <p class="learn-theory">${esc(lesson.theory)}</p>
-        <p class="learn-source">Fuente: <a href="${esc(lesson.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(lesson.sourceTitle)}</a></p>
+        ${factsMarkup}
+        <p class="learn-source">Fuente general: <a href="${esc(lesson.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(lesson.sourceTitle)}</a></p>
         <form class="quiz-card" id="animalQuizForm">
-          <fieldset><legend>${esc(lesson.question)}</legend>${options}</fieldset>
-          <button class="btn btn-primary" type="submit">Comprobar respuesta</button>
+          <h4>Quiz: ${esc(model.name)}</h4>
+          <p>Responde ${quizzes.length === 1 ? 'la pregunta' : `las ${quizzes.length} preguntas`} y comprueba tu resultado.</p>
+          ${questions}
+          <button class="btn btn-primary" type="submit">Comprobar respuestas</button>
           <p class="quiz-feedback" id="animalQuizFeedback" role="status" aria-live="polite"></p>
         </form>`;
       detail.querySelector('#animalQuizForm').addEventListener('submit', (event) => {
         event.preventDefault();
-        const selected = detail.querySelector('input[name="animalQuizAnswer"]:checked');
+        const results = quizzes.map((quiz, questionIndex) => {
+          const selected = detail.querySelector(`input[name="animalQuizAnswer${questionIndex}"]:checked`);
+          const feedback = detail.querySelector(`#animalQuizQuestionFeedback${questionIndex}`);
+          if (!selected) {
+            feedback.className = 'quiz-feedback quiz-question-feedback incorrect';
+            feedback.textContent = `Sin responder. ${quiz.explanation}`;
+            return { answered: false, correct: false };
+          }
+          const correct = Number(selected.value) === quiz.correctIndex;
+          feedback.className = `quiz-feedback quiz-question-feedback ${correct ? 'correct' : 'incorrect'}`;
+          feedback.textContent = `${correct ? '¡Correcto! ' : 'Aún no. '}${quiz.explanation}`;
+          return { answered: true, correct };
+        });
         const feedback = $('#animalQuizFeedback');
-        if (!selected) {
-          feedback.className = 'quiz-feedback incorrect';
-          feedback.textContent = 'Elige una respuesta antes de comprobar.';
-          return;
-        }
-        const correct = Number(selected.value) === lesson.correctIndex;
-        feedback.className = `quiz-feedback ${correct ? 'correct' : 'incorrect'}`;
-        feedback.textContent = `${correct ? '¡Correcto! ' : 'Aún no. '}${lesson.explanation}`;
+        const correctCount = results.filter((result) => result.correct).length;
+        const unansweredCount = results.filter((result) => !result.answered).length;
+        const allCorrect = correctCount === quizzes.length;
+        feedback.className = `quiz-feedback ${allCorrect ? 'correct' : 'incorrect'}`;
+        feedback.textContent = unansweredCount
+          ? `Resultado parcial: ${correctCount} de ${quizzes.length} correctas. Te faltan ${unansweredCount} por responder.`
+          : allCorrect
+            ? `¡Perfecto! ${correctCount} de ${quizzes.length} respuestas correctas.`
+            : `Resultado: ${correctCount} de ${quizzes.length} correctas. Revisa las explicaciones de cada pregunta.`;
       });
       detail.querySelector('[data-learn-back]').addEventListener('click', () => {
         activeLearningId = null;
