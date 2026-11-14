@@ -654,7 +654,7 @@
         <div>
           <p class="eyebrow">Tu espacio, aumentado</p>
           <h2>Realidad aumentada</h2>
-          <p>Coloca el modelo con RA nativa o usa «RA en pantalla» con la cámara. El botón «Activar manos» permite manipular el modelo; la superposición por cámara no se ancla a superficies.</p>
+          <p>Coloca el modelo con RA nativa o usa «RA en pantalla» con la cámara. «Activar manos» abre la RA en pantalla para rotar y acercar el modelo con MediaPipe; la RA nativa no recibe estos gestos y la superposición por cámara no se ancla a superficies.</p>
         </div>
         <span class="pill pill-blue" id="arBadge">Comprobando compatibilidad…</span>
       </div>
@@ -780,7 +780,6 @@
         <div class="consent-actions">
           <button class="btn btn-primary" id="handsStartBtn" type="button" disabled>Activar manos</button>
           <button class="btn" id="handsStopBtn" type="button" disabled>Apagar cámara</button>
-          <button class="btn" id="handsFlipBtn" type="button" disabled>Cambiar cámara</button>
           <span class="note" id="handsNotice" role="status" aria-live="polite">Marca la casilla para habilitar la cámara.</span>
         </div>
       </div>
@@ -1412,7 +1411,7 @@
       if (key !== 'ar') stopArScreen();
       if (!['hands', 'ar', 'vr'].includes(key)) Hands.stop();
       else Hands.resetGestures();
-      if (key === 'ar' && !$('#arScreen').hidden && Hands.running && !arScreenStream) void startArScreen();
+      if (key === 'ar' && !opts.deferArScreen && Hands.running) void ensureArScreenForHands();
       if (key === 'ar' || key === 'vr') syncHandsModeButtons();
       if (key === 'ar' || key === 'hands') {
         const viewer = gestureTargetViewer();
@@ -1793,6 +1792,10 @@
       });
       $('#arScreenBtn').addEventListener('click', () => {
         const panel = $('#arScreen');
+        if (!panel.hidden && currentTab === 'ar' && Hands.running) {
+          toast('RA en pantalla activa', 'Mantén abierta la vista de cámara para que MediaPipe controle el modelo.', '');
+          return;
+        }
         panel.hidden = !panel.hidden;
         $('#arScreenBtn').setAttribute('aria-expanded', String(!panel.hidden));
         if (!panel.hidden) {
@@ -2487,6 +2490,7 @@
       let landmarker = null;
       let raf = 0;
       let lastVideoTime = -1;
+      let lastFrameVideo = null;
       let facing = 'user';
       let sensitivity = 1;
       let pinchState = null;
@@ -2509,7 +2513,6 @@
       function setUi(on) {
         $('#handsStartBtn').disabled = on || !$('#handsConsent').checked || !window.isSecureContext;
         $('#handsStopBtn').disabled = !on;
-        $('#handsFlipBtn').disabled = !on;
         $('#vrCameraFlipBtn').disabled = !on;
         $('#handsBadge').textContent = on ? 'Cámara activa · gestos en vivo' : arScreenStream ? 'Cámara activa · RA en pantalla' : 'Cámara apagada';
         $('#handsCameraNote').textContent = on ? 'Procesamiento local activo. El video no se graba ni se envía.' : 'Buena luz frontal ayuda a detectar mejor los dedos.';
@@ -2562,7 +2565,7 @@
           if (my !== token) { detector.close(); if (localStream !== arScreenStream) localStream.getTracks().forEach((t) => t.stop()); return; }
           landmarker = detector;
           running = true;
-          lastVideoTime = -1; fpsCount = 0; fpsStart = performance.now();
+          lastVideoTime = -1; lastFrameVideo = null; fpsCount = 0; fpsStart = performance.now();
           pinchState = null; twoState = null; stable = null; swipeTrack = null;
           $('#noCamera').hidden = true;
           setUi(true);
@@ -2603,6 +2606,7 @@
         try { if (video.srcObject) { video.pause?.(); video.srcObject = null; } } catch (_) { /* nada */ }
         try { landmarker?.close(); } catch (_) { /* nada */ }
         landmarker = null;
+        lastFrameVideo = null;
         if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
         pinchState = null; twoState = null; stable = null; swipeTrack = null;
         $('#noCamera').hidden = false;
@@ -2645,6 +2649,8 @@
           }
           previous?.getTracks().forEach((t) => t.stop());
           facing = target;
+          lastVideoTime = -1;
+          lastFrameVideo = null;
           const message = `Cámara ${target === 'user' ? 'frontal' : 'trasera'} activa.`;
           if (handTracking) note(message);
           else toast('Cámara cambiada', message, 'ok');
@@ -2667,12 +2673,15 @@
       function loop() {
         if (!running) return;
         raf = requestAnimationFrame(loop);
-        if (!landmarker || video.readyState < 2) return;
-        if (video.currentTime === lastVideoTime) return;
-        lastVideoTime = video.currentTime;
+        const frameVideo = currentTab === 'ar' && !$('#arScreen').hidden && $('#arScreen').classList.contains('is-live')
+          ? $('#arScreenVideo') : video;
+        if (!landmarker || !frameVideo || frameVideo.readyState < 2) return;
+        if (frameVideo !== lastFrameVideo) { lastFrameVideo = frameVideo; lastVideoTime = -1; }
+        if (frameVideo.currentTime === lastVideoTime) return;
+        lastVideoTime = frameVideo.currentTime;
         const now = performance.now();
         let result;
-        try { result = landmarker.detectForVideo(video, now); }
+        try { result = landmarker.detectForVideo(frameVideo, now); }
         catch (_) { return; }
         fpsCount++;
         if (now - fpsStart > 1000) {
@@ -2743,7 +2752,7 @@
           cursor.classList.remove('on', 'pinch');
         }
         const viewer = gestureTargetViewer();
-        const orbit = viewer && typeof viewer.getCameraOrbit === 'function' ? viewer.getCameraOrbit() : null;
+        const orbit = viewer && viewer.loaded && typeof viewer.getCameraOrbit === 'function' ? viewer.getCameraOrbit() : null;
         const vrReady = currentTab === 'vr' && !!$('#vrRig') && !!$('#vrCamera');
         const controlsReady = !!orbit || vrReady;
         const both = hands.length >= 2 && hands[0].pinch && hands[1].pinch;
@@ -2774,7 +2783,7 @@
           return;
         }
         const viewer = gestureTargetViewer();
-        if (!viewer || typeof viewer.getCameraOrbit !== 'function') return;
+        if (!viewer || !viewer.loaded || typeof viewer.getCameraOrbit !== 'function') return;
         if (!pinchState) {
           pinchState = { x: hand.x, y: hand.y, orbit: viewer.getCameraOrbit() };
           setHandsAuto(false);
@@ -2797,7 +2806,7 @@
           return;
         }
         const viewer = gestureTargetViewer();
-        if (!viewer || typeof viewer.getCameraOrbit !== 'function') return;
+        if (!viewer || !viewer.loaded || typeof viewer.getCameraOrbit !== 'function') return;
         if (!twoState) {
           twoState = { d: dist, orbit: viewer.getCameraOrbit() };
           setHandsAuto(false);
@@ -2860,6 +2869,17 @@
       });
     }
 
+    async function ensureArScreenForHands() {
+      const panel = $('#arScreen');
+      if (panel.hidden) {
+        panel.hidden = false;
+        $('#arScreenBtn').setAttribute('aria-expanded', 'true');
+        $('#arScreenModel').setAttribute('src', $('#arModel').getAttribute('src') || '');
+        renderArPicker();
+      }
+      return await startArScreen();
+    }
+
     async function toggleHandsFromMode() {
       if (Hands.running) { Hands.stop(); return; }
       if (!$('#handsConsent').checked) {
@@ -2870,6 +2890,7 @@
         return;
       }
       try {
+        if (currentTab === 'ar' && !(await ensureArScreenForHands())) return;
         await Hands.start();
         toast('Manos activas', 'Pellizca y arrastra para girar; usa dos manos para acercar o alejar.', 'ok');
       } catch (error) {
@@ -2890,12 +2911,16 @@
         $('#handsStartBtn').disabled = true;
         try {
           await Hands.start();
-          toast('Manos activas', 'Pellizca y arrastra para girar; usa dos manos para acercar o alejar.', 'ok');
           if (['ar', 'vr'].includes(handsReturnTab)) {
             const destination = handsReturnTab;
             handsReturnTab = null;
-            selectTab(destination);
+            selectTab(destination, { deferArScreen: destination === 'ar' });
+            if (destination === 'ar' && !(await ensureArScreenForHands())) {
+              Hands.stop();
+              return;
+            }
           }
+          toast('Manos activas', 'Pellizca y arrastra para girar; usa dos manos para acercar o alejar.', 'ok');
         } catch (error) {
           toast('No se pudo activar la cámara', error.message || 'Revisa el permiso del navegador.', 'warn');
           $('#handsStartBtn').disabled = !$('#handsConsent').checked;
@@ -2904,7 +2929,6 @@
       $('#vrHandsBtn').addEventListener('click', toggleHandsFromMode);
       $('#vrCameraFlipBtn').addEventListener('click', () => Hands.flip());
       $('#handsStopBtn').addEventListener('click', () => Hands.stop());
-      $('#handsFlipBtn').addEventListener('click', () => Hands.flip());
       $('#handSensitivity').addEventListener('input', (event) => Hands.setSensitivity(event.target.value));
       $('#handsPrevBtn').addEventListener('click', () => handsStep(-1));
       $('#handsNextBtn').addEventListener('click', () => handsStep(1));
