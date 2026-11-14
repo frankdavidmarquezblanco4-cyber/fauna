@@ -410,6 +410,8 @@
     .learning-facts ul{margin:0;padding-left:22px;line-height:1.65}
     .learning-facts li+li{margin-top:12px}
     .learn-fact-source{display:block;margin-top:3px;font-size:.82rem;color:var(--muted)}
+    .quiz-source{margin:8px 0 0;font-size:.8rem;color:var(--muted);overflow-wrap:anywhere}
+    .quiz-source a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
     .quiz-card{margin-top:22px;padding:18px;border:1px solid #C6DFEE;border-radius:18px;background:#fff}
     .quiz-card fieldset{border:0;padding:0;margin:0}
     .quiz-card legend{font-weight:900;font-size:1.08rem;margin-bottom:12px}
@@ -2823,10 +2825,13 @@
             <input id="animalQuizOption${questionIndex}_${optionIndex}" type="radio" name="animalQuizAnswer${questionIndex}" value="${optionIndex}">
             <span>${esc(option)}</span>
           </label>`).join('');
+        const sourceMarkup = quiz.sourceTitle && quiz.sourceUrl ? `
+            <p class="quiz-source">Fuente de esta pregunta: <a href="${esc(quiz.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(quiz.sourceTitle)}</a></p>` : '';
         return `
           <fieldset class="quiz-question">
             <legend><span class="quiz-number">Pregunta ${questionIndex + 1} de ${quizzes.length}</span>${esc(quiz.question)}</legend>
             ${options}
+            ${sourceMarkup}
           </fieldset>
           <p class="quiz-feedback quiz-question-feedback" id="animalQuizQuestionFeedback${questionIndex}" role="status" aria-live="polite"></p>`;
       }).join('');

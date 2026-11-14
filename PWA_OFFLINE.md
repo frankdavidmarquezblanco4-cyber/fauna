@@ -8,7 +8,7 @@ La instalación y la primera preparación requieren conexión. Abre FaunaXR bajo
 
 - Galería, fichas de animales, búsqueda y preferencias locales.
 - Favoritos y visitas guardados en el dispositivo incluso sin crear perfil.
-- Las teorías y quizzes de los 21 animales, incluidos en la caché inicial de la PWA.
+- Las teorías y quizzes de diez preguntas para cada uno de los 21 animales, incluidos en la caché inicial de la PWA.
 - Modelos y miniaturas que ya se hayan descargado o abierto previamente.
 - Sala de RV en pantalla; la sesión inmersiva necesita un visor y WebXR compatible.
 - Control de manos cuando MediaPipe y la cámara están disponibles. El video se procesa localmente y no se graba ni se envía.
@@ -26,7 +26,7 @@ El uso de cámara es opcional y siempre depende del permiso del navegador. Para 
 
 ## Publicación y actualización
 
-Publica en la raíz `index.html`, `manifest.webmanifest`, `service-worker.js`, `assets/` y los demás archivos, conservando las rutas relativas. GitHub Pages con HTTPS y otros servidores HTTPS son válidos; `file://` no admite service workers. El app shell actual usa `faunaxr-offline-v37`. Al cambiar recursos precargados, incrementa `CACHE_NAME`; al activarse, el service worker elimina sus cachés anteriores sin borrar `localStorage` ni los datos locales del usuario.
+Publica en la raíz `index.html`, `manifest.webmanifest`, `service-worker.js`, `assets/` y los demás archivos, conservando las rutas relativas. GitHub Pages con HTTPS y otros servidores HTTPS son válidos; `file://` no admite service workers. El app shell actual usa `faunaxr-offline-v38`. Al cambiar recursos precargados, incrementa `CACHE_NAME`; al activarse, el service worker elimina sus cachés anteriores sin borrar `localStorage` ni los datos locales del usuario.
 
 ## Privacidad y almacenamiento
 

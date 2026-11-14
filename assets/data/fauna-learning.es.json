@@ -14,7 +14,129 @@
       "question": "¿Qué característica ayuda al gato a captar sonidos de distintas direcciones?",
       "sourceTitle": "Domestic Cat",
       "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/domestic-cat",
-      "theory": "El gato doméstico (Felis catus) desciende de un gato montés africano y convive con las personas desde hace miles de años. Aunque viva en una casa, conserva instintos de cazador: es carnívoro y necesita comer carne; suele acechar a sus presas en silencio y las atrapa con garras y dientes afilados. Sus sentidos también le ayudan: tiene buena visión y oído, y sus orejas pueden girar para captar sonidos. Así puede orientarse y reaccionar ante lo que ocurre a su alrededor."
+      "theory": "El gato doméstico (Felis catus) desciende de un gato montés africano y convive con las personas desde hace miles de años. Aunque viva en una casa, conserva instintos de cazador: es carnívoro y necesita comer carne; suele acechar a sus presas en silencio y las atrapa con garras y dientes afilados. Sus sentidos también le ayudan: tiene buena visión y oído, y sus orejas pueden girar para captar sonidos. Así puede orientarse y reaccionar ante lo que ocurre a su alrededor.",
+      "quizzes": [
+        {
+          "correctIndex": 0,
+          "explanation": "El gato doméstico se identifica científicamente como Felis catus y pertenece a la familia de los félidos.",
+          "options": [
+            "Felis catus",
+            "Canis lupus familiaris",
+            "Panthera leo"
+          ],
+          "question": "¿Cuál es el nombre científico del gato doméstico?",
+          "sourceTitle": "Cat",
+          "sourceUrl": "https://www.britannica.com/animal/cat"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "Los gatos domésticos tienen garras retráctiles, un rasgo corporal descrito entre sus características distintivas.",
+          "options": [
+            "Son siempre expuestas y no pueden retraerse",
+            "Pueden retraerse",
+            "Están adaptadas principalmente para excavar túneles"
+          ],
+          "question": "¿Qué rasgo caracteriza las garras de los gatos domésticos?",
+          "sourceTitle": "Cat",
+          "sourceUrl": "https://www.britannica.com/animal/cat"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Los gatos son carnívoros obligados; por ejemplo, necesitan taurina procedente de productos animales.",
+          "options": [
+            "Es un carnívoro obligado: necesita nutrientes que se obtienen de productos animales",
+            "Puede cubrir todos sus requerimientos nutricionales con una dieta exclusivamente vegetal",
+            "Es herbívoro y obtiene sus nutrientes principales de las hojas"
+          ],
+          "question": "¿Qué afirmación sobre la dieta del gato doméstico es correcta?",
+          "sourceTitle": "10 Facts About Cats",
+          "sourceUrl": "https://vcahospitals.com/resources/lifestyle-cat/facts-about-your-feline-friend"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "La capa llamada tapetum lucidum refleja luz dentro del ojo y, junto con otras características, contribuye a su visión nocturna; no significa que puedan ver en oscuridad total.",
+          "options": [
+            "Una capa reflectante en la parte posterior del ojo, junto con otras adaptaciones visuales",
+            "La capacidad de emitir luz desde los ojos",
+            "Una visión perfecta en oscuridad total"
+          ],
+          "question": "¿Qué ayuda a los gatos a ver en condiciones de poca luz?",
+          "sourceTitle": "10 Facts About Cats",
+          "sourceUrl": "https://vcahospitals.com/resources/lifestyle-cat/facts-about-your-feline-friend"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La combinación de orejas relajadas hacia delante, ojos cerrados o medio cerrados y bigotes relajados puede indicar que se siente feliz.",
+          "options": [
+            "Orejas aplastadas hacia atrás y pupilas dilatadas",
+            "Orejas relajadas y hacia delante, ojos entrecerrados y bigotes relajados",
+            "Lomo arqueado y pelo erizado"
+          ],
+          "question": "¿Qué suele indicar que un gato está relajado y posiblemente contento, según su lenguaje corporal?",
+          "sourceTitle": "Cat body language",
+          "sourceUrl": "https://www.cats.org.uk/help-and-advice/cat-behaviour/cat-body-language"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "El ronroneo no siempre significa felicidad: también puede ocurrir con estrés o dolor, por lo que el contexto y las señales corporales importan.",
+          "options": [
+            "Siempre demuestra que está feliz",
+            "Solo ocurre cuando está dormido",
+            "Puede aparecer también en situaciones de estrés o dolor, así que hay que observar el contexto y el resto de su lenguaje corporal"
+          ],
+          "question": "¿Qué es cierto sobre el ronroneo de un gato?",
+          "sourceTitle": "Cat body language",
+          "sourceUrl": "https://www.cats.org.uk/help-and-advice/cat-behaviour/cat-body-language"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Lo más habitual son 18 dedos: cinco en cada pata delantera y cuatro en cada pata trasera, aunque algunos gatos nacen con dedos extra.",
+          "options": [
+            "18: cinco en cada pata delantera y cuatro en cada trasera",
+            "16: cuatro en cada pata",
+            "20: cinco en cada pata"
+          ],
+          "question": "¿Cuál es la cantidad de dedos más habitual en un gato doméstico?",
+          "sourceTitle": "10 Facts About Cats",
+          "sourceUrl": "https://vcahospitals.com/resources/lifestyle-cat/facts-about-your-feline-friend"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "Los gatos tienen una capacidad mínima o inexistente para detectar sabores dulces y suelen preferir sabores y olores cárnicos o salados.",
+          "options": [
+            "Lo detectan mejor que los humanos",
+            "Tienen una capacidad mínima o nula para detectarlo",
+            "Es el sabor que más suelen preferir"
+          ],
+          "question": "¿Cómo responden los gatos al sabor dulce, por lo general?",
+          "sourceTitle": "10 Facts About Cats",
+          "sourceUrl": "https://vcahospitals.com/resources/lifestyle-cat/facts-about-your-feline-friend"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "La sensibilidad a la hierba gatera es hereditaria, por lo que algunos gatos no responden a ella.",
+          "options": [
+            "El color de su pelaje",
+            "Si vive dentro o fuera de casa",
+            "La herencia genética: algunos no tienen los genes asociados con esa respuesta"
+          ],
+          "question": "¿Qué determina en parte si un gato responde a la hierba gatera (catnip)?",
+          "sourceTitle": "10 Facts About Cats",
+          "sourceUrl": "https://vcahospitals.com/resources/lifestyle-cat/facts-about-your-feline-friend"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La fuente ubica al gato doméstico entre los Felinae, contrastándolos con Pantherinae, que incluye leones y tigres.",
+          "options": [
+            "Pantherinae, el grupo de leones y tigres que rugen",
+            "Felinae, el grupo que incluye gatos domésticos y que puede ronronear",
+            "Caninae, el grupo de perros y zorros"
+          ],
+          "question": "¿A qué subfamilia de félidos pertenecen los gatos domésticos, según la clasificación general descrita en la fuente?",
+          "sourceTitle": "Cat",
+          "sourceUrl": "https://www.britannica.com/animal/cat"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -29,7 +151,129 @@
       "question": "¿Para qué ayuda el aceite que los patos distribuyen por sus plumas?",
       "sourceTitle": "9 Cool Things You Should Know About Ducks",
       "sourceUrl": "https://www.iowadnr.gov/news-release/2016-09-07/9-cool-things-you-should-know-about-ducks",
-      "theory": "Los patos forman un grupo diverso de aves: algunas especies viven sobre todo en agua dulce, mientras que otras, como ciertos patos marinos, usan el mar y visitan agua dulce para reproducirse. Muchos patos de agua poco profunda buscan algas y plantas flotantes con su pico ancho; otros se sumergen para encontrar alimento. Además, se acicalan pasando con el pico el aceite de una glándula cerca de la cola por sus plumas. Ese aceite ayuda a mantenerlas impermeables y en buen estado."
+      "theory": "Los patos forman un grupo diverso de aves: algunas especies viven sobre todo en agua dulce, mientras que otras, como ciertos patos marinos, usan el mar y visitan agua dulce para reproducirse. Muchos patos de agua poco profunda buscan algas y plantas flotantes con su pico ancho; otros se sumergen para encontrar alimento. Además, se acicalan pasando con el pico el aceite de una glándula cerca de la cola por sus plumas. Ese aceite ayuda a mantenerlas impermeables y en buen estado.",
+      "quizzes": [
+        {
+          "correctIndex": 0,
+          "explanation": "Las patas palmeadas empujan el agua y facilitan la natación.",
+          "options": [
+            "Dedos unidos por membranas",
+            "Garras largas para remar",
+            "Almohadillas adhesivas"
+          ],
+          "question": "¿Qué característica de las patas ayuda a muchos patos a nadar?",
+          "sourceTitle": "Duck — Britannica Kids",
+          "sourceUrl": "https://kids.britannica.com/kids/article/duck/390384"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La glándula próxima a la cola produce aceite que protege las plumas exteriores del agua.",
+          "options": [
+            "Una capa de barro",
+            "Aceite producido por una glándula cerca de la cola",
+            "La luz solar que seca las plumas"
+          ],
+          "question": "¿Qué ayuda a proteger de la humedad las plumas exteriores de los patos?",
+          "sourceTitle": "Duck — Britannica Kids",
+          "sourceUrl": "https://kids.britannica.com/kids/article/duck/390384"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "El plumón, formado por plumas interiores suaves, proporciona aislamiento contra el frío.",
+          "options": [
+            "Plumas de vuelo",
+            "Plumas de cola",
+            "Plumas interiores suaves (down)"
+          ],
+          "question": "¿Cómo se llama el plumón suave que ayuda a mantener caliente al pato?",
+          "sourceTitle": "Duck — Britannica Kids",
+          "sourceUrl": "https://kids.britannica.com/kids/article/duck/390384"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "El ánade real suele alimentarse chapoteando: inclina el cuerpo hacia delante y toma semillas o vegetación acuática sin bucear.",
+          "options": [
+            "Se inclina hacia delante en el agua y alcanza el alimento bajo la superficie",
+            "Se sumerge hasta el fondo con las alas cerradas",
+            "Atrapa peces saltando desde la orilla"
+          ],
+          "question": "¿Cómo se alimenta típicamente un ánade real cuando busca semillas y vegetación acuática sin bucear?",
+          "sourceTitle": "Mallard Life History",
+          "sourceUrl": "https://www.allaboutbirds.org/guide/Mallard/lifehistory"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "En época reproductiva consume sobre todo materia animal, incluidos esos invertebrados.",
+          "options": [
+            "Solo peces adultos",
+            "Larvas de insectos acuáticos, lombrices, caracoles y camarones de agua dulce",
+            "Principalmente frutas de árboles"
+          ],
+          "question": "¿Qué alimentos predominan en la dieta del ánade real durante la época de cría, según Cornell Lab?",
+          "sourceTitle": "Mallard Life History",
+          "sourceUrl": "https://www.allaboutbirds.org/guide/Mallard/lifehistory"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "Sus nidos suelen estar en tierra firme cerca del agua y escondidos bajo hierbas u otra vegetación.",
+          "options": [
+            "En cavidades profundas del tronco",
+            "En plataformas de ramas sobre árboles altos",
+            "En el suelo seco, cerca del agua, ocultos entre vegetación"
+          ],
+          "question": "¿Dónde construyen generalmente sus nidos los ánades reales?",
+          "sourceTitle": "Mallard Life History",
+          "sourceUrl": "https://www.allaboutbirds.org/guide/Mallard/lifehistory"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "A diferencia de muchos patos, el pato de la madera anida en cavidades de árboles y también puede usar cajas nido.",
+          "options": [
+            "Cavidades naturales de árboles",
+            "Madrigueras subterráneas",
+            "Nidos flotantes hechos de algas"
+          ],
+          "question": "En el pato de la madera, ¿qué sirve habitualmente como sitio natural de anidación?",
+          "sourceTitle": "Wood duck — Smithsonian’s National Zoo",
+          "sourceUrl": "https://nationalzoo.si.edu/es/animals/wood-duck"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La hembra incuba los huevos durante aproximadamente 30 días.",
+          "options": [
+            "El macho y la hembra por turnos",
+            "La hembra",
+            "Ambos adultos simultáneamente"
+          ],
+          "question": "¿Quién incuba normalmente los huevos del pato de la madera?",
+          "sourceTitle": "Wood duck — Smithsonian’s National Zoo",
+          "sourceUrl": "https://nationalzoo.si.edu/es/animals/wood-duck"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "El Smithsonian describe a las crías como relativamente avanzadas al nacer y capaces de alimentarse casi enseguida.",
+          "options": [
+            "Nacen ciegas y dependen durante meses del alimento parental",
+            "Permanecen en el nido hasta poder volar",
+            "Nacen relativamente desarrolladas y pueden alimentarse casi de inmediato"
+          ],
+          "question": "¿Qué significa que las crías del pato de la madera sean precociales?",
+          "sourceTitle": "Wood duck — Smithsonian’s National Zoo",
+          "sourceUrl": "https://nationalzoo.si.edu/es/animals/wood-duck"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Las patas situadas hacia la parte posterior impulsan bien al pato en el agua, pero su posición hace que se balancee al caminar en tierra.",
+          "options": [
+            "Porque están colocadas muy atrás en el cuerpo",
+            "Porque se encuentran junto al cuello",
+            "Porque son más largas que el cuerpo"
+          ],
+          "question": "¿Por qué la posición de las patas de los patos favorece la natación pero hace que caminen con balanceo?",
+          "sourceTitle": "Duck — Britannica Students",
+          "sourceUrl": "https://kids.britannica.com/students/article/duck/274076"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -44,7 +288,129 @@
       "question": "¿Qué hace el zorro rojo con algunas presas que caza?",
       "sourceTitle": "Red Fox | Virginia Department of Wildlife Resources",
       "sourceUrl": "https://dwr.virginia.gov/wildlife/information/red-fox/",
-      "theory": "El zorro rojo puede vivir en lugares muy distintos, desde la tundra hasta el desierto; en Virginia también habita bosques, praderas, granjas y zonas urbanas. Suele preferir bordes de bosque y matorrales, donde encuentra vegetación variada. Aunque es omnívoro, gran parte de su dieta consiste en conejos y ratones; también come insectos, frutos y otros alimentos. Una conducta útil es que guarda parte de las presas que caza en escondites repartidos por su territorio para comerlas después."
+      "theory": "El zorro rojo puede vivir en lugares muy distintos, desde la tundra hasta el desierto; en Virginia también habita bosques, praderas, granjas y zonas urbanas. Suele preferir bordes de bosque y matorrales, donde encuentra vegetación variada. Aunque es omnívoro, gran parte de su dieta consiste en conejos y ratones; también come insectos, frutos y otros alimentos. Una conducta útil es que guarda parte de las presas que caza en escondites repartidos por su territorio para comerlas después.",
+      "quizzes": [
+        {
+          "correctIndex": 0,
+          "explanation": "El zorro rojo consume presas como roedores y conejos, además de frutas e insectos, por lo que su dieta es omnívora.",
+          "options": [
+            "Es omnívoro: come animales y también alimentos vegetales",
+            "Es exclusivamente herbívoro",
+            "Se alimenta únicamente de peces"
+          ],
+          "question": "¿Qué tipo de alimentación tiene el zorro rojo?",
+          "sourceTitle": "Red Fox — Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/wildlife/information/red-fox/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La guía describe como rasgo notable la cola tupida con punta blanca; señala que la cola del zorro gris suele tener la punta negra.",
+          "options": [
+            "Negra",
+            "Blanca",
+            "Anaranjada brillante"
+          ],
+          "question": "¿Qué color suele tener la punta de la cola del zorro rojo según la guía de la National Wildlife Federation?",
+          "sourceTitle": "Red Fox — National Wildlife Federation",
+          "sourceUrl": "https://www.nwf.org/Educational-Resources/Wildlife-Guide/Mammals/Red-Fox"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "El zorro rojo ocupa una amplia variedad de hábitats; se encuentra en bosques, tundra, praderas, desiertos, tierras agrícolas y áreas urbanas.",
+          "options": [
+            "Solo en bosques densos y alejados de las personas",
+            "Únicamente en desiertos cálidos",
+            "En hábitats diversos, incluidos bosques, campos y zonas urbanas"
+          ],
+          "question": "¿En qué tipos de lugares puede vivir el zorro rojo?",
+          "sourceTitle": "Red Fox (Vulpes vulpes) — Animal Diversity Web, University of Michigan",
+          "sourceUrl": "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "Los roedores y conejos son presas habituales del zorro rojo, aunque también puede comer aves, anfibios y frutas.",
+          "options": [
+            "Principalmente algas y plantas acuáticas",
+            "Roedores y conejos",
+            "Solo carroña"
+          ],
+          "question": "¿Qué suelen comer los zorros rojos, además de otros alimentos posibles?",
+          "sourceTitle": "Red Fox — National Wildlife Federation",
+          "sourceUrl": "https://www.nwf.org/Educational-Resources/Wildlife-Guide/Mammals/Red-Fox"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "La agencia describe al zorro rojo como crepuscular o nocturno según la disponibilidad de alimento, con preferencia por el amanecer y el atardecer.",
+          "options": [
+            "Al amanecer y al atardecer, aunque su actividad también depende de la disponibilidad de alimento",
+            "Exclusivamente al mediodía",
+            "Solo durante la noche más profunda"
+          ],
+          "question": "¿Cuándo suelen estar más activos los zorros rojos?",
+          "sourceTitle": "Red Fox — Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/wildlife/information/red-fox/"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "Las crías nacen ciegas y abren los ojos entre los 9 y 14 días; pasan sus primeras semanas en la madriguera.",
+          "options": [
+            "Con la vista desarrollada y listas para cazar",
+            "Cubiertas de escamas y capaces de nadar",
+            "Ciegas, y abren los ojos aproximadamente entre los 9 y 14 días"
+          ],
+          "question": "¿Cómo nacen las crías del zorro rojo?",
+          "sourceTitle": "Red Fox (Vulpes vulpes) — Animal Diversity Web, University of Michigan",
+          "sourceUrl": "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Los zorros rojos pueden guardar presas en depósitos ocultos dentro de su territorio y luego recuperar esa comida.",
+          "options": [
+            "La almacena en escondites para consumirla después",
+            "La entierra siempre junto a ríos",
+            "La lleva exclusivamente a árboles altos"
+          ],
+          "question": "¿Qué hace el zorro rojo con parte de la comida que captura?",
+          "sourceTitle": "Red Fox — Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/wildlife/information/red-fox/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La descripción de la agencia indica que las huellas del zorro muestran cuatro marcas de garras junto a las almohadillas.",
+          "options": [
+            "Las huellas de zorro no muestran dedos",
+            "Las huellas de zorro suelen mostrar marcas de cuatro garras",
+            "Las huellas de zorro tienen seis almohadillas principales"
+          ],
+          "question": "¿Qué puede ayudar a distinguir las huellas de un zorro rojo de las de un felino?",
+          "sourceTitle": "Red Fox — Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/wildlife/information/red-fox/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "Las crías suelen permanecer con su familia durante sus primeros meses y dispersarse en otoño para buscar sus propios territorios.",
+          "options": [
+            "Permanecen toda la vida dentro de la madriguera natal",
+            "Se dispersan en otoño para establecerse por su cuenta",
+            "Abandonan a sus padres antes de nacer"
+          ],
+          "question": "¿Qué sucede habitualmente con las crías de zorro rojo al crecer?",
+          "sourceTitle": "Red Fox — National Wildlife Federation",
+          "sourceUrl": "https://www.nwf.org/Educational-Resources/Wildlife-Guide/Mammals/Red-Fox"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "La variante llamada zorro plateado es una forma de color del zorro rojo; su pelaje puede ser plateado intenso o casi negro.",
+          "options": [
+            "Pelaje casi completamente negro o de tonos plateados",
+            "Pelaje siempre azul con manchas amarillas",
+            "Pelaje blanco uniforme con rayas verdes"
+          ],
+          "question": "¿Qué patrón de coloración puede presentar una variante plateada del zorro rojo?",
+          "sourceTitle": "Red Fox (Vulpes vulpes) — Animal Diversity Web, University of Michigan",
+          "sourceUrl": "https://animaldiversity.org/accounts/Vulpes_vulpes/"
+        }
+      ]
     },
     {
       "correctIndex": 0,
@@ -59,7 +425,129 @@
       "question": "¿Qué explica que existan perros con tamaños, formas y habilidades tan diferentes?",
       "sourceTitle": "Canis lupus familiaris (dog) | Animal Diversity Web",
       "sourceUrl": "https://animaldiversity.org/accounts/Canis_lupus_familiaris/",
-      "theory": "El perro doméstico vive junto a las personas en casi todo el mundo y puede adaptarse a muchos ambientes, desde ciudades y campos hasta bosques y desiertos. Es omnívoro: puede comer alimentos de origen animal y vegetal, aunque los perros domésticos necesitan una dieta equilibrada. Durante miles de años, las personas han seleccionado perros por sus capacidades y aspecto; por eso hay razas muy distintas, como perros pastores, de caza y de compañía. También se comunican con posturas del cuerpo, sonidos y olores."
+      "theory": "El perro doméstico vive junto a las personas en casi todo el mundo y puede adaptarse a muchos ambientes, desde ciudades y campos hasta bosques y desiertos. Es omnívoro: puede comer alimentos de origen animal y vegetal, aunque los perros domésticos necesitan una dieta equilibrada. Durante miles de años, las personas han seleccionado perros por sus capacidades y aspecto; por eso hay razas muy distintas, como perros pastores, de caza y de compañía. También se comunican con posturas del cuerpo, sonidos y olores.",
+      "quizzes": [
+        {
+          "correctIndex": 0,
+          "explanation": "Los cachorros se guían por el olfato desde que nacen; al principio tienen los ojos cerrados y aún no oyen plenamente.",
+          "options": [
+            "El olfato",
+            "La visión de colores",
+            "La audición de sonidos agudos"
+          ],
+          "question": "Durante las primeras semanas, ¿qué sentido ayuda a un cachorro recién nacido a orientarse aunque todavía no vea ni oiga bien?",
+          "sourceTitle": "Puppy Senses: When Can a Puppy See, Smell, and Hear?",
+          "sourceUrl": "https://www.akc.org/expert-advice/health/puppy-senses/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "Los ojos suelen abrirse entre los 14 y 21 días, aunque la vista todavía es limitada al principio.",
+          "options": [
+            "Al nacer",
+            "Entre los 14 y 21 días de vida",
+            "A los seis meses"
+          ],
+          "question": "Según la American Kennel Club, aproximadamente ¿cuándo comienzan a abrirse los ojos de los cachorros?",
+          "sourceTitle": "Puppy Senses: When Can a Puppy See, Smell, and Hear?",
+          "sourceUrl": "https://www.akc.org/expert-advice/health/puppy-senses/"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "La audición es uno de los sentidos que tarda más en desarrollarse: los cachorros no oyen hasta aproximadamente las tres semanas.",
+          "options": [
+            "Nacen con audición completamente desarrollada",
+            "Solo oyen sonidos graves durante el primer año",
+            "Nacen sordos y empiezan a oír alrededor de las tres semanas"
+          ],
+          "question": "¿Qué afirmación sobre la audición de los cachorros recién nacidos es correcta?",
+          "sourceTitle": "Puppy Senses: When Can a Puppy See, Smell, and Hear?",
+          "sourceUrl": "https://www.akc.org/expert-advice/health/puppy-senses/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "VCA señala que los perros tienen más de 100 millones de sitios receptores en la cavidad nasal, en comparación con unos 6 millones en las personas.",
+          "options": [
+            "Los perros tienen menos receptores olfativos que las personas",
+            "Los perros cuentan con más de 100 millones de sitios receptores olfativos, frente a unos 6 millones en las personas",
+            "El olfato canino solo funciona cuando el perro está despierto"
+          ],
+          "question": "¿Qué comparación describe mejor el sentido del olfato del perro frente al de las personas?",
+          "sourceTitle": "How Dogs Use Smell to Perceive the World",
+          "sourceUrl": "https://vcahospitals.com/know-your-pet/how-dogs-use-smell-to-perceive-the-world"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Los olores y sustancias químicas que detectan los perros pueden comunicar información como el sexo y el estado de ánimo de otro perro.",
+          "options": [
+            "Transmitir información química, como identidad y estado de ánimo",
+            "Reemplazar por completo todas las señales corporales",
+            "Indicar con certeza qué órdenes humanas deben obedecer"
+          ],
+          "question": "Además de ayudarles a percibir el entorno, ¿qué función puede cumplir el olfato entre perros?",
+          "sourceTitle": "How Dogs Use Smell to Perceive the World",
+          "sourceUrl": "https://vcahospitals.com/know-your-pet/how-dogs-use-smell-to-perceive-the-world"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "VCA describe la mirada apartada y posturas bajas como señales que pueden expresar apaciguamiento o preocupación; hay que interpretarlas junto con el resto del lenguaje corporal.",
+          "options": [
+            "Siempre está invitando a que le acaricien el vientre",
+            "Puede estar mostrando apaciguamiento, cautela o incomodidad",
+            "Está necesariamente enfermo"
+          ],
+          "question": "¿Qué puede comunicar un perro al apartar la mirada directa y bajar la cabeza o la cola?",
+          "sourceTitle": "Canine Communication - Interpreting Dog Language",
+          "sourceUrl": "https://vcahospitals.com/know-your-pet/canine-communication---interpreting-dog-language"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "La cola es una parte del lenguaje corporal, pero una señal aislada no basta: la postura, las orejas, la mirada y el contexto también importan.",
+          "options": [
+            "Siempre significa que el perro está contento y quiere que lo toquen",
+            "Demuestra que el perro está jugando",
+            "Debe leerse junto con otras señales y el contexto"
+          ],
+          "question": "¿Qué interpreta mejor un movimiento de cola en un perro?",
+          "sourceTitle": "Canine Communication - Interpreting Dog Language",
+          "sourceUrl": "https://vcahospitals.com/know-your-pet/canine-communication---interpreting-dog-language"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "La AVMA indica que entre las 3 y 14 semanas los cachorros están especialmente abiertos a aprender sobre su entorno, las personas y otros animales.",
+          "options": [
+            "Entre las 3 y 14 semanas de edad",
+            "Solo después de cumplir un año",
+            "Únicamente durante las primeras 24 horas"
+          ],
+          "question": "Según la AVMA, ¿en qué intervalo se recomienda iniciar experiencias de socialización para cachorros?",
+          "sourceTitle": "Socialization of dogs and cats",
+          "sourceUrl": "https://www.avma.org/resources-tools/animal-health-and-welfare/socialization-dogs-and-cats"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La AVMA recomienda mantener a los cachorros no completamente vacunados lejos de animales con estado vacunal desconocido y de lugares como parques donde hayan estado.",
+          "options": [
+            "Evitar toda interacción social durante el primer año",
+            "Mantenerlos apartados de animales de estado vacunal desconocido y de lugares que estos hayan frecuentado",
+            "Llevarlos a parques concurridos para fortalecer sus defensas"
+          ],
+          "question": "¿Qué precaución recomienda la AVMA para cachorros que aún no completaron sus vacunas?",
+          "sourceTitle": "Socialization of dogs and cats",
+          "sourceUrl": "https://www.avma.org/resources-tools/animal-health-and-welfare/socialization-dogs-and-cats"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "El Centro de Salud Canina de Cornell señala que el cepillado dental es el método más eficaz de cuidado en casa para prevenir enfermedad dental.",
+          "options": [
+            "Ofrecer huesos muy duros a diario",
+            "Cepillar los dientes del perro",
+            "Evitar que el perro mastique cualquier objeto"
+          ],
+          "question": "¿Cuál es el método más eficaz de cuidado dental en casa para ayudar a prevenir enfermedad dental canina?",
+          "sourceTitle": "Dental disease and home dental care",
+          "sourceUrl": "https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-information/dental-disease-and-home-dental-care"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -74,7 +562,129 @@
       "question": "¿Por qué el conejo vuelve a ingerir algunos de sus excrementos?",
       "sourceTitle": "Oryctolagus cuniculus (European rabbit) | Animal Diversity Web",
       "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/",
-      "theory": "El conejo europeo vive en lugares con suelo blando, donde puede excavar madrigueras; suele refugiarse en sistemas subterráneos llamados conejeras y puede vivir en grupos. Come plantas, como hierbas, hojas, brotes y raíces. Una adaptación curiosa es que vuelve a ingerir algunos excrementos: así, su aparato digestivo puede aprovechar nutrientes que no absorbió la primera vez. Esta conducta le ayuda a obtener más alimento de una dieta vegetal difícil de digerir."
+      "theory": "El conejo europeo vive en lugares con suelo blando, donde puede excavar madrigueras; suele refugiarse en sistemas subterráneos llamados conejeras y puede vivir en grupos. Come plantas, como hierbas, hojas, brotes y raíces. Una adaptación curiosa es que vuelve a ingerir algunos excrementos: así, su aparato digestivo puede aprovechar nutrientes que no absorbió la primera vez. Esta conducta le ayuda a obtener más alimento de una dieta vegetal difícil de digerir.",
+      "quizzes": [
+        {
+          "correctIndex": 0,
+          "explanation": "Los conejos son lagomorfos; este grupo también incluye a las liebres y las pikas.",
+          "options": [
+            "A los lagomorfos",
+            "A los marsupiales",
+            "A los primates"
+          ],
+          "question": "¿A qué grupo zoológico pertenece el conejo, distinto del grupo de los roedores?",
+          "sourceTitle": "Five rabbit facts from Rabbits: The Animal Answer Guide",
+          "sourceUrl": "https://www.si.edu/stories/five-rabbit-facts"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "El conejo europeo es herbívoro y consume, entre otras cosas, hierbas, hojas, brotes y raíces.",
+          "options": [
+            "Insectos y otros animales pequeños",
+            "Hierbas y otras partes de plantas",
+            "Peces y algas"
+          ],
+          "question": "¿Qué tipo de alimento predomina en la dieta del conejo europeo?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "El conejo puede golpear el suelo con sus patas traseras, y las vibraciones sirven como señal de alarma.",
+          "options": [
+            "Golpear el suelo con las patas traseras",
+            "Agitar la cola sobre la cabeza",
+            "Lanzar agua con las patas delanteras"
+          ],
+          "question": "¿Qué comportamiento puede usar un conejo para alertar a otros de un peligro cercano?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Son animales sociales; pueden formar grupos y vivir en redes de madrigueras llamadas conejeras o warrens.",
+          "options": [
+            "En grupos que usan sistemas de madrigueras",
+            "Siempre aislados en las copas de los árboles",
+            "En colonias acuáticas bajo el agua"
+          ],
+          "question": "¿Cómo suelen vivir los conejos europeos silvestres cuando el suelo y el alimento son adecuados?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "Las crías nacen desnudas y ciegas, por lo que dependen de los cuidados maternos durante sus primeras semanas.",
+          "options": [
+            "Nacen cubiertas de plumas y pueden volar",
+            "Nacen desnudas, ciegas y dependientes",
+            "Nacen con pelaje completo y buscan alimento por sí solas"
+          ],
+          "question": "¿Qué es característico de las crías recién nacidas del conejo europeo?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "correctIndex": 1,
+          "explanation": "La gestación del conejo europeo dura alrededor de 30 días, según la ficha de historia natural de la Universidad de Michigan.",
+          "options": [
+            "Unas 30 horas",
+            "Unos 30 días",
+            "Unos 30 meses"
+          ],
+          "question": "¿Cuánto dura aproximadamente la gestación del conejo europeo?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "La fermentación bacteriana en el ciego produce nutrientes; ingerir esos excrementos permite que el conejo los aproveche en una segunda pasada digestiva.",
+          "options": [
+            "Para aprovechar nutrientes producidos durante la fermentación intestinal",
+            "Para afilar sus garras",
+            "Para eliminar el agua que ha bebido"
+          ],
+          "question": "¿Por qué el conejo vuelve a ingerir ciertos excrementos blandos?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        },
+        {
+          "correctIndex": 2,
+          "explanation": "Los dientes del conejo crecen continuamente; masticar vegetación ayuda a desgastarlos y mantenerlos a una longitud funcional.",
+          "options": [
+            "Dejan de crecer al llegar a la edad adulta",
+            "Se reemplazan por completo cada invierno",
+            "Crecen continuamente y se desgastan al masticar"
+          ],
+          "question": "¿Qué ocurre con los dientes del conejo a lo largo de su vida?",
+          "sourceTitle": "On the Bunny Trail",
+          "sourceUrl": "https://www.pittsburghzoo.org/cottontail-confidental-the-easter-bunny/"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Al estar situados a los lados de la cabeza, los ojos del conejo le permiten vigilar una amplia zona alrededor, incluso hacia arriba y detrás.",
+          "options": [
+            "Están a los lados de la cabeza y amplían su campo visual",
+            "Están debajo de la nariz y solo miran hacia abajo",
+            "Están en la parte posterior de la cabeza"
+          ],
+          "question": "¿Qué característica de la ubicación de sus ojos ayuda al conejo a vigilar su entorno?",
+          "sourceTitle": "On the Bunny Trail",
+          "sourceUrl": "https://www.pittsburghzoo.org/cottontail-confidental-the-easter-bunny/"
+        },
+        {
+          "correctIndex": 0,
+          "explanation": "Los suelos arenosos y blandos facilitan la excavación; los campos con matorrales también ofrecen cobertura.",
+          "options": [
+            "Suelo blando y arenoso, donde es más fácil cavar",
+            "Roca sólida sin grietas",
+            "Un lecho permanente de agua profunda"
+          ],
+          "question": "¿Qué tipo de lugar suele favorecer que el conejo europeo excave sus madrigueras?",
+          "sourceTitle": "Oryctolagus cuniculus (European rabbit)",
+          "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -89,7 +699,138 @@
       "question": "¿De qué ave silvestre desciende principalmente la gallina doméstica?",
       "sourceTitle": "History of the Chicken — Penn State 4-H",
       "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken",
-      "theory": "La gallina doméstica desciende principalmente del gallo rojo de la jungla, un ave silvestre originaria del sudeste asiático. Hoy vive junto a las personas en granjas y corrales de muchos lugares del mundo. Hay gallinas de muchos tamaños y colores porque las personas han criado distintas variedades durante siglos. Algunas se seleccionan para poner huevos y otras para producir carne; no todas tienen el mismo aspecto ni se crían con el mismo propósito."
+      "theory": "La gallina doméstica desciende principalmente del gallo rojo de la jungla, un ave silvestre originaria del sudeste asiático. Hoy vive junto a las personas en granjas y corrales de muchos lugares del mundo. Hay gallinas de muchos tamaños y colores porque las personas han criado distintas variedades durante siglos. Algunas se seleccionan para poner huevos y otras para producir carne; no todas tienen el mismo aspecto ni se crían con el mismo propósito.",
+      "quizzes": [
+        {
+          "question": "¿De qué ave silvestre desciende principalmente la gallina doméstica?",
+          "options": [
+            "Del pavo salvaje",
+            "Del faisán dorado",
+            "Del gallo rojo de la jungla"
+          ],
+          "correctIndex": 2,
+          "explanation": "La página de Penn State indica que el gallo rojo de la jungla es el antepasado principal de la gallina doméstica.",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿En qué región se originó el ave silvestre mencionada en el texto?",
+          "options": [
+            "Sudeste asiático",
+            "Europa occidental",
+            "América del Sur"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto sitúa el origen de esa ave silvestre en el sudeste asiático.",
+          "evidence": "un ave silvestre originaria del sudeste asiático.",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿Con quién vive hoy la gallina doméstica?",
+          "options": [
+            "Junto a las personas",
+            "Lejos de las personas",
+            "Solo con aves silvestres"
+          ],
+          "correctIndex": 0,
+          "explanation": "Según el texto, hoy vive junto a las personas.",
+          "evidence": "Hoy vive junto a las personas",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿En cuáles de estos lugares vive la gallina doméstica, según el texto?",
+          "options": [
+            "En granjas y corrales",
+            "En desiertos y cuevas",
+            "En bosques y montañas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona las granjas y los corrales como lugares donde vive.",
+          "evidence": "en granjas y corrales",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿En qué escala geográfica vive la gallina doméstica junto a las personas?",
+          "options": [
+            "En muchos lugares del mundo",
+            "En un solo país",
+            "Solo en el sudeste asiático"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que vive en muchos lugares del mundo.",
+          "evidence": "de muchos lugares del mundo.",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿Qué característica puede variar mucho entre las gallinas?",
+          "options": [
+            "El tamaño",
+            "La cantidad de patas",
+            "La forma de respirar"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que hay gallinas de muchos tamaños.",
+          "evidence": "Hay gallinas de muchos tamaños",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "Además del tamaño, ¿qué otra característica varía entre las gallinas?",
+          "options": [
+            "El color",
+            "El número de alas",
+            "La forma de caminar"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto también menciona que hay gallinas de muchos colores.",
+          "evidence": "y colores",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿Durante cuánto tiempo han criado las personas distintas variedades de gallinas?",
+          "options": [
+            "Durante siglos",
+            "Durante unos días",
+            "Durante una semana"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto dice que las personas han criado variedades durante siglos.",
+          "evidence": "las personas han criado distintas variedades durante siglos.",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿Para qué se seleccionan algunas gallinas?",
+          "options": [
+            "Para poner huevos",
+            "Para cambiar de hábitat",
+            "Para vivir sin personas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto explica que algunas se seleccionan para poner huevos.",
+          "evidence": "Algunas se seleccionan para poner huevos",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        },
+        {
+          "question": "¿Para qué se seleccionan otras gallinas, según el texto?",
+          "options": [
+            "Para producir carne",
+            "Para poner flores",
+            "Para construir corrales"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que otras se seleccionan para producir carne.",
+          "evidence": "y otras para producir carne;",
+          "sourceTitle": "History of the Chicken — Penn State 4-H",
+          "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken"
+        }
+      ]
     },
     {
       "correctIndex": 0,
@@ -104,7 +845,138 @@
       "question": "¿Qué característica ayuda a las vacas a aprovechar los vegetales que comen?",
       "sourceTitle": "Cow",
       "sourceUrl": "https://nationalzoo.si.edu/animals/cow",
-      "theory": "Las vacas son hembras del ganado doméstico que ya han tenido al menos una cría. Viven en grupos llamados rebaños y comen plantas, como hierba y heno. Son rumiantes: su estómago tiene cuatro compartimentos que les ayudan a aprovechar los vegetales; por eso pasan varias horas pastando y luego rumiando, es decir, devolviendo alimento a la boca para masticarlo de nuevo. El ganado doméstico desciende de un antepasado salvaje llamado uro, que ya está extinto."
+      "theory": "Las vacas son hembras del ganado doméstico que ya han tenido al menos una cría. Viven en grupos llamados rebaños y comen plantas, como hierba y heno. Son rumiantes: su estómago tiene cuatro compartimentos que les ayudan a aprovechar los vegetales; por eso pasan varias horas pastando y luego rumiando, es decir, devolviendo alimento a la boca para masticarlo de nuevo. El ganado doméstico desciende de un antepasado salvaje llamado uro, que ya está extinto.",
+      "quizzes": [
+        {
+          "question": "¿Qué característica ayuda a las vacas a aprovechar los vegetales que comen?",
+          "options": [
+            "Tienen un estómago con cuatro compartimentos y rumian",
+            "Cazan otros animales para completar su dieta",
+            "Viven siempre solas y no forman grupos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El ganado es rumiante: sus cuatro compartimentos estomacales ayudan a digerir plantas, y la rumia consiste en volver a masticar el alimento.",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Qué condición debe cumplir una hembra del ganado doméstico para ser considerada vaca?",
+          "options": [
+            "Haber tenido al menos una cría",
+            "Vivir en un rebaño",
+            "Comer hierba y heno"
+          ],
+          "correctIndex": 0,
+          "explanation": "La teoría define como vacas a las hembras del ganado doméstico que ya han tenido al menos una cría.",
+          "evidence": "Las vacas son hembras del ganado doméstico que ya han tenido al menos una cría.",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Cómo se llama el grupo en el que viven las vacas?",
+          "options": [
+            "Manada de aves",
+            "Rebaño",
+            "Colonia"
+          ],
+          "correctIndex": 1,
+          "explanation": "Las vacas viven en grupos llamados rebaños.",
+          "evidence": "Viven en grupos llamados rebaños",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Qué comen las vacas, según el texto?",
+          "options": [
+            "Plantas, como hierba y heno",
+            "Solo carne",
+            "Piedras y tierra"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que comen plantas y da como ejemplos la hierba y el heno.",
+          "evidence": "comen plantas, como hierba y heno.",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Qué hacen las vacas durante varias horas antes de rumiar?",
+          "options": [
+            "Pastan",
+            "Duermen bajo el agua",
+            "Cavan madrigueras"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pasan varias horas pastando y luego rumiando.",
+          "evidence": "pasan varias horas pastando y luego rumiando",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Qué significa rumiar, según la explicación del texto?",
+          "options": [
+            "Devolver alimento a la boca para masticarlo de nuevo",
+            "Guardar alimento en el suelo",
+            "Tragar alimento sin masticarlo"
+          ],
+          "correctIndex": 0,
+          "explanation": "La rumia consiste en devolver alimento a la boca para masticarlo otra vez.",
+          "evidence": "devolviendo alimento a la boca para masticarlo de nuevo.",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Cuántos compartimentos tiene el estómago de las vacas?",
+          "options": [
+            "Dos",
+            "Cuatro",
+            "Seis"
+          ],
+          "correctIndex": 1,
+          "explanation": "El texto señala que el estómago de las vacas tiene cuatro compartimentos.",
+          "evidence": "su estómago tiene cuatro compartimentos",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Para qué ayudan los compartimentos del estómago de las vacas?",
+          "options": [
+            "A aprovechar los vegetales",
+            "A fabricar heno",
+            "A formar rebaños"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los cuatro compartimentos ayudan a las vacas a aprovechar los vegetales que comen.",
+          "evidence": "su estómago tiene cuatro compartimentos que les ayudan a aprovechar los vegetales",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿De qué animal salvaje desciende el ganado doméstico?",
+          "options": [
+            "Del uro",
+            "Del heno",
+            "Del rebaño"
+          ],
+          "correctIndex": 0,
+          "explanation": "El ganado doméstico desciende de un antepasado salvaje llamado uro.",
+          "evidence": "El ganado doméstico desciende de un antepasado salvaje llamado uro",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        },
+        {
+          "question": "¿Qué se indica sobre el uro?",
+          "options": [
+            "Que está extinto",
+            "Que vive en rebaños domésticos",
+            "Que es una planta"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto afirma que el uro, antepasado salvaje del ganado doméstico, ya está extinto.",
+          "evidence": "que ya está extinto.",
+          "sourceTitle": "Cow",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cow"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -119,7 +991,138 @@
       "question": "¿Qué tipo de alimentación tiene el caballo?",
       "sourceTitle": "Horse — National Geographic",
       "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse",
-      "theory": "El caballo doméstico (Equus ferus caballus) ha convivido con las personas durante miles de años. Es herbívoro y se alimenta principalmente de hierbas y otras plantas. Existen cientos de razas con distintos tamaños y habilidades, desarrolladas para tareas como correr o tirar de cargas. Los caballos que viven en libertad suelen reunirse en grupos sociales con yeguas, crías y un macho adulto; la vida de cada caballo depende también de su ambiente y cuidados."
+      "theory": "El caballo doméstico (Equus ferus caballus) ha convivido con las personas durante miles de años. Es herbívoro y se alimenta principalmente de hierbas y otras plantas. Existen cientos de razas con distintos tamaños y habilidades, desarrolladas para tareas como correr o tirar de cargas. Los caballos que viven en libertad suelen reunirse en grupos sociales con yeguas, crías y un macho adulto; la vida de cada caballo depende también de su ambiente y cuidados.",
+      "quizzes": [
+        {
+          "question": "¿Qué tipo de alimentación tiene el caballo?",
+          "options": [
+            "Carnívora: caza otros mamíferos",
+            "Herbívora: se alimenta de plantas",
+            "Insectívora: solo come insectos"
+          ],
+          "correctIndex": 1,
+          "explanation": "Los caballos son herbívoros y suelen pastar hierbas y otras plantas.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Cuál es el nombre científico del caballo doméstico?",
+          "options": [
+            "Equus ferus caballus",
+            "Equus ferus",
+            "Caballus equus"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto identifica al caballo doméstico como Equus ferus caballus.",
+          "evidence": "El caballo doméstico (Equus ferus caballus) ha convivido con las personas durante miles de años.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Desde cuándo convive el caballo doméstico con las personas?",
+          "options": [
+            "Durante miles de años",
+            "Desde hace unas semanas",
+            "Durante un solo año"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que el caballo doméstico ha convivido con las personas durante miles de años.",
+          "evidence": "El caballo doméstico (Equus ferus caballus) ha convivido con las personas durante miles de años.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Qué come principalmente el caballo?",
+          "options": [
+            "Hierbas y otras plantas",
+            "Piedras y arena",
+            "Madera y metal"
+          ],
+          "correctIndex": 0,
+          "explanation": "Según el texto, su alimentación incluye principalmente hierbas y otras plantas.",
+          "evidence": "Es herbívoro y se alimenta principalmente de hierbas y otras plantas.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Qué se dice sobre la cantidad de razas de caballos?",
+          "options": [
+            "Existen cientos de razas",
+            "Existe una sola raza",
+            "Existen exactamente dos razas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que existen cientos de razas de caballos.",
+          "evidence": "Existen cientos de razas con distintos tamaños y habilidades, desarrolladas para tareas como correr o tirar de cargas.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Qué característica puede variar entre las razas de caballos?",
+          "options": [
+            "El tamaño y las habilidades",
+            "El número de patas",
+            "La capacidad de ser plantas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona que las razas tienen distintos tamaños y habilidades.",
+          "evidence": "Existen cientos de razas con distintos tamaños y habilidades, desarrolladas para tareas como correr o tirar de cargas.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Para qué tareas se desarrollaron algunas razas de caballos?",
+          "options": [
+            "Correr o tirar de cargas",
+            "Nadar bajo el hielo",
+            "Construir viviendas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona correr y tirar de cargas como tareas para las que se desarrollaron razas.",
+          "evidence": "Existen cientos de razas con distintos tamaños y habilidades, desarrolladas para tareas como correr o tirar de cargas.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿En qué tipo de grupos suelen reunirse los caballos que viven en libertad?",
+          "options": [
+            "En grupos sociales",
+            "En grupos de peces",
+            "En grupos formados solo por plantas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que los caballos que viven en libertad suelen reunirse en grupos sociales.",
+          "evidence": "Los caballos que viven en libertad suelen reunirse en grupos sociales con yeguas, crías y un macho adulto; la vida de cada caballo depende también de su ambiente y cuidados.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "¿Qué integrantes menciona el texto en los grupos sociales de caballos en libertad?",
+          "options": [
+            "Yeguas, crías y un macho adulto",
+            "Solo crías",
+            "Únicamente plantas y yeguas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto describe grupos con yeguas, crías y un macho adulto.",
+          "evidence": "Los caballos que viven en libertad suelen reunirse en grupos sociales con yeguas, crías y un macho adulto; la vida de cada caballo depende también de su ambiente y cuidados.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        },
+        {
+          "question": "Según el texto, ¿de qué depende también la vida de cada caballo?",
+          "options": [
+            "De su ambiente y cuidados",
+            "Solo del color de su pelaje",
+            "Del número de razas existentes"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente dice que la vida de cada caballo depende también de su ambiente y cuidados.",
+          "evidence": "Los caballos que viven en libertad suelen reunirse en grupos sociales con yeguas, crías y un macho adulto; la vida de cada caballo depende también de su ambiente y cuidados.",
+          "sourceTitle": "Horse — National Geographic",
+          "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -171,7 +1174,9 @@
             "Manadas"
           ],
           "correctIndex": 2,
-          "explanation": "Los grupos familiares de leones se llaman manadas (prides en inglés)."
+          "explanation": "Los grupos familiares de leones se llaman manadas (prides en inglés).",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
         },
         {
           "question": "¿Quiénes suelen realizar la mayor parte de la caza de la manada?",
@@ -181,7 +1186,9 @@
             "Solo los machos adultos"
           ],
           "correctIndex": 0,
-          "explanation": "Las leonas suelen ser las principales cazadoras y pueden cooperar para acercarse a sus presas."
+          "explanation": "Las leonas suelen ser las principales cazadoras y pueden cooperar para acercarse a sus presas.",
+          "sourceTitle": "How loud is a lion’s roar? And 4 other lion facts | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/resources/facts/how-loud-is-a-lions-roar-and-4-other-lion-facts/"
         },
         {
           "question": "¿Cuándo suelen preferir cazar los leones?",
@@ -191,7 +1198,9 @@
             "Solo durante las lluvias"
           ],
           "correctIndex": 1,
-          "explanation": "La poca luz ayuda a las leonas a acercarse a sus presas sin ser detectadas."
+          "explanation": "La poca luz ayuda a las leonas a acercarse a sus presas sin ser detectadas.",
+          "sourceTitle": "How loud is a lion’s roar? And 4 other lion facts | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/resources/facts/how-loud-is-a-lions-roar-and-4-other-lion-facts/"
         },
         {
           "question": "¿A qué distancia puede oírse el rugido de un león, según las fuentes consultadas?",
@@ -201,7 +1210,9 @@
             "No se oye fuera de la manada"
           ],
           "correctIndex": 0,
-          "explanation": "El Smithsonian indica que puede escucharse hasta cinco millas; la AWF lo expresa como unos ocho kilómetros."
+          "explanation": "El Smithsonian indica que puede escucharse hasta cinco millas; la AWF lo expresa como unos ocho kilómetros.",
+          "sourceTitle": "Lion | African Wildlife Foundation",
+          "sourceUrl": "https://www.awf.org/wildlife-conservation/lion"
         },
         {
           "question": "¿Cuánto pueden dormir o descansar los leones durante un día?",
@@ -211,7 +1222,9 @@
             "Exactamente seis minutos"
           ],
           "correctIndex": 0,
-          "explanation": "Los leones pueden descansar hasta 20 horas al día, según WWF y African Wildlife Foundation."
+          "explanation": "Los leones pueden descansar hasta 20 horas al día, según WWF y African Wildlife Foundation.",
+          "sourceTitle": "Lion | African Wildlife Foundation",
+          "sourceUrl": "https://www.awf.org/wildlife-conservation/lion"
         },
         {
           "question": "¿Qué suele pasar con las manchas claras que algunos cachorros tienen en el pelaje?",
@@ -221,7 +1234,61 @@
             "Se vuelven más grandes cada año"
           ],
           "correctIndex": 1,
-          "explanation": "Las manchas juveniles suelen desaparecer a medida que los leones crecen."
+          "explanation": "Las manchas juveniles suelen desaparecer a medida que los leones crecen.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "question": "¿Qué función suelen cumplir los machos en la manada?",
+          "options": [
+            "Ayudar a defender el territorio",
+            "Cuidar solos a todas las crías",
+            "Realizar toda la caza"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los machos suelen ayudar a defender el territorio.",
+          "evidence": "los machos suelen ayudar a defender el territorio.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "question": "Además de cooperar en la caza, ¿en qué cooperan las hembras emparentadas?",
+          "options": [
+            "En la defensa de otros hábitats",
+            "En el cuidado de las crías",
+            "En la construcción de nidos"
+          ],
+          "correctIndex": 1,
+          "explanation": "Las hembras emparentadas cooperan en la caza y en el cuidado de las crías.",
+          "evidence": "Las hembras emparentadas cooperan en la caza y en el cuidado de las crías;",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "question": "¿Qué factores influyen en la longitud y el color de la melena de los machos?",
+          "options": [
+            "La edad, la genética y las hormonas",
+            "La hora del día y el descanso",
+            "El cuidado de las crías y la caza"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona la edad, la genética y las hormonas como factores que influyen en la melena.",
+          "evidence": "influyen factores como la edad, la genética y las hormonas.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
+        },
+        {
+          "question": "Según la teoría, ¿en qué tipo de entorno vive el león africano?",
+          "options": [
+            "Sabanas, praderas y bosques abiertos",
+            "Glaciares y bosques cerrados",
+            "Arrecifes y océanos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La teoría describe al león africano como habitante de sabanas, praderas y bosques abiertos.",
+          "evidence": "El león africano (Panthera leo) es un gran felino carnívoro de sabanas, praderas y bosques abiertos.",
+          "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/lion"
         }
       ]
     },
@@ -238,7 +1305,138 @@
       "question": "¿Qué causa principalmente el pelaje blanco de algunos tigres?",
       "sourceTitle": "The truth about white tigers — WWF",
       "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/",
-      "theory": "El tigre blanco no es una especie aparte: es un tigre con una variación genética poco común que cambia el color de su pelaje. Su manto blanco no lo camufla bien en la naturaleza, por lo que puede dificultar que se acerque a sus presas. Los tigres silvestres necesitan hábitats seguros y protección frente a amenazas humanas. Criar tigres blancos en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad."
+      "theory": "El tigre blanco no es una especie aparte: es un tigre con una variación genética poco común que cambia el color de su pelaje. Su manto blanco no lo camufla bien en la naturaleza, por lo que puede dificultar que se acerque a sus presas. Los tigres silvestres necesitan hábitats seguros y protección frente a amenazas humanas. Criar tigres blancos en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad.",
+      "quizzes": [
+        {
+          "question": "¿Qué causa principalmente el pelaje blanco de algunos tigres?",
+          "options": [
+            "Una variación genética que afecta el color del pelaje",
+            "Una dieta basada solamente en nieve",
+            "Un cambio de especie al vivir en cautiverio"
+          ],
+          "correctIndex": 0,
+          "explanation": "La variación genética llamada leucismo modifica el color del pelaje; no convierte al tigre en otra especie.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿El tigre blanco se considera una especie aparte?",
+          "options": [
+            "Sí, es una especie aparte",
+            "No, sigue siendo un tigre",
+            "Solo si vive en cautiverio"
+          ],
+          "correctIndex": 1,
+          "explanation": "El texto indica que el tigre blanco no es una especie aparte.",
+          "evidence": "El tigre blanco no es una especie aparte: es un tigre con una variación genética poco común que cambia el color de su pelaje.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿Qué dificultad puede causar el manto blanco en la naturaleza?",
+          "options": [
+            "Le dificulta camuflarse",
+            "Le permite ocultarse mejor",
+            "No afecta su camuflaje"
+          ],
+          "correctIndex": 0,
+          "explanation": "El manto blanco no lo camufla bien en la naturaleza.",
+          "evidence": "Su manto blanco no lo camufla bien en la naturaleza, por lo que puede dificultar que se acerque a sus presas.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "Según el texto, ¿qué puede dificultar el pelaje blanco al acercarse a una presa?",
+          "options": [
+            "Que el tigre se acerque a ella",
+            "Que el tigre encuentre un hábitat seguro",
+            "Que el tigre reciba protección humana"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto vincula el manto blanco con una dificultad para acercarse a las presas.",
+          "evidence": "Su manto blanco no lo camufla bien en la naturaleza, por lo que puede dificultar que se acerque a sus presas.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿Qué necesitan los tigres silvestres para vivir?",
+          "options": [
+            "Hábitats seguros",
+            "Criaderos en cautiverio",
+            "Pelajes de otro color"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que los tigres silvestres necesitan hábitats seguros.",
+          "evidence": "Los tigres silvestres necesitan hábitats seguros y protección frente a amenazas humanas.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿Frente a qué necesitan protección los tigres silvestres?",
+          "options": [
+            "Amenazas humanas",
+            "Cambios de especie",
+            "La nieve"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona que necesitan protección frente a amenazas humanas.",
+          "evidence": "Los tigres silvestres necesitan hábitats seguros y protección frente a amenazas humanas.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿Qué población deben ayudar a conservar las medidas de conservación?",
+          "options": [
+            "Las poblaciones que viven en libertad",
+            "Solo los tigres criados en cautiverio",
+            "Una especie aparte de tigre blanco"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto distingue la conservación de las poblaciones en libertad de la cría en cautiverio.",
+          "evidence": "Criar tigres blancos en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿Criar tigres blancos en cautiverio reemplaza la conservación de los que viven en libertad?",
+          "options": [
+            "Sí, la reemplaza por completo",
+            "No, no la reemplaza",
+            "Solo cuando tienen pelaje blanco"
+          ],
+          "correctIndex": 1,
+          "explanation": "La cría en cautiverio no sustituye la conservación de las poblaciones libres.",
+          "evidence": "Criar tigres blancos en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "Una iniciativa cría tigres blancos en cautiverio. ¿Qué indica el texto sobre su relación con la conservación en libertad?",
+          "options": [
+            "No sustituye conservar poblaciones libres",
+            "Hace innecesarios los hábitats seguros",
+            "Elimina las amenazas humanas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto afirma que la cría en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad.",
+          "evidence": "Criar tigres blancos en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        },
+        {
+          "question": "¿Cuál combinación coincide con las necesidades de los tigres silvestres mencionadas en el texto?",
+          "options": [
+            "Hábitats seguros y protección frente a amenazas humanas",
+            "Cría en cautiverio y ausencia de presas",
+            "Pelaje blanco y una especie aparte"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto reúne esas dos necesidades para los tigres silvestres.",
+          "evidence": "Los tigres silvestres necesitan hábitats seguros y protección frente a amenazas humanas.",
+          "sourceTitle": "The truth about white tigers — WWF",
+          "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -253,7 +1451,138 @@
       "question": "¿Qué función puede tener el aullido de un lobo gris?",
       "sourceTitle": "Gray wolf",
       "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf",
-      "theory": "El lobo gris vive en distintos ambientes del hemisferio norte, desde bosques hasta tundras. Es un cazador social: suele trabajar en manada para perseguir animales grandes, como ciervos o alces, y también puede comer presas pequeñas. Su velocidad y sus dientes y garras afilados le ayudan a capturar alimento. Además, los lobos se comunican con aullidos; estos sonidos pueden reunir a la manada o ayudar a localizar a un compañero que se ha separado."
+      "theory": "El lobo gris vive en distintos ambientes del hemisferio norte, desde bosques hasta tundras. Es un cazador social: suele trabajar en manada para perseguir animales grandes, como ciervos o alces, y también puede comer presas pequeñas. Su velocidad y sus dientes y garras afilados le ayudan a capturar alimento. Además, los lobos se comunican con aullidos; estos sonidos pueden reunir a la manada o ayudar a localizar a un compañero que se ha separado.",
+      "quizzes": [
+        {
+          "question": "¿Qué función puede tener el aullido de un lobo gris?",
+          "options": [
+            "Atraer peces hacia la orilla",
+            "Reunir a la manada o ayudar a encontrar a un lobo separado",
+            "Mantener caliente la madriguera"
+          ],
+          "correctIndex": 1,
+          "explanation": "La fuente explica que los aullidos pueden mantener unida a la manada y ayudar a que un lobo perdido vuelva a encontrarla.",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿En qué parte del mundo vive el lobo gris?",
+          "options": [
+            "En el hemisferio norte",
+            "En el hemisferio sur",
+            "En todos los hemisferios"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto sitúa al lobo gris en el hemisferio norte.",
+          "evidence": "El lobo gris vive en distintos ambientes del hemisferio norte",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Cuál de estos ambientes se menciona como hogar del lobo gris?",
+          "options": [
+            "Bosques",
+            "Arrecifes",
+            "Desiertos cálidos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los bosques aparecen entre los ambientes donde vive.",
+          "evidence": "desde bosques hasta tundras",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Qué otro ambiente se nombra como lugar donde vive el lobo gris?",
+          "options": [
+            "Tundras",
+            "Selvas tropicales",
+            "Humedales costeros"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona las tundras como uno de sus ambientes.",
+          "evidence": "desde bosques hasta tundras",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Qué tipo de cazador es el lobo gris?",
+          "options": [
+            "Un cazador social",
+            "Un cazador que siempre actúa solo",
+            "Un cazador que solo busca plantas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto lo describe como un cazador social.",
+          "evidence": "Es un cazador social",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Cómo suele perseguir el lobo gris a los animales grandes?",
+          "options": [
+            "Trabajando en manada",
+            "Actuando siempre sin otros lobos",
+            "Esperando en el agua"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que suele trabajar en manada para perseguir animales grandes.",
+          "evidence": "suele trabajar en manada para perseguir animales grandes",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Cuál de estos animales grandes se menciona como presa del lobo gris?",
+          "options": [
+            "Alces",
+            "Pingüinos",
+            "Tortugas marinas"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los alces aparecen como ejemplo de animales grandes que persigue.",
+          "evidence": "como ciervos o alces",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "Además de animales grandes, ¿qué más puede comer el lobo gris?",
+          "options": [
+            "Presas pequeñas",
+            "Solo frutas",
+            "Únicamente peces"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que también puede comer presas pequeñas.",
+          "evidence": "y también puede comer presas pequeñas",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Qué característica física le ayuda a capturar alimento al lobo gris?",
+          "options": [
+            "Su velocidad",
+            "Sus alas",
+            "Su caparazón"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona que su velocidad le ayuda a capturar alimento.",
+          "evidence": "Su velocidad y sus dientes y garras afilados le ayudan a capturar alimento.",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        },
+        {
+          "question": "¿Qué rasgos se mencionan junto con la velocidad como ayuda para capturar alimento?",
+          "options": [
+            "Dientes y garras afilados",
+            "Aletas y escamas",
+            "Plumas y pico"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona sus dientes y garras afilados como ayuda para capturar alimento.",
+          "evidence": "sus dientes y garras afilados le ayudan a capturar alimento.",
+          "sourceTitle": "Gray wolf",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -268,7 +1597,138 @@
       "question": "¿Para qué puede usar un elefante su trompa?",
       "sourceTitle": "Elephant | WWF",
       "sourceUrl": "https://www.worldwildlife.org/species/elephant/",
-      "theory": "Los elefantes son los mamíferos terrestres más grandes y viven en distintos hábitats de África y Asia. Su trompa les sirve para recoger objetos, comunicarse con sonidos, saludar a otros elefantes y aspirar agua para beber o bañarse. Pueden pasar hasta 18 horas al día alimentándose de plantas. Al perder espacio para encontrar comida y agua, entran con más frecuencia en conflicto con las personas; además, la caza furtiva por el marfil amenaza a los elefantes africanos."
+      "theory": "Los elefantes son los mamíferos terrestres más grandes y viven en distintos hábitats de África y Asia. Su trompa les sirve para recoger objetos, comunicarse con sonidos, saludar a otros elefantes y aspirar agua para beber o bañarse. Pueden pasar hasta 18 horas al día alimentándose de plantas. Al perder espacio para encontrar comida y agua, entran con más frecuencia en conflicto con las personas; además, la caza furtiva por el marfil amenaza a los elefantes africanos.",
+      "quizzes": [
+        {
+          "question": "¿Para qué puede usar un elefante su trompa?",
+          "options": [
+            "Para excavar madrigueras profundas donde vivir",
+            "Para producir marfil",
+            "Para recoger objetos y aspirar agua"
+          ],
+          "correctIndex": 2,
+          "explanation": "La teoría explica que la trompa sirve para recoger objetos y aspirar agua, entre otros usos.",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Qué récord de tamaño se atribuye a los elefantes?",
+          "options": [
+            "Son los mamíferos terrestres más grandes",
+            "Son los mamíferos terrestres más pequeños",
+            "Son los mamíferos que viven más tiempo"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente los describe como los mamíferos terrestres más grandes.",
+          "evidence": "Los elefantes son los mamíferos terrestres más grandes",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿En qué continentes viven los elefantes?",
+          "options": [
+            "África y Asia",
+            "Europa y Oceanía",
+            "América y Europa"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que viven en distintos hábitats de África y Asia.",
+          "evidence": "viven en distintos hábitats de África y Asia.",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Qué función de la trompa se relaciona con los sonidos?",
+          "options": [
+            "Comunicarse con sonidos",
+            "Alimentarse de plantas",
+            "Encontrar espacio para vivir"
+          ],
+          "correctIndex": 0,
+          "explanation": "La trompa les sirve para comunicarse con sonidos.",
+          "evidence": "comunicarse con sonidos",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Cómo puede usar la trompa un elefante al relacionarse con otro?",
+          "options": [
+            "Para saludarlo",
+            "Para producir marfil",
+            "Para buscar agua en nuevos hábitats"
+          ],
+          "correctIndex": 0,
+          "explanation": "La teoría señala que pueden usar la trompa para saludar a otros elefantes.",
+          "evidence": "saludar a otros elefantes",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Hasta cuántas horas al día pueden pasar alimentándose?",
+          "options": [
+            "Hasta 18 horas",
+            "Hasta 8 horas",
+            "Hasta 2 horas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que pueden pasar hasta 18 horas al día alimentándose.",
+          "evidence": "Pueden pasar hasta 18 horas al día alimentándose de plantas.",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿De qué se alimentan durante esas horas?",
+          "options": [
+            "De plantas",
+            "De marfil",
+            "De sonidos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente especifica que se alimentan de plantas.",
+          "evidence": "alimentándose de plantas.",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Qué puede ocurrir cuando los elefantes pierden espacio para encontrar comida y agua?",
+          "options": [
+            "Entran con más frecuencia en conflicto con las personas",
+            "Dejan de vivir en África y Asia",
+            "Pasan menos tiempo alimentándose"
+          ],
+          "correctIndex": 0,
+          "explanation": "La pérdida de espacio para buscar comida y agua se relaciona con conflictos más frecuentes con las personas.",
+          "evidence": "Al perder espacio para encontrar comida y agua, entran con más frecuencia en conflicto con las personas;",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Qué amenaza a los elefantes africanos según la fuente?",
+          "options": [
+            "La caza furtiva por el marfil",
+            "La comunicación con sonidos",
+            "La alimentación de plantas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente señala que la caza furtiva por el marfil amenaza a los elefantes africanos.",
+          "evidence": "la caza furtiva por el marfil amenaza a los elefantes africanos.",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        },
+        {
+          "question": "¿Qué producto se menciona como motivo de la caza furtiva que amenaza a los elefantes africanos?",
+          "options": [
+            "El marfil",
+            "Las plantas",
+            "El agua"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente relaciona la caza furtiva con el marfil.",
+          "evidence": "la caza furtiva por el marfil amenaza a los elefantes africanos.",
+          "sourceTitle": "Elephant | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/elephant/"
+        }
+      ]
     },
     {
       "correctIndex": 0,
@@ -283,7 +1743,138 @@
       "question": "¿Qué estudian los científicos para ayudar a conservar a las jirafas?",
       "sourceTitle": "Giraffe Conservation",
       "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation",
-      "theory": "Las jirafas viven en distintos ambientes de África, desde desiertos muy secos hasta sabanas y zonas de matorral semiárido. Suelen alimentarse de hojas de árboles y arbustos, que alcanzan gracias a su largo cuello. Para proteger a estos animales, los científicos estudian sus desplazamientos y cómo factores como las cercas y otros cambios en el uso del terreno afectan los lugares por donde pueden moverse."
+      "theory": "Las jirafas viven en distintos ambientes de África, desde desiertos muy secos hasta sabanas y zonas de matorral semiárido. Suelen alimentarse de hojas de árboles y arbustos, que alcanzan gracias a su largo cuello. Para proteger a estos animales, los científicos estudian sus desplazamientos y cómo factores como las cercas y otros cambios en el uso del terreno afectan los lugares por donde pueden moverse.",
+      "quizzes": [
+        {
+          "question": "¿Qué estudian los científicos para ayudar a conservar a las jirafas?",
+          "options": [
+            "Sus desplazamientos y cómo los cambios del terreno afectan por dónde se mueven",
+            "Cómo construyen nidos en los árboles",
+            "Cómo cazan peces en los ríos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El seguimiento de sus movimientos ayuda a conocer qué lugares necesitan y cómo barreras o cambios del terreno pueden afectar su distribución.",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿En qué continente viven las jirafas según el texto?",
+          "options": [
+            "África",
+            "Asia",
+            "Europa"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que viven en distintos ambientes de África.",
+          "evidence": "Las jirafas viven en distintos ambientes de África",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿Cuál de estos ambientes se menciona como lugar donde viven las jirafas?",
+          "options": [
+            "Sabanas",
+            "Glaciares",
+            "Arrecifes"
+          ],
+          "correctIndex": 0,
+          "explanation": "Las sabanas aparecen entre los ambientes mencionados.",
+          "evidence": "desde desiertos muy secos hasta sabanas y zonas de matorral semiárido",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿Cómo describe el texto algunos de los desiertos donde viven las jirafas?",
+          "options": [
+            "Muy secos",
+            "Cubiertos de nieve",
+            "Siempre inundados"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto caracteriza esos desiertos como muy secos.",
+          "evidence": "desiertos muy secos",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿Qué otro tipo de zona se menciona junto a las sabanas?",
+          "options": [
+            "Matorral semiárido",
+            "Bosque tropical lluvioso",
+            "Pradera nevada"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto también menciona zonas de matorral semiárido.",
+          "evidence": "zonas de matorral semiárido",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿De qué suelen alimentarse las jirafas?",
+          "options": [
+            "Hojas",
+            "Peces",
+            "Insectos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que suelen alimentarse de hojas.",
+          "evidence": "Suelen alimentarse de hojas",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿De dónde obtienen las hojas que comen?",
+          "options": [
+            "De árboles y arbustos",
+            "De rocas y arena",
+            "De ríos y lagos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto especifica que comen hojas de árboles y arbustos.",
+          "evidence": "de árboles y arbustos",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "¿Qué característica les ayuda a alcanzar las hojas?",
+          "options": [
+            "Su largo cuello",
+            "Sus alas",
+            "Sus patas cortas"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto relaciona el largo cuello con alcanzar las hojas.",
+          "evidence": "que alcanzan gracias a su largo cuello",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "Según el texto, ¿qué elemento puede afectar los lugares por donde pueden moverse las jirafas?",
+          "options": [
+            "Las cercas",
+            "Las nubes",
+            "Las estaciones"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto incluye las cercas entre los factores que afectan por dónde pueden moverse.",
+          "evidence": "factores como las cercas y otros cambios en el uso del terreno afectan los lugares por donde pueden moverse.",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        },
+        {
+          "question": "Además de las cercas, ¿qué otro factor puede afectar por dónde se mueven?",
+          "options": [
+            "Cambios en el uso del terreno",
+            "Cambios en el color de las hojas",
+            "Cambios en la duración del día"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona los cambios en el uso del terreno como otro factor que afecta los lugares por donde pueden moverse.",
+          "evidence": "otros cambios en el uso del terreno afectan los lugares por donde pueden moverse.",
+          "sourceTitle": "Giraffe Conservation",
+          "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -298,7 +1889,138 @@
       "question": "¿De qué material están hechos los cuernos de los rinocerontes?",
       "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
       "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros",
-      "theory": "Los rinocerontes son un grupo de cinco especies que viven en África y Asia. Todas son herbívoras, aunque lo que comen depende de la especie: algunas pastan hierbas y otras arrancan hojas y ramas. Sus cuernos están hechos de queratina, el mismo material que forma el pelo y las uñas humanas, y los usan, entre otras cosas, para conseguir alimento. También se revuelcan en el barro, que les ayuda a refrescarse y a proteger la piel del sol y de los insectos."
+      "theory": "Los rinocerontes son un grupo de cinco especies que viven en África y Asia. Todas son herbívoras, aunque lo que comen depende de la especie: algunas pastan hierbas y otras arrancan hojas y ramas. Sus cuernos están hechos de queratina, el mismo material que forma el pelo y las uñas humanas, y los usan, entre otras cosas, para conseguir alimento. También se revuelcan en el barro, que les ayuda a refrescarse y a proteger la piel del sol y de los insectos.",
+      "quizzes": [
+        {
+          "question": "¿De qué material están hechos los cuernos de los rinocerontes?",
+          "options": [
+            "De hueso macizo",
+            "De queratina, como el pelo y las uñas",
+            "De madera endurecida"
+          ],
+          "correctIndex": 1,
+          "explanation": "La teoría explica que el cuerno está compuesto de queratina, igual que el pelo y las uñas humanas.",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Cuántas especies forman el grupo de los rinocerontes?",
+          "options": [
+            "Cinco",
+            "Tres",
+            "Ocho"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que los rinocerontes forman un grupo de cinco especies.",
+          "evidence": "Los rinocerontes son un grupo de cinco especies",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿En qué continentes viven los rinocerontes?",
+          "options": [
+            "África y Asia",
+            "Europa y África",
+            "Asia y América"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente señala que viven en África y Asia.",
+          "evidence": "viven en África y Asia.",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Qué tipo de alimentación tienen todos los rinocerontes?",
+          "options": [
+            "Herbívora",
+            "Carnívora",
+            "Omnívora"
+          ],
+          "correctIndex": 0,
+          "explanation": "Según el texto, todas las especies son herbívoras.",
+          "evidence": "Todas son herbívoras",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Qué influye en qué comen los rinocerontes?",
+          "options": [
+            "La especie",
+            "El color de la piel",
+            "El lugar donde se revuelcan"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente explica que lo que comen depende de la especie.",
+          "evidence": "lo que comen depende de la especie",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Qué hacen algunas especies para alimentarse de hierbas?",
+          "options": [
+            "Las pastan",
+            "Las entierran",
+            "Las recogen del barro"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto dice que algunas especies pastan hierbas.",
+          "evidence": "algunas pastan hierbas",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Qué arrancan algunas especies para comer?",
+          "options": [
+            "Hojas y ramas",
+            "Piedras y raíces",
+            "Flores y frutos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona que algunas arrancan hojas y ramas.",
+          "evidence": "otras arrancan hojas y ramas.",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Para qué usan los rinocerontes sus cuernos, entre otras cosas?",
+          "options": [
+            "Para conseguir alimento",
+            "Para fabricar barro",
+            "Para refrescarse"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que usan sus cuernos, entre otras cosas, para conseguir alimento.",
+          "evidence": "los usan, entre otras cosas, para conseguir alimento.",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿Qué beneficio del barro ayuda a los rinocerontes a no acalorarse?",
+          "options": [
+            "Les ayuda a refrescarse",
+            "Les ayuda a pastar hierbas",
+            "Les ayuda a arrancar ramas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente dice que el barro les ayuda a refrescarse.",
+          "evidence": "les ayuda a refrescarse",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        },
+        {
+          "question": "¿De qué protege el barro la piel de los rinocerontes?",
+          "options": [
+            "Del sol y de los insectos",
+            "De las hierbas y las ramas",
+            "Del agua y del viento"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que el barro protege su piel del sol y de los insectos.",
+          "evidence": "proteger la piel del sol y de los insectos.",
+          "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -313,7 +2035,138 @@
       "question": "¿Qué ayuda al panda gigante a sujetar los tallos de bambú?",
       "sourceTitle": "Giant panda",
       "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda",
-      "theory": "El panda gigante vive en bosques de montaña del centro-sur de China, donde crece mucho bambú. Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta. Sus fuertes mandíbulas y dientes ayudan a triturar los tallos, y un hueso especial de la muñeca funciona como un “pulgar” para sujetarlos. La pérdida y fragmentación de los bosques amenazan su hábitat."
+      "theory": "El panda gigante vive en bosques de montaña del centro-sur de China, donde crece mucho bambú. Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta. Sus fuertes mandíbulas y dientes ayudan a triturar los tallos, y un hueso especial de la muñeca funciona como un “pulgar” para sujetarlos. La pérdida y fragmentación de los bosques amenazan su hábitat.",
+      "quizzes": [
+        {
+          "question": "¿Qué ayuda al panda gigante a sujetar los tallos de bambú?",
+          "options": [
+            "Una cola prensil",
+            "Alas pequeñas en las patas delanteras",
+            "Un hueso de la muñeca que funciona como un pulgar"
+          ],
+          "correctIndex": 2,
+          "explanation": "Un hueso especial de su muñeca, cubierto por una almohadilla, le sirve como un pulgar para agarrar el bambú.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿En qué región de China vive el panda gigante?",
+          "options": [
+            "En el centro-sur",
+            "En el norte",
+            "En el este"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto sitúa al panda gigante en el centro-sur de China.",
+          "evidence": "El panda gigante vive en bosques de montaña del centro-sur de China, donde crece mucho bambú.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿En qué tipo de entorno vive el panda gigante?",
+          "options": [
+            "En bosques de montaña",
+            "En praderas abiertas",
+            "En bosques costeros"
+          ],
+          "correctIndex": 0,
+          "explanation": "Su hábitat descrito son los bosques de montaña.",
+          "evidence": "El panda gigante vive en bosques de montaña del centro-sur de China, donde crece mucho bambú.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿Qué planta crece mucho en los bosques donde vive?",
+          "options": [
+            "Bambú",
+            "Trébol",
+            "Cactus"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que en esos bosques crece mucho bambú.",
+          "evidence": "El panda gigante vive en bosques de montaña del centro-sur de China, donde crece mucho bambú.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿A qué grupo de animales pertenece el panda gigante?",
+          "options": [
+            "Al grupo de los osos",
+            "Al grupo de los felinos",
+            "Al grupo de los ciervos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Aunque se alimenta principalmente de bambú, pertenece al grupo de los osos.",
+          "evidence": "Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿Cuál es el alimento principal del panda gigante?",
+          "options": [
+            "El bambú",
+            "Las raíces",
+            "Los insectos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El bambú es su alimento principal, según el texto.",
+          "evidence": "Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿Por qué necesita comer grandes cantidades de bambú cada día?",
+          "options": [
+            "Porque su digestión no aprovecha bien esta planta",
+            "Porque el bambú solo crece de noche",
+            "Porque necesita triturar madera"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto relaciona la gran cantidad diaria con el poco aprovechamiento digestivo del bambú.",
+          "evidence": "Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿Qué característica de su digestión se menciona en el texto?",
+          "options": [
+            "No aprovecha bien el bambú",
+            "Aprovecha por completo el bambú",
+            "No puede comer bambú"
+          ],
+          "correctIndex": 0,
+          "explanation": "La digestión del panda no aprovecha bien esta planta.",
+          "evidence": "Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿Qué le ayudan a hacer sus fuertes mandíbulas y dientes?",
+          "options": [
+            "A triturar los tallos",
+            "A sujetar las ramas con la muñeca",
+            "A encontrar bosques nuevos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Sus mandíbulas y dientes fuertes sirven para triturar los tallos.",
+          "evidence": "Sus fuertes mandíbulas y dientes ayudan a triturar los tallos, y un hueso especial de la muñeca funciona como un “pulgar” para sujetarlos.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        },
+        {
+          "question": "¿Qué amenaza el hábitat del panda gigante?",
+          "options": [
+            "La pérdida y fragmentación de los bosques",
+            "El exceso de lluvias en las montañas",
+            "La falta de tallos en los bambúes"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala la pérdida y fragmentación de los bosques como amenazas para su hábitat.",
+          "evidence": "La pérdida y fragmentación de los bosques amenazan su hábitat.",
+          "sourceTitle": "Giant panda",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda"
+        }
+      ]
     },
     {
       "correctIndex": 0,
@@ -328,7 +2181,138 @@
       "question": "¿Qué adaptación ayuda al tiburón blanco a desenvolverse en aguas frías?",
       "sourceTitle": "White shark — Monterey Bay Aquarium",
       "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark",
-      "theory": "El tiburón blanco vive en mares templados de todo el mundo y puede recorrer enormes distancias entre zonas costeras y aguas abiertas. Para cazar, acelera en ráfagas y sorprende a sus presas; los adultos comen sobre todo focas y leones marinos, aunque también aprovechan cadáveres de ballenas y comen algunos peces o rayas. Además, puede conservar más calor que el agua que lo rodea gracias a un sistema especial de intercambio de calor en la sangre, una adaptación que le ayuda a vivir en aguas frías."
+      "theory": "El tiburón blanco vive en mares templados de todo el mundo y puede recorrer enormes distancias entre zonas costeras y aguas abiertas. Para cazar, acelera en ráfagas y sorprende a sus presas; los adultos comen sobre todo focas y leones marinos, aunque también aprovechan cadáveres de ballenas y comen algunos peces o rayas. Además, puede conservar más calor que el agua que lo rodea gracias a un sistema especial de intercambio de calor en la sangre, una adaptación que le ayuda a vivir en aguas frías.",
+      "quizzes": [
+        {
+          "question": "¿Qué adaptación ayuda al tiburón blanco a desenvolverse en aguas frías?",
+          "options": [
+            "Puede mantener su cuerpo más caliente que el agua que lo rodea.",
+            "Tiene plumas que lo aíslan del frío.",
+            "Solo vive en aguas tropicales poco profundas."
+          ],
+          "correctIndex": 0,
+          "explanation": "El tiburón blanco conserva calor mediante un sistema de intercambio de calor en su circulación, y su cuerpo puede estar más caliente que el agua circundante.",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿En qué tipo de mares vive el tiburón blanco?",
+          "options": [
+            "En mares templados de todo el mundo",
+            "Solo en mares tropicales",
+            "Únicamente en lagos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que vive en mares templados de todo el mundo.",
+          "evidence": "El tiburón blanco vive en mares templados de todo el mundo",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿Qué puede recorrer el tiburón blanco entre zonas costeras y aguas abiertas?",
+          "options": [
+            "Enormes distancias",
+            "Solo unos pocos metros",
+            "Únicamente el fondo marino"
+          ],
+          "correctIndex": 0,
+          "explanation": "Puede recorrer enormes distancias entre esas zonas.",
+          "evidence": "puede recorrer enormes distancias entre zonas costeras y aguas abiertas.",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿Cómo acelera el tiburón blanco para cazar?",
+          "options": [
+            "En ráfagas",
+            "A un ritmo siempre lento",
+            "Sin moverse"
+          ],
+          "correctIndex": 0,
+          "explanation": "Para cazar, acelera en ráfagas.",
+          "evidence": "Para cazar, acelera en ráfagas",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿Cómo sorprende a sus presas cuando caza?",
+          "options": [
+            "Las sorprende",
+            "Las espera en tierra",
+            "Las atrae con sonidos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto dice que sorprende a sus presas.",
+          "evidence": "y sorprende a sus presas;",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿Qué comen sobre todo los tiburones blancos adultos?",
+          "options": [
+            "Focas y leones marinos",
+            "Plantas marinas",
+            "Aves terrestres"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los adultos comen sobre todo focas y leones marinos.",
+          "evidence": "los adultos comen sobre todo focas y leones marinos,",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿Qué pueden aprovechar los tiburones blancos además de cazar presas?",
+          "options": [
+            "Cadáveres de ballenas",
+            "Troncos flotantes",
+            "Nidos de aves"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que también aprovechan cadáveres de ballenas.",
+          "evidence": "aunque también aprovechan cadáveres de ballenas",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "Además de focas, leones marinos y cadáveres de ballenas, ¿qué comen a veces?",
+          "options": [
+            "Algunos peces o rayas",
+            "Frutas y semillas",
+            "Insectos terrestres"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona algunos peces o rayas como parte de su alimentación.",
+          "evidence": "y comen algunos peces o rayas.",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "¿En qué parte del cuerpo se encuentra el sistema especial que ayuda a conservar calor?",
+          "options": [
+            "En la sangre",
+            "En las plumas",
+            "En las escamas de la cola"
+          ],
+          "correctIndex": 0,
+          "explanation": "Conserva calor gracias a un sistema especial de intercambio de calor en la sangre.",
+          "evidence": "gracias a un sistema especial de intercambio de calor en la sangre,",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        },
+        {
+          "question": "Según el texto, ¿qué ayuda a hacer posible la adaptación de conservación de calor?",
+          "options": [
+            "Vivir en aguas frías",
+            "Vivir solo en aguas cálidas",
+            "Trasladarse a lagos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que esta adaptación le ayuda a vivir en aguas frías.",
+          "evidence": "una adaptación que le ayuda a vivir en aguas frías.",
+          "sourceTitle": "White shark — Monterey Bay Aquarium",
+          "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -343,7 +2327,138 @@
       "question": "¿Qué ayuda al oso pardo a escarbar en busca de alimento?",
       "sourceTitle": "Brown Bears",
       "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm",
-      "theory": "Los osos forman un grupo de mamíferos con dietas y costumbres que varían según la especie y el lugar donde viven. Por ejemplo, el oso pardo puede comer plantas, bayas, insectos, peces y otros animales; sus largas garras y hombros fuertes le ayudan a escarbar en busca de alimento. Muchos osos pardos pasan el invierno en guaridas y aprovechan la grasa acumulada durante los meses de comida abundante. No todos los osos viven igual: estos datos describen al oso pardo, no a cada especie de oso."
+      "theory": "Los osos forman un grupo de mamíferos con dietas y costumbres que varían según la especie y el lugar donde viven. Por ejemplo, el oso pardo puede comer plantas, bayas, insectos, peces y otros animales; sus largas garras y hombros fuertes le ayudan a escarbar en busca de alimento. Muchos osos pardos pasan el invierno en guaridas y aprovechan la grasa acumulada durante los meses de comida abundante. No todos los osos viven igual: estos datos describen al oso pardo, no a cada especie de oso.",
+      "quizzes": [
+        {
+          "question": "¿Qué ayuda al oso pardo a escarbar en busca de alimento?",
+          "options": [
+            "Sus aletas y cola plana",
+            "Sus largas garras y hombros fuertes",
+            "Sus alas y pico curvo"
+          ],
+          "correctIndex": 1,
+          "explanation": "La fuente explica que las largas garras y los hombros fuertes del oso pardo le permiten cavar para encontrar comida.",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿A qué grupo de animales pertenecen los osos?",
+          "options": [
+            "Mamíferos",
+            "Reptiles",
+            "Aves"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto identifica a los osos como mamíferos.",
+          "evidence": "Los osos forman un grupo de mamíferos",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿Qué puede comer el oso pardo de origen vegetal?",
+          "options": [
+            "Plantas y bayas",
+            "Hojas y algas marinas",
+            "Semillas y raíces únicamente"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona plantas y bayas entre los alimentos del oso pardo.",
+          "evidence": "el oso pardo puede comer plantas, bayas, insectos, peces y otros animales",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿Qué alimentos del oso pardo menciona la fuente que no son plantas ni bayas?",
+          "options": [
+            "Insectos y peces",
+            "Frutas y flores",
+            "Algas y moluscos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto incluye insectos y peces en la dieta posible del oso pardo.",
+          "evidence": "el oso pardo puede comer plantas, bayas, insectos, peces y otros animales",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "Además de plantas, bayas, insectos y peces, ¿qué más puede comer el oso pardo?",
+          "options": [
+            "Otros animales",
+            "Solo miel",
+            "Únicamente corteza"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente añade otros animales a la lista de alimentos posibles.",
+          "evidence": "el oso pardo puede comer plantas, bayas, insectos, peces y otros animales",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿Qué puede variar entre los osos según la especie y el lugar donde viven?",
+          "options": [
+            "Sus dietas",
+            "El hecho de ser mamíferos",
+            "La cantidad de opciones de respuesta"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que las dietas varían según la especie y el lugar.",
+          "evidence": "con dietas y costumbres que varían según la especie y el lugar donde viven",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "Según el texto, ¿qué otra característica puede variar según la especie y el lugar donde vive un oso?",
+          "options": [
+            "Sus costumbres",
+            "Su pertenencia al grupo de los mamíferos",
+            "El nombre de la fuente"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que también varían las costumbres de los osos.",
+          "evidence": "con dietas y costumbres que varían según la especie y el lugar donde viven",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿Dónde pasan el invierno muchos osos pardos?",
+          "options": [
+            "En guaridas",
+            "En nidos de ramas",
+            "En cuevas bajo el agua"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto dice que muchos osos pardos pasan el invierno en guaridas.",
+          "evidence": "Muchos osos pardos pasan el invierno en guaridas",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿Qué aprovechan muchos osos pardos durante el invierno?",
+          "options": [
+            "La grasa acumulada",
+            "Las bayas recién recolectadas",
+            "Los insectos almacenados"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente explica que aprovechan la grasa acumulada durante el invierno.",
+          "evidence": "aprovechan la grasa acumulada durante los meses de comida abundante",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        },
+        {
+          "question": "¿A qué osos se refieren específicamente los datos sobre las guaridas y la grasa invernal?",
+          "options": [
+            "A muchos osos pardos",
+            "A todas las especies de osos",
+            "A todos los mamíferos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto aclara que estos datos describen al oso pardo, no a todas las especies.",
+          "evidence": "No todos los osos viven igual: estos datos describen al oso pardo, no a cada especie de oso.",
+          "sourceTitle": "Brown Bears",
+          "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -358,7 +2473,138 @@
       "question": "¿Qué les ayuda a nadar a los crocodilianos?",
       "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
       "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian",
-      "theory": "Los cocodrilos son parte de un grupo de reptiles llamado crocodilianos, que también incluye caimanes, aligátores y gaviales. Viven en humedales y pasan mucho tiempo dentro o cerca del agua; nadan con ayuda de su cola fuerte y sus patas traseras palmeadas. Son carnívoros y comen animales que pueden atrapar en el agua o en la orilla, como peces, ranas y tortugas. Sus ojos situados en la parte superior de la cabeza les ayudan a vigilar mientras casi todo su cuerpo queda bajo el agua."
+      "theory": "Los cocodrilos son parte de un grupo de reptiles llamado crocodilianos, que también incluye caimanes, aligátores y gaviales. Viven en humedales y pasan mucho tiempo dentro o cerca del agua; nadan con ayuda de su cola fuerte y sus patas traseras palmeadas. Son carnívoros y comen animales que pueden atrapar en el agua o en la orilla, como peces, ranas y tortugas. Sus ojos situados en la parte superior de la cabeza les ayudan a vigilar mientras casi todo su cuerpo queda bajo el agua.",
+      "quizzes": [
+        {
+          "question": "¿Qué les ayuda a nadar a los crocodilianos?",
+          "options": [
+            "Alas anchas y plumas impermeables",
+            "Patas delanteras largas para remar",
+            "Una cola fuerte y patas traseras palmeadas"
+          ],
+          "correctIndex": 2,
+          "explanation": "La teoría explica que se impulsan en el agua con su cola fuerte y sus patas traseras palmeadas.",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿A qué grupo de reptiles pertenecen los cocodrilos?",
+          "options": [
+            "Crocodilianos",
+            "Felinos",
+            "Roedores"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que los cocodrilos forman parte del grupo llamado crocodilianos.",
+          "evidence": "Los cocodrilos son parte de un grupo de reptiles llamado crocodilianos",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿Cuál de estos animales también forma parte de los crocodilianos?",
+          "options": [
+            "Gaviales",
+            "Pingüinos",
+            "Salamandras"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los gaviales aparecen entre los animales que forman parte de los crocodilianos.",
+          "evidence": "que también incluye caimanes, aligátores y gaviales.",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿En qué tipo de lugares viven los cocodrilos?",
+          "options": [
+            "Humedales",
+            "Desiertos",
+            "Montañas nevadas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente dice que los cocodrilos viven en humedales.",
+          "evidence": "Viven en humedales",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿Dónde pasan mucho tiempo los cocodrilos?",
+          "options": [
+            "Dentro o cerca del agua",
+            "En las copas de los árboles",
+            "Bajo tierra"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pasan mucho tiempo dentro o cerca del agua, según el texto.",
+          "evidence": "y pasan mucho tiempo dentro o cerca del agua;",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿Qué tipo de animales comen los cocodrilos?",
+          "options": [
+            "Animales",
+            "Plantas",
+            "Frutos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto los describe como carnívoros y dice que comen animales.",
+          "evidence": "Son carnívoros y comen animales",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿Cuál de estos animales figura entre los alimentos de los cocodrilos?",
+          "options": [
+            "Ranas",
+            "Semillas",
+            "Hojas"
+          ],
+          "correctIndex": 0,
+          "explanation": "Las ranas son uno de los animales que el texto menciona como alimento.",
+          "evidence": "como peces, ranas y tortugas.",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿Dónde pueden atrapar los cocodrilos a los animales que comen?",
+          "options": [
+            "En el agua o en la orilla",
+            "En el cielo",
+            "En cuevas profundas"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente señala que pueden atrapar animales en el agua o en la orilla.",
+          "evidence": "que pueden atrapar en el agua o en la orilla,",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿En qué parte de la cabeza tienen los ojos los cocodrilos?",
+          "options": [
+            "En la parte superior",
+            "En la punta del hocico",
+            "Debajo de la mandíbula"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto ubica sus ojos en la parte superior de la cabeza.",
+          "evidence": "Sus ojos situados en la parte superior de la cabeza",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        },
+        {
+          "question": "¿Qué les permiten hacer sus ojos mientras casi todo el cuerpo queda bajo el agua?",
+          "options": [
+            "Vigilar",
+            "Respirar",
+            "Cavar"
+          ],
+          "correctIndex": 0,
+          "explanation": "Sus ojos les ayudan a vigilar aunque casi todo el cuerpo esté bajo el agua.",
+          "evidence": "les ayudan a vigilar mientras casi todo su cuerpo queda bajo el agua.",
+          "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+          "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian"
+        }
+      ]
     },
     {
       "correctIndex": 0,
@@ -373,7 +2619,138 @@
       "question": "¿Cómo ayudan los gorilas a mantener los bosques donde viven?",
       "sourceTitle": "Gorillas | WWF",
       "sourceUrl": "https://www.worldwildlife.org/species/gorilla/",
-      "theory": "Los gorilas viven en los bosques tropicales de África ecuatorial. Pasan casi la mitad del día comiendo: sobre todo tallos, brotes de bambú y frutas, además de corteza y pequeños invertebrados. Al comer frutas y desplazarse por el bosque, dispersan semillas y ayudan a que crezcan nuevos árboles, por lo que contribuyen a mantener la vida de su hábitat. Viven en grupos familiares que suelen tener entre cinco y diez individuos, normalmente liderados por un macho adulto llamado espalda plateada."
+      "theory": "Los gorilas viven en los bosques tropicales de África ecuatorial. Pasan casi la mitad del día comiendo: sobre todo tallos, brotes de bambú y frutas, además de corteza y pequeños invertebrados. Al comer frutas y desplazarse por el bosque, dispersan semillas y ayudan a que crezcan nuevos árboles, por lo que contribuyen a mantener la vida de su hábitat. Viven en grupos familiares que suelen tener entre cinco y diez individuos, normalmente liderados por un macho adulto llamado espalda plateada.",
+      "quizzes": [
+        {
+          "question": "¿Cómo ayudan los gorilas a mantener los bosques donde viven?",
+          "options": [
+            "Dispersan semillas al comer frutas y desplazarse por el bosque.",
+            "Construyen represas para crear nuevos humedales.",
+            "Polinizan flores mientras vuelan entre los árboles."
+          ],
+          "correctIndex": 0,
+          "explanation": "Al comer frutas, los gorilas dispersan sus semillas por el bosque, lo que ayuda a que crezcan árboles.",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿En qué tipo de lugar viven los gorilas?",
+          "options": [
+            "En los bosques tropicales de África ecuatorial",
+            "En los desiertos de Asia central",
+            "En las praderas de Europa"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente indica que viven en los bosques tropicales de África ecuatorial.",
+          "evidence": "Los gorilas viven en los bosques tropicales de África ecuatorial.",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Cuánto tiempo del día pasan casi comiendo los gorilas?",
+          "options": [
+            "Casi la mitad del día",
+            "Casi todo el día",
+            "Solo una pequeña parte del día"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pasan casi la mitad del día comiendo.",
+          "evidence": "Pasan casi la mitad del día comiendo:",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Cuál de estos alimentos forma parte de lo que comen sobre todo los gorilas?",
+          "options": [
+            "Tallos",
+            "Peces",
+            "Huevos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los tallos están entre los alimentos que comen sobre todo.",
+          "evidence": "sobre todo tallos, brotes de bambú y frutas",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Qué brotes se mencionan entre los alimentos principales de los gorilas?",
+          "options": [
+            "Brotes de bambú",
+            "Brotes de trigo",
+            "Brotes de pino"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona los brotes de bambú entre sus alimentos principales.",
+          "evidence": "sobre todo tallos, brotes de bambú y frutas",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Cuál de estas frutas se incluye entre los alimentos que comen sobre todo los gorilas?",
+          "options": [
+            "Frutas",
+            "Frutos secos",
+            "Algas"
+          ],
+          "correctIndex": 0,
+          "explanation": "Las frutas aparecen entre los alimentos que comen sobre todo.",
+          "evidence": "sobre todo tallos, brotes de bambú y frutas",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "Además de tallos, brotes de bambú y frutas, ¿qué alimento se menciona?",
+          "options": [
+            "Corteza",
+            "Carne de otros animales",
+            "Néctar"
+          ],
+          "correctIndex": 0,
+          "explanation": "La corteza figura entre los alimentos adicionales indicados.",
+          "evidence": "además de corteza y pequeños invertebrados.",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Qué tipo de grupos forman los gorilas?",
+          "options": [
+            "Grupos familiares",
+            "Grupos de animales de distintas especies",
+            "Grupos sin vínculos familiares"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente señala que viven en grupos familiares.",
+          "evidence": "Viven en grupos familiares",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Cuántos individuos suelen tener los grupos familiares de gorilas?",
+          "options": [
+            "Entre cinco y diez",
+            "Entre veinte y treinta",
+            "Solo dos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los grupos familiares suelen tener entre cinco y diez individuos.",
+          "evidence": "suelen tener entre cinco y diez individuos",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        },
+        {
+          "question": "¿Quién suele liderar los grupos familiares de gorilas?",
+          "options": [
+            "Un macho adulto llamado espalda plateada",
+            "Una hembra joven llamada espalda plateada",
+            "Un pequeño invertebrado"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los grupos suelen estar liderados por un macho adulto llamado espalda plateada.",
+          "evidence": "normalmente liderados por un macho adulto llamado espalda plateada.",
+          "sourceTitle": "Gorillas | WWF",
+          "sourceUrl": "https://www.worldwildlife.org/species/gorilla/"
+        }
+      ]
     },
     {
       "correctIndex": 1,
@@ -388,7 +2765,138 @@
       "question": "¿Qué comen principalmente las cebras de Grevy?",
       "sourceTitle": "Grevy's zebra",
       "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra",
-      "theory": "La cebra de Grevy vive en zonas secas de matorral y pastizales de Etiopía y el norte de Kenia. Come sobre todo hierbas; también puede alimentarse de hojas, frutos y corteza. Sus dientes resistentes le permiten masticar pastos duros durante mucho tiempo, y puede pasar gran parte del día comiendo. A diferencia de otras cebras, los adultos no forman manadas permanentes: las hembras y sus crías suelen reunirse en grupos pequeños y cambiantes."
+      "theory": "La cebra de Grevy vive en zonas secas de matorral y pastizales de Etiopía y el norte de Kenia. Come sobre todo hierbas; también puede alimentarse de hojas, frutos y corteza. Sus dientes resistentes le permiten masticar pastos duros durante mucho tiempo, y puede pasar gran parte del día comiendo. A diferencia de otras cebras, los adultos no forman manadas permanentes: las hembras y sus crías suelen reunirse en grupos pequeños y cambiantes.",
+      "quizzes": [
+        {
+          "question": "¿Qué comen principalmente las cebras de Grevy?",
+          "options": [
+            "Peces",
+            "Hierbas",
+            "Insectos"
+          ],
+          "correctIndex": 1,
+          "explanation": "La teoría indica que su alimento principal son las hierbas, aunque también comen hojas, frutos y corteza.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿En qué dos países vive la cebra de Grevy?",
+          "options": [
+            "Etiopía y el norte de Kenia",
+            "Egipto y el sur de Kenia",
+            "Etiopía y Tanzania"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto sitúa a la cebra de Grevy en Etiopía y el norte de Kenia.",
+          "evidence": "La cebra de Grevy vive en zonas secas de matorral y pastizales de Etiopía y el norte de Kenia.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿En qué tipo de ambiente vive la cebra de Grevy?",
+          "options": [
+            "Bosques húmedos y pantanos",
+            "Zonas secas de matorral y pastizales",
+            "Montañas nevadas"
+          ],
+          "correctIndex": 1,
+          "explanation": "La fuente describe su hábitat como zonas secas de matorral y pastizales.",
+          "evidence": "La cebra de Grevy vive en zonas secas de matorral y pastizales de Etiopía y el norte de Kenia.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "Además de hierbas, ¿qué puede comer la cebra de Grevy?",
+          "options": [
+            "Peces y huevos",
+            "Hojas, frutos y corteza",
+            "Hongos y raíces"
+          ],
+          "correctIndex": 1,
+          "explanation": "El texto menciona hojas, frutos y corteza como otros alimentos posibles.",
+          "evidence": "Come sobre todo hierbas; también puede alimentarse de hojas, frutos y corteza.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿Qué les permiten hacer sus dientes resistentes?",
+          "options": [
+            "Masticar pastos duros durante mucho tiempo",
+            "Cavar madrigueras profundas",
+            "Romper semillas de frutos"
+          ],
+          "correctIndex": 0,
+          "explanation": "Sus dientes resistentes le permiten masticar pastos duros durante mucho tiempo.",
+          "evidence": "Sus dientes resistentes le permiten masticar pastos duros durante mucho tiempo",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿Qué característica de su alimentación se menciona sobre el día?",
+          "options": [
+            "Come solo al amanecer",
+            "Puede pasar gran parte del día comiendo",
+            "Deja de comer durante el día"
+          ],
+          "correctIndex": 1,
+          "explanation": "La fuente indica que puede dedicar gran parte del día a comer.",
+          "evidence": "puede pasar gran parte del día comiendo.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿Qué tipo de grupos forman los adultos de la cebra de Grevy?",
+          "options": [
+            "Manadas permanentes",
+            "No forman manadas permanentes",
+            "Grupos permanentes de machos"
+          ],
+          "correctIndex": 1,
+          "explanation": "A diferencia de otras cebras, los adultos de esta especie no forman manadas permanentes.",
+          "evidence": "A diferencia de otras cebras, los adultos no forman manadas permanentes",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿Qué suelen hacer las hembras y sus crías?",
+          "options": [
+            "Se reúnen en grupos pequeños y cambiantes",
+            "Viven siempre aisladas",
+            "Forman grupos grandes y permanentes"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto dice que las hembras y sus crías suelen reunirse en grupos pequeños y cambiantes.",
+          "evidence": "las hembras y sus crías suelen reunirse en grupos pequeños y cambiantes.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿Cuál es una diferencia señalada entre la cebra de Grevy y otras cebras?",
+          "options": [
+            "La de Grevy no forma manadas permanentes de adultos",
+            "La de Grevy no come hierbas",
+            "La de Grevy vive únicamente en bosques"
+          ],
+          "correctIndex": 0,
+          "explanation": "La diferencia indicada es que sus adultos no forman manadas permanentes.",
+          "evidence": "A diferencia de otras cebras, los adultos no forman manadas permanentes",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        },
+        {
+          "question": "¿Qué combinación describe correctamente a la cebra de Grevy?",
+          "options": [
+            "Vive en zonas secas y puede comer hojas y frutos",
+            "Vive en pantanos y come principalmente peces",
+            "Vive en bosques y come principalmente insectos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fuente menciona zonas secas como hábitat y hojas y frutos entre los alimentos que puede consumir.",
+          "evidence": "La cebra de Grevy vive en zonas secas de matorral y pastizales de Etiopía y el norte de Kenia. Come sobre todo hierbas; también puede alimentarse de hojas, frutos y corteza.",
+          "sourceTitle": "Grevy's zebra",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra"
+        }
+      ]
     },
     {
       "correctIndex": 2,
@@ -403,7 +2911,138 @@
       "question": "¿Qué función cumple la cola del guepardo cuando corre?",
       "sourceTitle": "Cheetah",
       "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah",
-      "theory": "El guepardo vive en distintas zonas de África, como sabanas y pastizales, donde puede encontrar presas. Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos. Su cuerpo ligero, sus patas y su columna flexible le ayudan a acelerar y alargar la zancada; la cola le sirve para equilibrarse al girar. Sus carreras máximas son muy breves, porque correr a tanta velocidad exige mucho esfuerzo."
+      "theory": "El guepardo vive en distintas zonas de África, como sabanas y pastizales, donde puede encontrar presas. Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos. Su cuerpo ligero, sus patas y su columna flexible le ayudan a acelerar y alargar la zancada; la cola le sirve para equilibrarse al girar. Sus carreras máximas son muy breves, porque correr a tanta velocidad exige mucho esfuerzo.",
+      "quizzes": [
+        {
+          "question": "¿Qué función cumple la cola del guepardo cuando corre?",
+          "options": [
+            "Le permite respirar bajo el agua.",
+            "Le sirve para excavar madrigueras.",
+            "Le ayuda a equilibrarse al girar."
+          ],
+          "correctIndex": 2,
+          "explanation": "La cola actúa como un timón y ayuda al guepardo a mantener el equilibrio cuando cambia de dirección.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿En qué continente vive el guepardo según el texto?",
+          "options": [
+            "África",
+            "Asia",
+            "Europa"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto indica que vive en distintas zonas de África.",
+          "evidence": "El guepardo vive en distintas zonas de África, como sabanas y pastizales, donde puede encontrar presas.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿En qué tipo de lugares puede vivir el guepardo?",
+          "options": [
+            "Sabanas y pastizales",
+            "Glaciares y tundras",
+            "Arrecifes y océanos"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona las sabanas y los pastizales como lugares donde vive.",
+          "evidence": "El guepardo vive en distintas zonas de África, como sabanas y pastizales, donde puede encontrar presas.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿Qué tipo de animal es el guepardo según su alimentación?",
+          "options": [
+            "Carnívoro",
+            "Herbívoro",
+            "Omnívoro"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto dice que el guepardo es carnívoro.",
+          "evidence": "Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿En qué momento suele cazar el guepardo?",
+          "options": [
+            "De día",
+            "Solo de noche",
+            "Al amanecer y nunca durante el día"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto señala que suele cazar de día.",
+          "evidence": "Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿Qué animales acecha, según el texto, antes de correr para atraparlos?",
+          "options": [
+            "Gacelas y antílopes pequeños",
+            "Ballenas y delfines",
+            "Ranas y peces"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto menciona gacelas y antílopes pequeños como animales que acecha.",
+          "evidence": "Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿Qué hace el guepardo después de acechar a sus presas?",
+          "options": [
+            "Corre para atraparlas",
+            "Se esconde bajo el agua",
+            "Construye un nido"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tras acechar a sus presas, corre para atraparlas.",
+          "evidence": "Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿Qué partes de su cuerpo le ayudan a acelerar y alargar la zancada?",
+          "options": [
+            "Su cuerpo ligero, sus patas y su columna flexible",
+            "Sus escamas y sus aletas",
+            "Sus alas y su pico"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto atribuye esas ayudas para correr al cuerpo ligero, las patas y la columna flexible.",
+          "evidence": "Su cuerpo ligero, sus patas y su columna flexible le ayudan a acelerar y alargar la zancada;",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "¿Por qué son muy breves las carreras máximas del guepardo?",
+          "options": [
+            "Porque correr a tanta velocidad exige mucho esfuerzo",
+            "Porque solo puede correr en el agua",
+            "Porque necesita detenerse para buscar árboles"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto explica que correr a tanta velocidad exige mucho esfuerzo.",
+          "evidence": "Sus carreras máximas son muy breves, porque correr a tanta velocidad exige mucho esfuerzo.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        },
+        {
+          "question": "Según el texto, ¿qué combinación describe mejor la caza del guepardo?",
+          "options": [
+            "Suele cazar de día, acecha y luego corre para atrapar a su presa",
+            "Caza de día, pero espera a que la presa se acerque sin acecharla",
+            "Acecha de noche y atrapa a sus presas sin correr"
+          ],
+          "correctIndex": 0,
+          "explanation": "El texto combina la caza diurna, el acecho y la carrera para atrapar a la presa.",
+          "evidence": "Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos.",
+          "sourceTitle": "Cheetah",
+          "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah"
+        }
+      ]
     }
   ]
 }

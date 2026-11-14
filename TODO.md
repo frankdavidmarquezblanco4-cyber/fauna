@@ -12,8 +12,8 @@
 - [x] El JSON de aprendizaje está incluido en el app shell de la PWA para lectura offline.
 - [x] La teoría del león africano incluye cinco datos curiosos, cada uno con fuente enlazada.
 
-## Pendiente en esta actualización
-- [ ] Cada uno de los 21 animales tiene exactamente diez preguntas autocorregibles, con tres opciones, explicación y fuente por pregunta. El lote de investigación aprobado solo completó cinco especies antes de detenerse por falta de créditos; no publicar el requisito como completo hasta cubrir las 21.
+## Últimos cambios
+- [x] Cada uno de los 21 animales tiene exactamente diez preguntas autocorregibles, con tres opciones, explicación y fuente enlazada en cada pregunta. Se integraron las cinco series investigadas y las otras 16 se redactaron solo desde la teoría, los hechos curiosos y la fuente ya asociados a cada ficha, según la alternativa autorizada.
 - [x] En RA móvil, ampliar la vista en vivo; mantener ocultas las notificaciones mientras la cámara está activa; detener la cámara al salir de RA y al pasar la página a segundo plano.
 - [x] En RV, esperar a que la sala esté lista antes de habilitar la entrada, ocultar notificaciones durante pantalla completa, y conservar el selector completo usable en pantallas estrechas.
 
