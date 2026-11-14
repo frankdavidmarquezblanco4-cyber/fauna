@@ -391,6 +391,12 @@
     .footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
     .footer-links{display:flex;gap:14px;flex-wrap:wrap}
     .footer-links a,.footer-links button{color:var(--blue);font-weight:750;background:none;border:0;padding:0;text-decoration:none;font-size:inherit}
+    .creator-credit{display:grid;place-items:center;min-height:258px;padding:28px 0 42px}
+    .creator-drop{width:158px;height:158px;display:grid;place-items:center;border-radius:0 50% 50% 50%;transform:rotate(45deg);background:radial-gradient(circle at 67% 27%,#BDEEFF 0 2%,transparent 3%),linear-gradient(145deg,#64D6F0,#168BC6 62%,#155BB5);box-shadow:inset -10px -14px 20px rgba(8,62,122,.23),0 12px 24px rgba(19,109,166,.22);position:relative}
+    .creator-drop::after{content:"";position:absolute;top:19%;right:25%;width:9px;height:29px;border-radius:99px;background:rgba(255,255,255,.48);transform:rotate(25deg)}
+    .creator-drop-copy{display:grid;gap:5px;width:138px;color:#fff;text-align:center;transform:rotate(-45deg);position:relative;z-index:1;text-shadow:0 1px 3px rgba(0,40,80,.28)}
+    .creator-drop-copy span{font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .creator-drop-copy strong{font-size:1.05rem;font-weight:850}
     .toast-region{position:fixed;right:16px;bottom:16px;z-index:300;display:grid;gap:8px;width:min(380px,calc(100% - 32px));pointer-events:none}
     .toast{padding:13px 16px;background:#12243A;color:#fff;border-radius:13px;box-shadow:var(--shadow-lg);animation:rise .22s ease;font-size:.9rem;font-weight:650}
     .toast strong{display:block;font-size:.95rem;margin-bottom:2px}
@@ -943,6 +949,11 @@
   </dialog>
 
   <footer class="footer">
+    <section class="creator-credit" aria-label="Créditos del proyecto">
+      <div class="creator-drop">
+        <div class="creator-drop-copy"><span>Proyecto hecho por</span><strong>Frank Marquez</strong></div>
+      </div>
+    </section>
     <div class="shell footer-inner">
       <p style="margin:0">FaunaXR GALERÍA XR · Modelos 3D, RA y RV para aprender creando. Los datos y modelos se guardan en este dispositivo.</p>
       <div class="footer-links">
