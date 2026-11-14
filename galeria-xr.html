@@ -1301,8 +1301,18 @@
        Utilidades de UI
        ============================================================ */
     let toastTimer = 0;
+    function clearToasts() {
+      const region = $('#toastRegion');
+      if (region) region.replaceChildren();
+      clearTimeout(toastTimer);
+      toastTimer = 0;
+    }
     function toast(title, message = '', kind = '') {
-      if (arScreenStream || (typeof Hands !== 'undefined' && Hands.running)) return;
+      const vrPresentationActive = document.body.classList.contains('vr-fullscreen-open') || document.body.classList.contains('vr-session-active');
+      if (arScreenStream || (typeof Hands !== 'undefined' && Hands.running) || vrPresentationActive) {
+        if (vrPresentationActive) clearToasts();
+        return;
+      }
       const region = $('#toastRegion');
       const item = document.createElement('div');
       item.className = `toast ${kind}`.trim();
@@ -2026,7 +2036,7 @@
 
       scene.addEventListener('enter-vr', () => {
         document.body.classList.add('vr-session-active');
-        $('#toastRegion').replaceChildren();
+        clearToasts();
         setVrFullscreenUi(isVrFullscreen());
         $('#vrEnterBtn').textContent = 'SALIR DE RV';
         $('#vrExitBtn').hidden = false;
@@ -2069,6 +2079,7 @@
     function selectVrStation(id) {
       const m = getModel(id);
       if (!m) return;
+      clearToasts();
       vrCurrentId = id;
       markViewed(id);
       $('#vrInfoName').textContent = m.name;
@@ -2139,7 +2150,7 @@
       if (controls) controls.hidden = !on;
       if (fsBtn) fsBtn.hidden = !on;
       document.body.classList.toggle('vr-fullscreen-open', !!on);
-      if (on) $('#toastRegion').replaceChildren();
+      if (on) clearToasts();
       fitVrCamera();
     }
     function isVrFullscreen() {

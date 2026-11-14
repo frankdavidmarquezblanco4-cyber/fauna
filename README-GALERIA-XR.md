@@ -12,7 +12,7 @@ La colección incorpora animales de casa y granja además de 13 especies salvaje
 
 ## Controles de RV
 
-En **Sala RV**, al entrar en **Pantalla completa**, usa los controles integrados: **Anterior**, el selector **Animal al frente** y **Siguiente**. También aparecen si el navegador no permite la pantalla completa nativa y se ajustan a pantallas estrechas. Los avisos emergentes se silencian durante la pantalla completa y las sesiones inmersivas. En visor WebXR, los botones virtuales **ANTERIOR** y **SIGUIENTE** están frente a la cámara; apunta y pulsa con el controlador. Los pedestales también se pueden seleccionar con el puntero/control.
+En **Sala RV**, al entrar en **Pantalla completa**, usa los controles integrados: **Anterior**, el selector **Animal al frente** y **Siguiente**. También aparecen si el navegador no permite la pantalla completa nativa y se ajustan a pantallas estrechas. Cambiar de animal elimina los avisos superpuestos; además, no aparecen avisos durante la pantalla completa ni las sesiones inmersivas. En visor WebXR, los botones virtuales **ANTERIOR** y **SIGUIENTE** están frente a la cámara; apunta y pulsa con el controlador. Los pedestales también se pueden seleccionar con el puntero/control.
 
 El selector incluye las 21 especies de la galería y los diseños GLB cargados en **Mis modelos**. Si agregas o borras un GLB, la sala se reconstruye con la colección actual al volver a ella.
 
