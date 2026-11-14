@@ -14,6 +14,16 @@ La colección incorpora animales de casa y granja además de 13 especies salvaje
 
 En **Sala RV**, al entrar en **Pantalla completa**, usa los controles integrados: **Anterior**, el selector **Animal al frente** y **Siguiente**. También aparecen si el navegador no permite la pantalla completa nativa. En visor WebXR, los botones virtuales **ANTERIOR** y **SIGUIENTE** están frente a la cámara; apunta y pulsa con el controlador. Los pedestales también se pueden seleccionar con el puntero/control.
 
+El selector incluye las 21 especies de la galería y los diseños GLB cargados en **Mis modelos**. Si agregas o borras un GLB, la sala se reconstruye con la colección actual al volver a ella.
+
+## Aprende
+
+La pestaña **Aprende** contiene una teoría breve, una fuente enlazada y un quiz autocorregible para cada uno de los 21 animales. El contenido está guardado en `assets/data/fauna-learning.es.json` y se incluye en la caché offline.
+
+## Realidad aumentada con cámara
+
+Desde una tarjeta de la galería o un modelo propio, pulsa **RA** para abrir la cámara y proyectar el diseño seleccionado. El selector dentro de la vista permite cambiar entre animales y GLB propios mientras la cámara está activa. Los avisos emergentes se silencian durante la proyección. Este modo superpone el diseño a la imagen de cámara, pero no lo ancla espacialmente; requiere permiso de cámara y HTTPS o `localhost`.
+
 ## Modelos propios y privacidad
 
 En **Mis modelos**, sube GLB de hasta 60 MB; la página valida el archivo y guarda sus datos en IndexedDB del mismo navegador. Puedes explorar y guardar favoritos sin crear perfil; los perfiles y datos locales no se suben ni sincronizan. La cámara requiere HTTPS o localhost y permiso del navegador; el video de control gestual se procesa localmente.

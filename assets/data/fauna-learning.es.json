@@ -1,0 +1,320 @@
+{
+  "language": "es",
+  "animals": [
+    {
+      "correctIndex": 0,
+      "explanation": "La teoría explica que las orejas del gato pueden girar y ayudarle a captar sonidos.",
+      "id": "gato",
+      "name": "Gato doméstico",
+      "options": [
+        "Puede girar las orejas",
+        "Tiene plumas que vibran",
+        "Usa branquias para oír bajo el agua"
+      ],
+      "question": "¿Qué característica ayuda al gato a captar sonidos de distintas direcciones?",
+      "sourceTitle": "Domestic Cat",
+      "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/domestic-cat",
+      "theory": "El gato doméstico (Felis catus) desciende de un gato montés africano y convive con las personas desde hace miles de años. Aunque viva en una casa, conserva instintos de cazador: es carnívoro y necesita comer carne; suele acechar a sus presas en silencio y las atrapa con garras y dientes afilados. Sus sentidos también le ayudan: tiene buena visión y oído, y sus orejas pueden girar para captar sonidos. Así puede orientarse y reaccionar ante lo que ocurre a su alrededor."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "El aceite de una glándula cercana a la cola ayuda a impermeabilizar las plumas y a cuidarlas.",
+      "id": "duck",
+      "name": "Pato",
+      "options": [
+        "A hacerlas crecer más rápido",
+        "A mantenerlas impermeables y en buen estado",
+        "A cambiar el color del agua donde nadan"
+      ],
+      "question": "¿Para qué ayuda el aceite que los patos distribuyen por sus plumas?",
+      "sourceTitle": "9 Cool Things You Should Know About Ducks",
+      "sourceUrl": "https://www.iowadnr.gov/news-release/2016-09-07/9-cool-things-you-should-know-about-ducks",
+      "theory": "Los patos forman un grupo diverso de aves: algunas especies viven sobre todo en agua dulce, mientras que otras, como ciertos patos marinos, usan el mar y visitan agua dulce para reproducirse. Muchos patos de agua poco profunda buscan algas y plantas flotantes con su pico ancho; otros se sumergen para encontrar alimento. Además, se acicalan pasando con el pico el aceite de una glándula cerca de la cola por sus plumas. Ese aceite ayuda a mantenerlas impermeables y en buen estado."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "El zorro rojo puede almacenar presas en escondites de su territorio y volver a ellas más tarde.",
+      "id": "fox",
+      "name": "Zorro",
+      "options": [
+        "Las entierra todas en el fondo de un lago.",
+        "Las lleva a vivir a su madriguera como mascotas.",
+        "Las guarda en escondites para comerlas después."
+      ],
+      "question": "¿Qué hace el zorro rojo con algunas presas que caza?",
+      "sourceTitle": "Red Fox | Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/wildlife/information/red-fox/",
+      "theory": "El zorro rojo puede vivir en lugares muy distintos, desde la tundra hasta el desierto; en Virginia también habita bosques, praderas, granjas y zonas urbanas. Suele preferir bordes de bosque y matorrales, donde encuentra vegetación variada. Aunque es omnívoro, gran parte de su dieta consiste en conejos y ratones; también come insectos, frutos y otros alimentos. Una conducta útil es que guarda parte de las presas que caza en escondites repartidos por su territorio para comerlas después."
+    },
+    {
+      "correctIndex": 0,
+      "explanation": "A lo largo de muchas generaciones, las personas eligieron perros con rasgos útiles o deseados para tareas como pastorear, cazar o acompañar.",
+      "id": "dog",
+      "name": "Perro doméstico",
+      "options": [
+        "Las personas los han seleccionado durante muchas generaciones para distintas tareas y características.",
+        "Todos viven en ambientes diferentes y cambian de especie al mudarse.",
+        "Solo comen plantas, y el alimento determina por completo su aspecto."
+      ],
+      "question": "¿Qué explica que existan perros con tamaños, formas y habilidades tan diferentes?",
+      "sourceTitle": "Canis lupus familiaris (dog) | Animal Diversity Web",
+      "sourceUrl": "https://animaldiversity.org/accounts/Canis_lupus_familiaris/",
+      "theory": "El perro doméstico vive junto a las personas en casi todo el mundo y puede adaptarse a muchos ambientes, desde ciudades y campos hasta bosques y desiertos. Es omnívoro: puede comer alimentos de origen animal y vegetal, aunque los perros domésticos necesitan una dieta equilibrada. Durante miles de años, las personas han seleccionado perros por sus capacidades y aspecto; por eso hay razas muy distintas, como perros pastores, de caza y de compañía. También se comunican con posturas del cuerpo, sonidos y olores."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "Al volver a ingerirlos, puede recuperar nutrientes producidos o liberados durante la digestión de las plantas.",
+      "id": "rabbit",
+      "name": "Conejo",
+      "options": [
+        "Para construir una madriguera más resistente",
+        "Para aprovechar nutrientes que no absorbió la primera vez",
+        "Para atraer a otros animales a su grupo"
+      ],
+      "question": "¿Por qué el conejo vuelve a ingerir algunos de sus excrementos?",
+      "sourceTitle": "Oryctolagus cuniculus (European rabbit) | Animal Diversity Web",
+      "sourceUrl": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/",
+      "theory": "El conejo europeo vive en lugares con suelo blando, donde puede excavar madrigueras; suele refugiarse en sistemas subterráneos llamados conejeras y puede vivir en grupos. Come plantas, como hierbas, hojas, brotes y raíces. Una adaptación curiosa es que vuelve a ingerir algunos excrementos: así, su aparato digestivo puede aprovechar nutrientes que no absorbió la primera vez. Esta conducta le ayuda a obtener más alimento de una dieta vegetal difícil de digerir."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "La página de Penn State indica que el gallo rojo de la jungla es el antepasado principal de la gallina doméstica.",
+      "id": "chicken",
+      "name": "Gallina",
+      "options": [
+        "Del pavo salvaje",
+        "Del faisán dorado",
+        "Del gallo rojo de la jungla"
+      ],
+      "question": "¿De qué ave silvestre desciende principalmente la gallina doméstica?",
+      "sourceTitle": "History of the Chicken — Penn State 4-H",
+      "sourceUrl": "https://extension.psu.edu/programs/4-h/opportunities/projects/animal-science/poultry/raising-rearing/viii-other-online-resources/the-chicken/history-of-the-chicken",
+      "theory": "La gallina doméstica desciende principalmente del gallo rojo de la jungla, un ave silvestre originaria del sudeste asiático. Hoy vive junto a las personas en granjas y corrales de muchos lugares del mundo. Hay gallinas de muchos tamaños y colores porque las personas han criado distintas variedades durante siglos. Algunas se seleccionan para poner huevos y otras para producir carne; no todas tienen el mismo aspecto ni se crían con el mismo propósito."
+    },
+    {
+      "correctIndex": 0,
+      "explanation": "El ganado es rumiante: sus cuatro compartimentos estomacales ayudan a digerir plantas, y la rumia consiste en volver a masticar el alimento.",
+      "id": "cow",
+      "name": "Vaca",
+      "options": [
+        "Tienen un estómago con cuatro compartimentos y rumian",
+        "Cazan otros animales para completar su dieta",
+        "Viven siempre solas y no forman grupos"
+      ],
+      "question": "¿Qué característica ayuda a las vacas a aprovechar los vegetales que comen?",
+      "sourceTitle": "Cow",
+      "sourceUrl": "https://nationalzoo.si.edu/animals/cow",
+      "theory": "Las vacas son hembras del ganado doméstico que ya han tenido al menos una cría. Viven en grupos llamados rebaños y comen plantas, como hierba y heno. Son rumiantes: su estómago tiene cuatro compartimentos que les ayudan a aprovechar los vegetales; por eso pasan varias horas pastando y luego rumiando, es decir, devolviendo alimento a la boca para masticarlo de nuevo. El ganado doméstico desciende de un antepasado salvaje llamado uro, que ya está extinto."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "Los caballos son herbívoros y suelen pastar hierbas y otras plantas.",
+      "id": "horse",
+      "name": "Caballo",
+      "options": [
+        "Carnívora: caza otros mamíferos",
+        "Herbívora: se alimenta de plantas",
+        "Insectívora: solo come insectos"
+      ],
+      "question": "¿Qué tipo de alimentación tiene el caballo?",
+      "sourceTitle": "Horse — National Geographic",
+      "sourceUrl": "https://www.nationalgeographic.com/animals/mammals/facts/horse",
+      "theory": "El caballo doméstico (Equus ferus caballus) ha convivido con las personas durante miles de años. Es herbívoro y se alimenta principalmente de hierbas y otras plantas. Existen cientos de razas con distintos tamaños y habilidades, desarrolladas para tareas como correr o tirar de cargas. Los caballos que viven en libertad suelen reunirse en grupos sociales con yeguas, crías y un macho adulto; la vida de cada caballo depende también de su ambiente y cuidados."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "Los leones viven en grupos sociales llamados manadas, generalmente formados por hembras emparentadas, crías y uno o más machos.",
+      "id": "wild-lion",
+      "name": "León",
+      "options": [
+        "Bandadas",
+        "Colonias de madrigueras",
+        "Manadas"
+      ],
+      "question": "¿Qué nombre reciben los grupos sociales de leones?",
+      "sourceTitle": "Lion | Smithsonian's National Zoo and Conservation Biology Institute",
+      "sourceUrl": "https://nationalzoo.si.edu/animals/lion",
+      "theory": "Los leones viven en hábitats muy variados, desde llanuras abiertas hasta matorrales densos y bosques secos. Se alimentan sobre todo de animales grandes, como cebras y ñus. A diferencia de la mayoría de los felinos, forman grupos sociales llamados manadas, compuestos principalmente por hembras emparentadas, sus crías y uno o más machos. Las hembras suelen ser las principales cazadoras y también crían a los cachorros."
+    },
+    {
+      "correctIndex": 0,
+      "explanation": "La variación genética llamada leucismo modifica el color del pelaje; no convierte al tigre en otra especie.",
+      "id": "wild-tiger",
+      "name": "Tigre blanco",
+      "options": [
+        "Una variación genética que afecta el color del pelaje",
+        "Una dieta basada solamente en nieve",
+        "Un cambio de especie al vivir en cautiverio"
+      ],
+      "question": "¿Qué causa principalmente el pelaje blanco de algunos tigres?",
+      "sourceTitle": "The truth about white tigers — WWF",
+      "sourceUrl": "https://www.worldwildlife.org/news/stories/the-truth-about-white-tigers/",
+      "theory": "El tigre blanco no es una especie aparte: es un tigre con una variación genética poco común que cambia el color de su pelaje. Su manto blanco no lo camufla bien en la naturaleza, por lo que puede dificultar que se acerque a sus presas. Los tigres silvestres necesitan hábitats seguros y protección frente a amenazas humanas. Criar tigres blancos en cautiverio no reemplaza la conservación de las poblaciones que viven en libertad."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "La fuente explica que los aullidos pueden mantener unida a la manada y ayudar a que un lobo perdido vuelva a encontrarla.",
+      "id": "wild-wolf",
+      "name": "Lobo gris",
+      "options": [
+        "Atraer peces hacia la orilla",
+        "Reunir a la manada o ayudar a encontrar a un lobo separado",
+        "Mantener caliente la madriguera"
+      ],
+      "question": "¿Qué función puede tener el aullido de un lobo gris?",
+      "sourceTitle": "Gray wolf",
+      "sourceUrl": "https://nationalzoo.si.edu/animals/gray-wolf",
+      "theory": "El lobo gris vive en distintos ambientes del hemisferio norte, desde bosques hasta tundras. Es un cazador social: suele trabajar en manada para perseguir animales grandes, como ciervos o alces, y también puede comer presas pequeñas. Su velocidad y sus dientes y garras afilados le ayudan a capturar alimento. Además, los lobos se comunican con aullidos; estos sonidos pueden reunir a la manada o ayudar a localizar a un compañero que se ha separado."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "La teoría explica que la trompa sirve para recoger objetos y aspirar agua, entre otros usos.",
+      "id": "wild-elephant",
+      "name": "Elefante",
+      "options": [
+        "Para excavar madrigueras profundas donde vivir",
+        "Para producir marfil",
+        "Para recoger objetos y aspirar agua"
+      ],
+      "question": "¿Para qué puede usar un elefante su trompa?",
+      "sourceTitle": "Elephant | WWF",
+      "sourceUrl": "https://www.worldwildlife.org/species/elephant/",
+      "theory": "Los elefantes son los mamíferos terrestres más grandes y viven en distintos hábitats de África y Asia. Su trompa les sirve para recoger objetos, comunicarse con sonidos, saludar a otros elefantes y aspirar agua para beber o bañarse. Pueden pasar hasta 18 horas al día alimentándose de plantas. Al perder espacio para encontrar comida y agua, entran con más frecuencia en conflicto con las personas; además, la caza furtiva por el marfil amenaza a los elefantes africanos."
+    },
+    {
+      "correctIndex": 0,
+      "explanation": "El seguimiento de sus movimientos ayuda a conocer qué lugares necesitan y cómo barreras o cambios del terreno pueden afectar su distribución.",
+      "id": "wild-giraffe",
+      "name": "Jirafa",
+      "options": [
+        "Sus desplazamientos y cómo los cambios del terreno afectan por dónde se mueven",
+        "Cómo construyen nidos en los árboles",
+        "Cómo cazan peces en los ríos"
+      ],
+      "question": "¿Qué estudian los científicos para ayudar a conservar a las jirafas?",
+      "sourceTitle": "Giraffe Conservation",
+      "sourceUrl": "https://nationalzoo.si.edu/conservation-ecology-center/giraffe-conservation",
+      "theory": "Las jirafas viven en distintos ambientes de África, desde desiertos muy secos hasta sabanas y zonas de matorral semiárido. Suelen alimentarse de hojas de árboles y arbustos, que alcanzan gracias a su largo cuello. Para proteger a estos animales, los científicos estudian sus desplazamientos y cómo factores como las cercas y otros cambios en el uso del terreno afectan los lugares por donde pueden moverse."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "La teoría explica que el cuerno está compuesto de queratina, igual que el pelo y las uñas humanas.",
+      "id": "wild-rhino",
+      "name": "Rinoceronte",
+      "options": [
+        "De hueso macizo",
+        "De queratina, como el pelo y las uñas",
+        "De madera endurecida"
+      ],
+      "question": "¿De qué material están hechos los cuernos de los rinocerontes?",
+      "sourceTitle": "Rhinoceros | San Diego Zoo Animals & Plants",
+      "sourceUrl": "https://animals.sandiegozoo.org/animals/rhinoceros",
+      "theory": "Los rinocerontes son un grupo de cinco especies que viven en África y Asia. Todas son herbívoras, aunque lo que comen depende de la especie: algunas pastan hierbas y otras arrancan hojas y ramas. Sus cuernos están hechos de queratina, el mismo material que forma el pelo y las uñas humanas, y los usan, entre otras cosas, para conseguir alimento. También se revuelcan en el barro, que les ayuda a refrescarse y a proteger la piel del sol y de los insectos."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "Un hueso especial de su muñeca, cubierto por una almohadilla, le sirve como un pulgar para agarrar el bambú.",
+      "id": "wild-panda",
+      "name": "Panda gigante",
+      "options": [
+        "Una cola prensil",
+        "Alas pequeñas en las patas delanteras",
+        "Un hueso de la muñeca que funciona como un pulgar"
+      ],
+      "question": "¿Qué ayuda al panda gigante a sujetar los tallos de bambú?",
+      "sourceTitle": "Giant panda",
+      "sourceUrl": "https://nationalzoo.si.edu/animals/giant-panda",
+      "theory": "El panda gigante vive en bosques de montaña del centro-sur de China, donde crece mucho bambú. Aunque pertenece al grupo de los osos, su alimento principal es el bambú: necesita comer grandes cantidades cada día porque su digestión no aprovecha bien esta planta. Sus fuertes mandíbulas y dientes ayudan a triturar los tallos, y un hueso especial de la muñeca funciona como un “pulgar” para sujetarlos. La pérdida y fragmentación de los bosques amenazan su hábitat."
+    },
+    {
+      "correctIndex": 0,
+      "explanation": "El tiburón blanco conserva calor mediante un sistema de intercambio de calor en su circulación, y su cuerpo puede estar más caliente que el agua circundante.",
+      "id": "wild-shark",
+      "name": "Tiburón blanco",
+      "options": [
+        "Puede mantener su cuerpo más caliente que el agua que lo rodea.",
+        "Tiene plumas que lo aíslan del frío.",
+        "Solo vive en aguas tropicales poco profundas."
+      ],
+      "question": "¿Qué adaptación ayuda al tiburón blanco a desenvolverse en aguas frías?",
+      "sourceTitle": "White shark — Monterey Bay Aquarium",
+      "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/white-shark",
+      "theory": "El tiburón blanco vive en mares templados de todo el mundo y puede recorrer enormes distancias entre zonas costeras y aguas abiertas. Para cazar, acelera en ráfagas y sorprende a sus presas; los adultos comen sobre todo focas y leones marinos, aunque también aprovechan cadáveres de ballenas y comen algunos peces o rayas. Además, puede conservar más calor que el agua que lo rodea gracias a un sistema especial de intercambio de calor en la sangre, una adaptación que le ayuda a vivir en aguas frías."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "La fuente explica que las largas garras y los hombros fuertes del oso pardo le permiten cavar para encontrar comida.",
+      "id": "wild-bear",
+      "name": "Oso",
+      "options": [
+        "Sus aletas y cola plana",
+        "Sus largas garras y hombros fuertes",
+        "Sus alas y pico curvo"
+      ],
+      "question": "¿Qué ayuda al oso pardo a escarbar en busca de alimento?",
+      "sourceTitle": "Brown Bears",
+      "sourceUrl": "https://www.nps.gov/subjects/bears/brown-bears.htm",
+      "theory": "Los osos forman un grupo de mamíferos con dietas y costumbres que varían según la especie y el lugar donde viven. Por ejemplo, el oso pardo puede comer plantas, bayas, insectos, peces y otros animales; sus largas garras y hombros fuertes le ayudan a escarbar en busca de alimento. Muchos osos pardos pasan el invierno en guaridas y aprovechan la grasa acumulada durante los meses de comida abundante. No todos los osos viven igual: estos datos describen al oso pardo, no a cada especie de oso."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "La teoría explica que se impulsan en el agua con su cola fuerte y sus patas traseras palmeadas.",
+      "id": "wild-crocodile",
+      "name": "Cocodrilo",
+      "options": [
+        "Alas anchas y plumas impermeables",
+        "Patas delanteras largas para remar",
+        "Una cola fuerte y patas traseras palmeadas"
+      ],
+      "question": "¿Qué les ayuda a nadar a los crocodilianos?",
+      "sourceTitle": "Crocodilian | San Diego Zoo Animals & Plants",
+      "sourceUrl": "https://animals.sandiegozoo.org/animals/crocodilian",
+      "theory": "Los cocodrilos son parte de un grupo de reptiles llamado crocodilianos, que también incluye caimanes, aligátores y gaviales. Viven en humedales y pasan mucho tiempo dentro o cerca del agua; nadan con ayuda de su cola fuerte y sus patas traseras palmeadas. Son carnívoros y comen animales que pueden atrapar en el agua o en la orilla, como peces, ranas y tortugas. Sus ojos situados en la parte superior de la cabeza les ayudan a vigilar mientras casi todo su cuerpo queda bajo el agua."
+    },
+    {
+      "correctIndex": 0,
+      "explanation": "Al comer frutas, los gorilas dispersan sus semillas por el bosque, lo que ayuda a que crezcan árboles.",
+      "id": "wild-gorilla",
+      "name": "Gorila",
+      "options": [
+        "Dispersan semillas al comer frutas y desplazarse por el bosque.",
+        "Construyen represas para crear nuevos humedales.",
+        "Polinizan flores mientras vuelan entre los árboles."
+      ],
+      "question": "¿Cómo ayudan los gorilas a mantener los bosques donde viven?",
+      "sourceTitle": "Gorillas | WWF",
+      "sourceUrl": "https://www.worldwildlife.org/species/gorilla/",
+      "theory": "Los gorilas viven en los bosques tropicales de África ecuatorial. Pasan casi la mitad del día comiendo: sobre todo tallos, brotes de bambú y frutas, además de corteza y pequeños invertebrados. Al comer frutas y desplazarse por el bosque, dispersan semillas y ayudan a que crezcan nuevos árboles, por lo que contribuyen a mantener la vida de su hábitat. Viven en grupos familiares que suelen tener entre cinco y diez individuos, normalmente liderados por un macho adulto llamado espalda plateada."
+    },
+    {
+      "correctIndex": 1,
+      "explanation": "La teoría indica que su alimento principal son las hierbas, aunque también comen hojas, frutos y corteza.",
+      "id": "wild-zebra",
+      "name": "Cebra",
+      "options": [
+        "Peces",
+        "Hierbas",
+        "Insectos"
+      ],
+      "question": "¿Qué comen principalmente las cebras de Grevy?",
+      "sourceTitle": "Grevy's zebra",
+      "sourceUrl": "https://nationalzoo.si.edu/animals/grevys-zebra",
+      "theory": "La cebra de Grevy vive en zonas secas de matorral y pastizales de Etiopía y el norte de Kenia. Come sobre todo hierbas; también puede alimentarse de hojas, frutos y corteza. Sus dientes resistentes le permiten masticar pastos duros durante mucho tiempo, y puede pasar gran parte del día comiendo. A diferencia de otras cebras, los adultos no forman manadas permanentes: las hembras y sus crías suelen reunirse en grupos pequeños y cambiantes."
+    },
+    {
+      "correctIndex": 2,
+      "explanation": "La cola actúa como un timón y ayuda al guepardo a mantener el equilibrio cuando cambia de dirección.",
+      "id": "wild-cheetah",
+      "name": "Guepardo",
+      "options": [
+        "Le permite respirar bajo el agua.",
+        "Le sirve para excavar madrigueras.",
+        "Le ayuda a equilibrarse al girar."
+      ],
+      "question": "¿Qué función cumple la cola del guepardo cuando corre?",
+      "sourceTitle": "Cheetah",
+      "sourceUrl": "https://nationalzoo.si.edu/animals/cheetah",
+      "theory": "El guepardo vive en distintas zonas de África, como sabanas y pastizales, donde puede encontrar presas. Es carnívoro y suele cazar de día: acecha animales como gacelas y antílopes pequeños, y luego corre para atraparlos. Su cuerpo ligero, sus patas y su columna flexible le ayudan a acelerar y alargar la zancada; la cola le sirve para equilibrarse al girar. Sus carreras máximas son muy breves, porque correr a tanta velocidad exige mucho esfuerzo."
+    }
+  ]
+}

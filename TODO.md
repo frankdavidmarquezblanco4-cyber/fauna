@@ -1,18 +1,20 @@
 # Estado de FaunaXR
 
-## Entregado en esta versión local
+## Entregado
 - [x] La página principal y el inicio PWA abren la Galería de animales; la marca visible y el manifiesto se llaman FaunaXR.
 - [x] Iconos de instalación FaunaXR en tamaños 192 y 512 px, incluido icono maskable.
 - [x] Catálogo ampliado a 21 animales; agrega 13 salvajes: león, tigre blanco, lobo, elefante, jirafa, rinoceronte, panda, tiburón blanco, oso, cocodrilo, gorila, cebra y guepardo.
-- [x] Licencias CC0 1.0 y fuente identificadas en las fichas y `assets/models/WILD-MODELS-LICENSES.txt`.
-- [x] La sala RV incluye 21 estaciones con selector y navegación Anterior/Siguiente en pantalla completa; botones equivalentes están frente a la cámara en escena WebXR.
-- [x] La sección Mis modelos continúa aceptando GLB de hasta 60 MB, guardándolos localmente.
-- [x] Service worker actualizado para FaunaXR y miniaturas de animales salvajes; modelos se cachean al visitarlos.
+- [x] Licencias CC0 1.0 y fuentes de modelos identificadas en las fichas y en `assets/models/WILD-MODELS-LICENSES.txt`.
+- [x] La sección Mis modelos acepta GLB de hasta 60 MB y los guarda localmente.
+- [x] La sala RV lista los 21 animales y los GLB propios; el selector de pantalla completa enfoca la estación seleccionada.
+- [x] La RA por cámara deja seleccionar cualquier animal de la galería o GLB propio, y silencia los avisos superpuestos mientras proyecta el modelo.
+- [x] La nueva pestaña Aprende tiene teoría breve, fuente enlazada y quiz autocorregible para cada animal del catálogo.
+- [x] El JSON de aprendizaje está incluido en el app shell de la PWA para lectura offline.
 
-## Aún pendiente
-- [ ] Añadir un modelo de puma/cougar cuando se disponga de un GLB con permiso/licencia redistribuible verificable. No se incluyó un modelo de fuentes que requieren cuenta o cuya licencia no se pudo comprobar.
-- [ ] Publicar esta versión en hosting HTTPS; aún no se ha realizado despliegue ni push.
-- [ ] Probar la sesión WebXR con un visor físico; los controles virtuales están implementados pero el hardware no está disponible en esta verificación.
+## Pendientes previos
+- [ ] Añadir un puma/cougar si aparece un GLB redistribuible con licencia verificable.
+- [ ] Publicar como sitio en hosting HTTPS; aún no hay despliegue web. HTTPS es necesario para cámara fuera de localhost.
+- [ ] Probar la sesión WebXR inmersiva con un visor físico; el hardware no estuvo disponible para esta verificación.
 
 ## Privacidad
-Los perfiles, favoritos y modelos propios persisten en el navegador/dispositivo local. La cámara de manos continúa siendo opcional, requiere consentimiento y el video se procesa en el dispositivo.
+Los perfiles, favoritos y modelos propios persisten en el navegador/dispositivo local. El control de manos/cámara es opcional, requiere permiso del navegador y procesa video en el dispositivo.

@@ -394,6 +394,32 @@
     body.high-contrast .btn,body.high-contrast input,body.high-contrast select{border:2px solid #273640;color:#000}
     body.high-contrast .btn-primary,body.high-contrast .btn-ar{background:#0047AB;color:#fff}
     body.high-contrast .badge,body.high-contrast .pill{background:#fff;color:#000;border:1px solid #000}
+
+    /* ===== Aprendizaje animal ===== */
+    .learn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:18px}
+    .learn-card{display:flex;flex-direction:column;gap:8px;padding:16px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 5px 16px rgba(18,36,58,.05)}
+    .learn-card h3{margin:0;font-size:1.03rem;color:var(--ink)}
+    .learn-card p{margin:0;color:var(--muted);font-size:.87rem;line-height:1.5}
+    .learn-card .btn{margin-top:auto}
+    .learn-detail{margin-top:18px;padding:clamp(18px,3vw,30px);border:1px solid var(--border);border-radius:22px;background:linear-gradient(145deg,#fff,#F3FAFF);box-shadow:0 8px 24px rgba(18,36,58,.06)}
+    .learn-detail h3{margin:3px 0 12px;font-size:clamp(1.35rem,3vw,1.9rem)}
+    .learn-theory{max-width:75ch;font-size:1.03rem;line-height:1.75;color:#30475A}
+    .learn-source{font-size:.85rem;color:var(--muted)}
+    .quiz-card{margin-top:22px;padding:18px;border:1px solid #C6DFEE;border-radius:18px;background:#fff}
+    .quiz-card fieldset{border:0;padding:0;margin:0}
+    .quiz-card legend{font-weight:900;font-size:1.08rem;margin-bottom:12px}
+    .quiz-option{display:flex;align-items:flex-start;gap:10px;margin:8px 0;padding:12px;border:1px solid var(--border);border-radius:12px;cursor:pointer}
+    .quiz-option input{width:18px;height:18px;accent-color:var(--blue);flex:none;margin:2px 0 0}
+    .quiz-feedback{min-height:1.5em;font-weight:800;margin:12px 0 0}
+    .quiz-feedback.correct{color:#167044}.quiz-feedback.incorrect{color:#9D372B}
+    .ar-screen-toolbar{position:absolute;z-index:4;left:12px;right:12px;top:12px;display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:12px;background:rgba(8,30,45,.72);color:#fff;backdrop-filter:blur(8px)}
+    .ar-screen-toolbar label{font-size:.8rem;font-weight:850;white-space:nowrap}
+    .ar-screen-toolbar select{min-width:0;flex:1;border:1px solid rgba(255,255,255,.7);border-radius:9px;padding:8px;background:#fff;color:#10283A;font:inherit}
+    .ar-screen.is-live .ar-screen-tag{top:auto;bottom:72px;left:auto;right:12px;font-size:.66rem;opacity:.78}
+    .ar-screen.is-live .ar-screen-actions{left:12px;right:auto;bottom:12px;width:auto}
+    .ar-screen.is-live .ar-screen-actions .btn{box-shadow:0 4px 18px rgba(0,0,0,.28)}
+    body.ar-camera-live .toast-region{display:none!important}
+    @media(max-width:640px){.learn-grid{grid-template-columns:1fr 1fr;gap:9px}.learn-card{padding:12px}.learn-card .btn{width:100%}.ar-screen-toolbar{left:8px;right:8px;top:8px;padding:6px}.ar-screen-toolbar select{font-size:.83rem}.ar-screen.is-live .ar-screen-tag{display:none}.quiz-card{padding:14px}}
   </style>
 </head>
 <body>
@@ -521,7 +547,7 @@
         <p id="profileMeta">Perfil local</p>
       </div>
       <div class="profile-stats">
-        <div><strong id="statViewed">0/6</strong><span>Modelos vistos</span></div>
+        <div><strong id="statViewed">0/21</strong><span>Modelos vistos</span></div>
         <div><strong id="statFav">0</strong><span>Favoritos</span></div>
         <div><strong id="statOwn">0</strong><span>GLB propios</span></div>
       </div>
@@ -532,6 +558,7 @@
     <nav class="tabs-wrap" aria-label="Secciones de la galería">
       <div class="tabs" role="tablist" aria-label="Experiencias de FaunaXR Galería XR">
         <button class="tab" id="tab-gallery" role="tab" aria-selected="true" aria-controls="view-gallery" tabindex="0" data-tab="gallery">Galería 3D</button>
+        <button class="tab" id="tab-learn" role="tab" aria-selected="false" aria-controls="view-learn" tabindex="-1" data-tab="learn">Aprende</button>
         <button class="tab" id="tab-ar" role="tab" aria-selected="false" aria-controls="view-ar" tabindex="-1" data-tab="ar">Realidad aumentada</button>
         <button class="tab" id="tab-vr" role="tab" aria-selected="false" aria-controls="view-vr" tabindex="-1" data-tab="vr">Sala RV</button>
         <button class="tab" id="tab-hands" role="tab" aria-selected="false" aria-controls="view-hands" tabindex="-1" data-tab="hands">Manos</button>
@@ -545,7 +572,7 @@
         <div>
           <p class="eyebrow">Catálogo interactivo</p>
           <h2>Galería de modelos 3D</h2>
-          <p>Seis modelos con licencia para aprender. Ábrelos para verlos en grande, guardarlos en favoritos y llevarlos a RA, RV o al modo manos.</p>
+          <p>21 animales para aprender, además de tus diseños GLB. Ábrelos en 3D, RA, RV o modo manos.</p>
         </div>
         <div class="view-head-actions">
           <button class="btn btn-sm" id="showFavsBtn" type="button" aria-pressed="false">★ Solo favoritos</button>
@@ -564,6 +591,21 @@
       <p class="empty" id="galleryEmpty" hidden>No hay modelos que coincidan. Prueba otra búsqueda o cambia el filtro.</p>
     </section>
 
+
+    <!-- ===== Teoría y quiz de animales ===== -->
+    <section class="view" id="view-learn" role="tabpanel" aria-labelledby="tab-learn" tabindex="-1" hidden>
+      <div class="view-head">
+        <div>
+          <p class="eyebrow">Observa · Comprende · Comprueba</p>
+          <h2>Aprende sobre los animales</h2>
+          <p>Explora una teoría breve para cada animal de la galería y comprueba lo aprendido con un quiz.</p>
+        </div>
+      </div>
+      <p class="note" id="learnStatus" role="status" aria-live="polite">Cargando contenido educativo…</p>
+      <div class="learn-grid" id="learnGrid"></div>
+      <section class="learn-detail" id="learnDetail" aria-live="polite" hidden></section>
+    </section>
+
     <!-- ===== Realidad aumentada ===== -->
     <section class="view" id="view-ar" role="tabpanel" aria-labelledby="tab-ar" tabindex="-1" hidden>
       <div class="view-head">
@@ -579,7 +621,7 @@
           <div class="viewer-card-head">
             <div>
               <span class="pill" id="arModelCategory">Mascota</span>
-              <h3 id="arModelName">Gato Scratch</h3>
+              <h3 id="arModelName">Gato doméstico</h3>
             </div>
             <span class="status" id="arStatus"><i class="dot wait"></i><span>RA · comprobando</span></span>
           </div>
@@ -602,6 +644,10 @@
           <div class="ar-screen" id="arScreen" hidden>
             <video id="arScreenVideo" muted playsinline aria-label="Cámara local para RA en pantalla"></video>
             <model-viewer id="arScreenModel" camera-controls touch-action="pan-y" shadow-intensity="0" environment-image="neutral" exposure="1" interaction-prompt="none" autoplay></model-viewer>
+            <div class="ar-screen-toolbar">
+              <label for="arScreenModelSelect">Diseño</label>
+              <select id="arScreenModelSelect" aria-label="Elige el animal o diseño que se proyecta"></select>
+            </div>
             <div class="ar-screen-empty" id="arScreenEmpty">Activa la cámara para ver el modelo sobre tu entorno.<br>El modelo flota frente a la cámara; no se ancla a una superficie.</div>
             <span class="ar-screen-tag">RA en pantalla · sin anclaje · sin grabación</span>
             <div class="ar-screen-actions">
@@ -710,7 +756,7 @@
         </section>
         <section class="hands-viewer" aria-label="Modelo controlado con gestos">
           <div class="hands-viewer-head">
-            <div><h3 id="handsModelName">Gato Scratch</h3><span id="handsModelCategory">Mascota</span></div>
+            <div><h3 id="handsModelName">Gato doméstico</h3><span id="handsModelCategory">Mascota</span></div>
             <div class="nav-btns"><button class="icon-btn" id="handsPrevBtn" type="button" aria-label="Modelo anterior">‹</button><button class="icon-btn" id="handsNextBtn" type="button" aria-label="Modelo siguiente">›</button></div>
           </div>
           <div class="viewer hands-stage">
@@ -780,7 +826,7 @@
   <!-- ===== Diálogo de modelo ===== -->
   <dialog class="modal" id="modelDialog" aria-labelledby="dialogTitle">
     <div class="modal-head">
-      <div><p class="eyebrow" id="dialogCategory">Mascota</p><h2 id="dialogTitle">Gato Scratch</h2></div>
+      <div><p class="eyebrow" id="dialogCategory">Mascota</p><h2 id="dialogTitle">Gato doméstico</h2></div>
       <button class="icon-btn" type="button" data-close-dialog="modelDialog" aria-label="Cerrar ficha del modelo">✕</button>
     </div>
     <div class="modal-body">
@@ -877,10 +923,10 @@
       ============================================================ */
     const MODELS = [
       {
-        id: 'gato', name: 'Gato Scratch', category: 'Mascotas', catKey: 'mascotas',
+        id: 'gato', name: 'Gato doméstico', category: 'Mascotas', catKey: 'mascotas',
         file: 'assets/models/scratch-cat.glb', poster: 'assets/models/scratch-cat.webp',
-        desc: 'La mascota de Scratch llega en 3D para acompañar tus primeros pasos en programación. Gírala, colócala sobre tu mesa y salúdala con la mano.',
-        author: 'Scratch Foundation', license: 'Uso educativo · consulta los términos de Scratch',
+        desc: 'El gato doméstico (Felis catus) es un mamífero carnívoro que vive junto a las personas y conserva sentidos y conductas de cazador. Gira el modelo para observar su postura y sus rasgos.',
+        author: 'Scratch Foundation', license: 'Modelo original de Scratch Foundation · uso sujeto a sus términos',
         licenseUrl: 'https://scratch.mit.edu/terms_of_use', animated: false
       },
       {
@@ -1241,6 +1287,7 @@
        ============================================================ */
     let toastTimer = 0;
     function toast(title, message = '', kind = '') {
+      if (arScreenStream || (typeof Hands !== 'undefined' && Hands.running)) return;
       const region = $('#toastRegion');
       const item = document.createElement('div');
       item.className = `toast ${kind}`.trim();
@@ -1276,8 +1323,11 @@
     /* ============================================================
        Pestañas
        ============================================================ */
-    const TAB_KEYS = ['gallery', 'ar', 'vr', 'hands', 'upload'];
+    const TAB_KEYS = ['gallery', 'learn', 'ar', 'vr', 'hands', 'upload'];
     let currentTab = 'gallery';
+    let learningEntries = [];
+    let learningLoaded = false;
+    let activeLearningId = null;
 
     function selectTab(key, opts = {}) {
       if (!TAB_KEYS.includes(key)) key = 'gallery';
@@ -1288,6 +1338,7 @@
         tab.tabIndex = selected ? 0 : -1;
       });
       $$('.view').forEach((view) => { view.hidden = view.id !== `view-${key}`; });
+      if (key === 'learn') renderLearningGrid();
       if (key === 'ar') initAr();
       if (key === 'vr') initVr();
       if (key === 'hands') initHandsView();
@@ -1371,6 +1422,7 @@
             <div class="model-foot">
               <button class="btn btn-sm btn-primary" type="button" data-open="${esc(m.id)}">Ver 3D</button>
               <button class="btn btn-sm" type="button" data-ar="${esc(m.id)}">RA</button>
+              ${MODELS.some((animal) => animal.id === m.id) ? `<button class="btn btn-sm btn-soft" type="button" data-learn="${esc(m.id)}">Aprender</button>` : ''}
             </div>
           </div>
         </article>`;
@@ -1387,6 +1439,8 @@
         if (favBtn) { toggleFavorite(favBtn.dataset.fav); return; }
         const openBtn = event.target.closest('[data-open]');
         if (openBtn) { openModel(openBtn.dataset.open); return; }
+        const learnBtn = event.target.closest('[data-learn]');
+        if (learnBtn) { selectTab('learn'); renderLearningDetail(learnBtn.dataset.learn); return; }
         const arBtn = event.target.closest('[data-ar]');
         if (arBtn) { goToAr(arBtn.dataset.ar); }
       });
@@ -1487,21 +1541,46 @@
         detectArSupport();
       }
     }
+    function fillDesignSelect(select, selectedId) {
+      if (!select) return;
+      const models = allModels();
+      const chosen = selectedId || select.value || arCurrentId || vrCurrentId;
+      select.replaceChildren();
+      const catalog = models.filter((m) => !m.uploadId);
+      const own = models.filter((m) => !!m.uploadId);
+      const addGroup = (label, list) => {
+        if (!list.length) return;
+        const group = document.createElement('optgroup');
+        group.label = label;
+        list.forEach((m) => {
+          const option = document.createElement('option');
+          option.value = m.id;
+          option.textContent = m.name;
+          group.append(option);
+        });
+        select.append(group);
+      };
+      addGroup('Animales de la galería', catalog);
+      addGroup('Diseños cargados en este dispositivo', own);
+      if (chosen && models.some((m) => m.id === chosen)) select.value = chosen;
+    }
     function renderArPicker() {
       const wrap = $('#arPicker');
-      if (!wrap) return;
-      wrap.replaceChildren();
-      allModels().forEach((m) => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'picker-btn';
-        btn.dataset.id = m.id;
-        btn.setAttribute('aria-pressed', String(m.id === arCurrentId));
-        btn.setAttribute('aria-label', `Ver ${m.name} en realidad aumentada`);
-        btn.innerHTML = `${m.poster ? `<img src="${esc(m.poster)}" data-backup="${POSTER_FALLBACKS[m.id] || ''}" alt="" loading="lazy" onerror="if(this.dataset.backup){this.onerror=null;this.src=this.dataset.backup}">` : '<img alt="" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E">'}<span>${esc(m.name)}</span>`;
-        btn.addEventListener('click', () => setArModel(m.id));
-        wrap.append(btn);
-      });
+      if (wrap) {
+        wrap.replaceChildren();
+        allModels().forEach((m) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'picker-btn';
+          btn.dataset.id = m.id;
+          btn.setAttribute('aria-pressed', String(m.id === arCurrentId));
+          btn.setAttribute('aria-label', `Ver ${m.name} en realidad aumentada`);
+          btn.innerHTML = `${m.poster ? `<img src="${esc(m.poster)}" data-backup="${POSTER_FALLBACKS[m.id] || ''}" alt="" loading="lazy" onerror="if(this.dataset.backup){this.onerror=null;this.src=this.dataset.backup}">` : '<img alt="" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E">'}<span>${esc(m.name)}</span>`;
+          btn.addEventListener('click', () => setArModel(m.id));
+          wrap.append(btn);
+        });
+      }
+      fillDesignSelect($('#arScreenModelSelect'), arCurrentId);
     }
     function setArModel(id) {
       const m = getModel(id);
@@ -1513,6 +1592,8 @@
       viewer.setAttribute('src', m.file);
       const screen = $('#arScreen');
       if (screen && !screen.hidden) $('#arScreenModel').setAttribute('src', m.file);
+      const screenSelect = $('#arScreenModelSelect');
+      if (screenSelect) screenSelect.value = id;
       viewer.alt = `Modelo ${m.name} en realidad aumentada`;
       viewer.setAttribute('camera-orbit', 'auto auto auto');
       $('#arModelName').textContent = m.name;
@@ -1582,11 +1663,12 @@
         $('#arScreenBtn').setAttribute('aria-expanded', String(!panel.hidden));
         if (!panel.hidden) {
           $('#arScreenModel').setAttribute('src', $('#arModel').getAttribute('src'));
-          toast('RA en pantalla', 'Activa la cámara y coloca el modelo frente a ti.');
+          renderArPicker();
         } else {
           stopArScreen();
         }
       });
+      $('#arScreenModelSelect').addEventListener('change', (event) => setArModel(event.target.value));
       $('#arScreenStart').addEventListener('click', startArScreen);
       $('#arScreenStop').addEventListener('click', stopArScreen);
     }
@@ -1613,12 +1695,15 @@
         const facing = stream.getVideoTracks()[0]?.getSettings?.().facingMode || 'environment';
         video.style.transform = facing === 'user' ? 'scaleX(-1)' : 'none';
         $('#arScreenEmpty').hidden = true;
+        $('#arScreen').classList.add('is-live');
+        document.body.classList.add('ar-camera-live');
+        $('#toastRegion').replaceChildren();
+        $('#arMessage').hidden = true;
         $('#arScreenStop').disabled = false;
         $('#arScreenModel').setAttribute('src', $('#arModel').getAttribute('src'));
         $('#arScreenModel').setAttribute('camera-orbit', 'auto auto auto');
-        $('#arMessage').textContent = 'Cámara activa. Arrastra el modelo para girarlo y usa los controles del visor para acercarlo.';
+        $('#arMessage').hidden = true;
         setStatus('#dotCam', '#statusCam', 'ok', 'Cámara · RA en pantalla');
-        toast('Cámara activa', 'El modelo se superpone a tu entorno sin anclarse a una superficie.', 'ok');
       } catch (error) {
         stream?.getTracks().forEach((track) => track.stop());
         stopArScreen();
@@ -1639,6 +1724,9 @@
       const video = $('#arScreenVideo');
       if (video) video.srcObject = null;
       if ($('#arScreenEmpty')) $('#arScreenEmpty').hidden = false;
+      $('#arScreen')?.classList.remove('is-live');
+      document.body.classList.remove('ar-camera-live');
+      if ($('#arMessage')) $('#arMessage').hidden = false;
       if ($('#arScreenStart')) { $('#arScreenStart').disabled = false; $('#arScreenStart').textContent = 'Activar cámara'; }
       if ($('#arScreenStop')) $('#arScreenStop').disabled = true;
       if (!Hands.running) setStatus('#dotCam', '#statusCam', 'off', 'Cámara · apagada');
@@ -1646,9 +1734,14 @@
     function goToAr(id) {
       selectTab('ar');
       setArModel(id);
-      const btn = $('#arActivateBtn');
-      btn.focus({ preventScroll: true });
-      toast('Realidad aumentada', 'Pulsa «Ver en RA» para colocar el modelo en tu espacio.', '');
+      const panel = $('#arScreen');
+      if (panel.hidden) {
+        panel.hidden = false;
+        $('#arScreenBtn').setAttribute('aria-expanded', 'true');
+      }
+      $('#arScreenModelSelect').value = id;
+      startArScreen();
+      $('#arScreenStart').focus({ preventScroll: true });
     }
 
     /* ============================================================
@@ -1780,7 +1873,7 @@
           }
         });
       }
-      const items = allModels().slice(0, 24);
+      const items = allModels();
       const radius = items.length > 1 ? Math.max(4.2, items.length * 0.9) : 0;
       const camZ = radius + 4.8;
       const mount = $('#vrMount');
@@ -1932,19 +2025,18 @@
 
     function renderVrSelect() {
       const selects = [$('#vrStartModel'), $('#vrFullscreenModel')].filter(Boolean);
-      if (!selects.length) return;
-      const current = vrCurrentId || selects[0].value;
-      selects.forEach((select) => {
-        select.replaceChildren();
-        allModels().slice(0, 24).forEach((m) => {
-          const opt = document.createElement('option');
-          opt.value = m.id; opt.textContent = m.name;
-          select.append(opt);
-        });
-        if (current && allModels().some((m) => m.id === current)) select.value = current;
-      });
+      const current = vrCurrentId || selects[0]?.value;
+      selects.forEach((select) => fillDesignSelect(select, current));
+      if (vrBuilt) {
+        const desired = allModels().map((model) => model.id);
+        const currentIds = Array.from(vrPedestals.keys());
+        const changed = desired.length !== currentIds.length || desired.some((id) => !vrPedestals.has(id));
+        if (changed) {
+          teardownVr();
+          if (currentTab === 'vr') initVr();
+        }
+      }
     }
-
     function selectVrStation(id) {
       const m = getModel(id);
       if (!m) return;
@@ -2643,6 +2735,92 @@
       } catch (_) { /* no crítico */ }
     }
 
+    async function loadLearningData() {
+      const status = $('#learnStatus');
+      try {
+        const response = await fetch('./assets/data/fauna-learning.es.json', { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        learningEntries = Array.isArray(data.animals) ? data.animals : [];
+        learningLoaded = true;
+        const missing = MODELS.filter((model) => !learningEntries.some((item) => item.id === model.id));
+        status.textContent = missing.length
+          ? `Hay ${learningEntries.length} fichas listas; faltan ${missing.length} especies por cargar.`
+          : `${learningEntries.length} fichas con teoría, quiz y fuentes consultadas. El contenido funciona sin conexión.`;
+        renderLearningGrid();
+      } catch (error) {
+        learningEntries = [];
+        status.textContent = 'No se pudo cargar el contenido educativo. Comprueba que los archivos de FaunaXR estén completos y vuelve a intentarlo.';
+        console.error('No se pudo cargar FaunaXR Aprendizaje', error);
+      }
+    }
+    function renderLearningGrid() {
+      const grid = $('#learnGrid');
+      if (!grid) return;
+      if (!learningLoaded) return;
+      const rows = MODELS.map((model) => ({ model, lesson: learningEntries.find((item) => item.id === model.id) })).filter((row) => row.lesson);
+      grid.innerHTML = rows.map(({ model, lesson }) => `
+        <article class="learn-card">
+          ${model.poster ? `<img src="${esc(model.poster)}" alt="" loading="lazy" decoding="async" style="width:100%;height:132px;object-fit:contain;background:#F2F8FC;border-radius:12px">` : ''}
+          <h3>${esc(model.name)}</h3>
+          <p>${esc(lesson.theory.slice(0, 138))}${lesson.theory.length > 138 ? '…' : ''}</p>
+          <button class="btn btn-sm btn-primary" type="button" data-learn-card="${esc(model.id)}">Leer teoría y hacer quiz</button>
+        </article>`).join('');
+      $('#learnGrid').hidden = !!activeLearningId;
+      $('#learnDetail').hidden = !activeLearningId;
+      if (activeLearningId) renderLearningDetail(activeLearningId);
+    }
+    function renderLearningDetail(id) {
+      const model = MODELS.find((item) => item.id === id);
+      const lesson = learningEntries.find((item) => item.id === id);
+      const detail = $('#learnDetail');
+      if (!model || !lesson || !detail) return;
+      activeLearningId = id;
+      $('#learnGrid').hidden = true;
+      detail.hidden = false;
+      const options = lesson.options.map((option, index) => `
+        <label class="quiz-option" for="animalQuizOption${index}">
+          <input id="animalQuizOption${index}" type="radio" name="animalQuizAnswer" value="${index}">
+          <span>${esc(option)}</span>
+        </label>`).join('');
+      detail.innerHTML = `
+        <button class="btn btn-sm" type="button" data-learn-back>‹ Todos los animales</button>
+        <p class="eyebrow" style="margin:18px 0 4px">Teoría del animal</p>
+        <h3>${esc(model.name)}</h3>
+        <p class="learn-theory">${esc(lesson.theory)}</p>
+        <p class="learn-source">Fuente: <a href="${esc(lesson.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(lesson.sourceTitle)}</a></p>
+        <form class="quiz-card" id="animalQuizForm">
+          <fieldset><legend>${esc(lesson.question)}</legend>${options}</fieldset>
+          <button class="btn btn-primary" type="submit">Comprobar respuesta</button>
+          <p class="quiz-feedback" id="animalQuizFeedback" role="status" aria-live="polite"></p>
+        </form>`;
+      detail.querySelector('#animalQuizForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const selected = detail.querySelector('input[name="animalQuizAnswer"]:checked');
+        const feedback = $('#animalQuizFeedback');
+        if (!selected) {
+          feedback.className = 'quiz-feedback incorrect';
+          feedback.textContent = 'Elige una respuesta antes de comprobar.';
+          return;
+        }
+        const correct = Number(selected.value) === lesson.correctIndex;
+        feedback.className = `quiz-feedback ${correct ? 'correct' : 'incorrect'}`;
+        feedback.textContent = `${correct ? '¡Correcto! ' : 'Aún no. '}${lesson.explanation}`;
+      });
+      detail.querySelector('[data-learn-back]').addEventListener('click', () => {
+        activeLearningId = null;
+        detail.hidden = true;
+        $('#learnGrid').hidden = false;
+        $('#learnGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    function initLearningEvents() {
+      $('#learnGrid').addEventListener('click', (event) => {
+        const button = event.target.closest('[data-learn-card]');
+        if (button) renderLearningDetail(button.dataset.learnCard);
+      });
+    }
+
     function initUploadEvents() {
       const zone = $('#dropzone');
       const input = $('#fileInput');
@@ -2887,6 +3065,7 @@
       renderGallery();
       renderLicenses();
       initGalleryEvents();
+      initLearningEvents();
       initDialogEvents();
       initConfirm();
       initArEvents();
@@ -2902,6 +3081,7 @@
 
       applyProfile();
       initTabEvents();
+      loadLearningData();
       loadUploads();
 
       window.SXR = {

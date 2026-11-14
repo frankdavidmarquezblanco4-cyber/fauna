@@ -1,12 +1,13 @@
 /* FaunaXR · PWA offline cache */
 'use strict';
 
-const CACHE_NAME = 'faunaxr-offline-v33';
+const CACHE_NAME = 'faunaxr-offline-v35';
 const APP_SHELL = [
   './',
   './index.html',
   './galeria-xr.html',
   './manifest.webmanifest',
+  './assets/data/fauna-learning.es.json',
   './assets/pwa/icon-192.png',
   './assets/pwa/icon-512.png',
   './assets/pwa/icon-maskable-512.png',
